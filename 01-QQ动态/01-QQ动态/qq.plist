@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>found_icons_qzone.png</string>
+			<key>title</key>
+			<string>QQ空间</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>found_icons_gamecenter.png</string>
+			<key>title</key>
+			<string>游戏</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>found_icons_readcenter.png</string>
+			<key>title</key>
+			<string>阅读</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>found_icons_folder.png</string>
+			<key>title</key>
+			<string>文件助手</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>found_icons_location.png</string>
+			<key>title</key>
+			<string>附近的人</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>found_icons_saosao.png</string>
+			<key>title</key>
+			<string>扫一扫</string>
+		</dict>
+	</array>
+</array>
+</plist>

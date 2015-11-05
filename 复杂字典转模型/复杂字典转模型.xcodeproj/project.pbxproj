@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3517F8671BE0A38A009B767B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517F8661BE0A38A009B767B /* main.m */; };
+		3517F86A1BE0A38A009B767B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517F8691BE0A38A009B767B /* AppDelegate.m */; };
+		3517F86D1BE0A38A009B767B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517F86C1BE0A38A009B767B /* ViewController.m */; };
+		3517F8701BE0A38A009B767B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3517F86E1BE0A38A009B767B /* Main.storyboard */; };
+		3517F8721BE0A38A009B767B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3517F8711BE0A38A009B767B /* Assets.xcassets */; };
+		3517F8751BE0A38A009B767B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3517F8731BE0A38A009B767B /* LaunchScreen.storyboard */; };
+		3517F8801BE0A38A009B767B /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517F87F1BE0A38A009B767B /* _______Tests.m */; };
+		3517F88B1BE0A38A009B767B /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517F88A1BE0A38A009B767B /* _______UITests.m */; };
+		3517F89A1BE0A3B3009B767B /* cars_simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3517F8981BE0A3B3009B767B /* cars_simple.plist */; settings = {ASSET_TAGS = (); }; };
+		3517F89B1BE0A3B3009B767B /* cars_total.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3517F8991BE0A3B3009B767B /* cars_total.plist */; settings = {ASSET_TAGS = (); }; };
+		3517F89E1BE0A3D0009B767B /* CZCarGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517F89D1BE0A3D0009B767B /* CZCarGroup.m */; settings = {ASSET_TAGS = (); }; };
+		3517F8A11BE0AA8A009B767B /* CZCars.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517F8A01BE0AA8A009B767B /* CZCars.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3517F87C1BE0A38A009B767B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3517F85A1BE0A38A009B767B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3517F8611BE0A38A009B767B;
+			remoteInfo = "复杂字典转模型";
+		};
+		3517F8871BE0A38A009B767B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3517F85A1BE0A38A009B767B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3517F8611BE0A38A009B767B;
+			remoteInfo = "复杂字典转模型";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3517F8621BE0A38A009B767B /* 复杂字典转模型.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "复杂字典转模型.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3517F8661BE0A38A009B767B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3517F8681BE0A38A009B767B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3517F8691BE0A38A009B767B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3517F86B1BE0A38A009B767B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3517F86C1BE0A38A009B767B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3517F86F1BE0A38A009B767B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3517F8711BE0A38A009B767B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3517F8741BE0A38A009B767B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3517F8761BE0A38A009B767B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3517F87B1BE0A38A009B767B /* 复杂字典转模型Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "复杂字典转模型Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3517F87F1BE0A38A009B767B /* _______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______Tests.m"; sourceTree = "<group>"; };
+		3517F8811BE0A38A009B767B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3517F8861BE0A38A009B767B /* 复杂字典转模型UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "复杂字典转模型UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3517F88A1BE0A38A009B767B /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
+		3517F88C1BE0A38A009B767B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3517F8981BE0A3B3009B767B /* cars_simple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cars_simple.plist; sourceTree = "<group>"; };
+		3517F8991BE0A3B3009B767B /* cars_total.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cars_total.plist; sourceTree = "<group>"; };
+		3517F89C1BE0A3D0009B767B /* CZCarGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZCarGroup.h; sourceTree = "<group>"; };
+		3517F89D1BE0A3D0009B767B /* CZCarGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZCarGroup.m; sourceTree = "<group>"; };
+		3517F89F1BE0AA8A009B767B /* CZCars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZCars.h; sourceTree = "<group>"; };
+		3517F8A01BE0AA8A009B767B /* CZCars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZCars.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3517F85F1BE0A38A009B767B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3517F8781BE0A38A009B767B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3517F8831BE0A38A009B767B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3517F8591BE0A38A009B767B = {
+			isa = PBXGroup;
+			children = (
+				3517F8641BE0A38A009B767B /* 复杂字典转模型 */,
+				3517F87E1BE0A38A009B767B /* 复杂字典转模型Tests */,
+				3517F8891BE0A38A009B767B /* 复杂字典转模型UITests */,
+				3517F8631BE0A38A009B767B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3517F8631BE0A38A009B767B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3517F8621BE0A38A009B767B /* 复杂字典转模型.app */,
+				3517F87B1BE0A38A009B767B /* 复杂字典转模型Tests.xctest */,
+				3517F8861BE0A38A009B767B /* 复杂字典转模型UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3517F8641BE0A38A009B767B /* 复杂字典转模型 */ = {
+			isa = PBXGroup;
+			children = (
+				3517F8681BE0A38A009B767B /* AppDelegate.h */,
+				3517F8691BE0A38A009B767B /* AppDelegate.m */,
+				3517F86B1BE0A38A009B767B /* ViewController.h */,
+				3517F86C1BE0A38A009B767B /* ViewController.m */,
+				3517F89C1BE0A3D0009B767B /* CZCarGroup.h */,
+				3517F89D1BE0A3D0009B767B /* CZCarGroup.m */,
+				3517F89F1BE0AA8A009B767B /* CZCars.h */,
+				3517F8A01BE0AA8A009B767B /* CZCars.m */,
+				3517F86E1BE0A38A009B767B /* Main.storyboard */,
+				3517F8711BE0A38A009B767B /* Assets.xcassets */,
+				3517F8731BE0A38A009B767B /* LaunchScreen.storyboard */,
+				3517F8761BE0A38A009B767B /* Info.plist */,
+				3517F8651BE0A38A009B767B /* Supporting Files */,
+			);
+			path = "复杂字典转模型";
+			sourceTree = "<group>";
+		};
+		3517F8651BE0A38A009B767B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3517F8981BE0A3B3009B767B /* cars_simple.plist */,
+				3517F8991BE0A3B3009B767B /* cars_total.plist */,
+				3517F8661BE0A38A009B767B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3517F87E1BE0A38A009B767B /* 复杂字典转模型Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3517F87F1BE0A38A009B767B /* _______Tests.m */,
+				3517F8811BE0A38A009B767B /* Info.plist */,
+			);
+			path = "复杂字典转模型Tests";
+			sourceTree = "<group>";
+		};
+		3517F8891BE0A38A009B767B /* 复杂字典转模型UITests */ = {
+			isa = PBXGroup;
+			children = (
+				3517F88A1BE0A38A009B767B /* _______UITests.m */,
+				3517F88C1BE0A38A009B767B /* Info.plist */,
+			);
+			path = "复杂字典转模型UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3517F8611BE0A38A009B767B /* 复杂字典转模型 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3517F88F1BE0A38A009B767B /* Build configuration list for PBXNativeTarget "复杂字典转模型" */;
+			buildPhases = (
+				3517F85E1BE0A38A009B767B /* Sources */,
+				3517F85F1BE0A38A009B767B /* Frameworks */,
+				3517F8601BE0A38A009B767B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "复杂字典转模型";
+			productName = "复杂字典转模型";
+			productReference = 3517F8621BE0A38A009B767B /* 复杂字典转模型.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3517F87A1BE0A38A009B767B /* 复杂字典转模型Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3517F8921BE0A38A009B767B /* Build configuration list for PBXNativeTarget "复杂字典转模型Tests" */;
+			buildPhases = (
+				3517F8771BE0A38A009B767B /* Sources */,
+				3517F8781BE0A38A009B767B /* Frameworks */,
+				3517F8791BE0A38A009B767B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3517F87D1BE0A38A009B767B /* PBXTargetDependency */,
+			);
+			name = "复杂字典转模型Tests";
+			productName = "复杂字典转模型Tests";
+			productReference = 3517F87B1BE0A38A009B767B /* 复杂字典转模型Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3517F8851BE0A38A009B767B /* 复杂字典转模型UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3517F8951BE0A38A009B767B /* Build configuration list for PBXNativeTarget "复杂字典转模型UITests" */;
+			buildPhases = (
+				3517F8821BE0A38A009B767B /* Sources */,
+				3517F8831BE0A38A009B767B /* Frameworks */,
+				3517F8841BE0A38A009B767B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3517F8881BE0A38A009B767B /* PBXTargetDependency */,
+			);
+			name = "复杂字典转模型UITests";
+			productName = "复杂字典转模型UITests";
+			productReference = 3517F8861BE0A38A009B767B /* 复杂字典转模型UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3517F85A1BE0A38A009B767B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "何建新";
+				TargetAttributes = {
+					3517F8611BE0A38A009B767B = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = SXAMGGC2DK;
+					};
+					3517F87A1BE0A38A009B767B = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = SXAMGGC2DK;
+						TestTargetID = 3517F8611BE0A38A009B767B;
+					};
+					3517F8851BE0A38A009B767B = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = SXAMGGC2DK;
+						TestTargetID = 3517F8611BE0A38A009B767B;
+					};
+				};
+			};
+			buildConfigurationList = 3517F85D1BE0A38A009B767B /* Build configuration list for PBXProject "复杂字典转模型" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3517F8591BE0A38A009B767B;
+			productRefGroup = 3517F8631BE0A38A009B767B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3517F8611BE0A38A009B767B /* 复杂字典转模型 */,
+				3517F87A1BE0A38A009B767B /* 复杂字典转模型Tests */,
+				3517F8851BE0A38A009B767B /* 复杂字典转模型UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3517F8601BE0A38A009B767B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3517F89B1BE0A3B3009B767B /* cars_total.plist in Resources */,
+				3517F8751BE0A38A009B767B /* LaunchScreen.storyboard in Resources */,
+				3517F89A1BE0A3B3009B767B /* cars_simple.plist in Resources */,
+				3517F8721BE0A38A009B767B /* Assets.xcassets in Resources */,
+				3517F8701BE0A38A009B767B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3517F8791BE0A38A009B767B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3517F8841BE0A38A009B767B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3517F85E1BE0A38A009B767B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3517F8A11BE0AA8A009B767B /* CZCars.m in Sources */,
+				3517F86D1BE0A38A009B767B /* ViewController.m in Sources */,
+				3517F86A1BE0A38A009B767B /* AppDelegate.m in Sources */,
+				3517F8671BE0A38A009B767B /* main.m in Sources */,
+				3517F89E1BE0A3D0009B767B /* CZCarGroup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3517F8771BE0A38A009B767B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3517F8801BE0A38A009B767B /* _______Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3517F8821BE0A38A009B767B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3517F88B1BE0A38A009B767B /* _______UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3517F87D1BE0A38A009B767B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3517F8611BE0A38A009B767B /* 复杂字典转模型 */;
+			targetProxy = 3517F87C1BE0A38A009B767B /* PBXContainerItemProxy */;
+		};
+		3517F8881BE0A38A009B767B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3517F8611BE0A38A009B767B /* 复杂字典转模型 */;
+			targetProxy = 3517F8871BE0A38A009B767B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3517F86E1BE0A38A009B767B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3517F86F1BE0A38A009B767B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3517F8731BE0A38A009B767B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3517F8741BE0A38A009B767B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3517F88D1BE0A38A009B767B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3517F88E1BE0A38A009B767B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3517F8901BE0A38A009B767B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "复杂字典转模型/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3517F8911BE0A38A009B767B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "复杂字典转模型/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3517F8931BE0A38A009B767B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "复杂字典转模型Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/复杂字典转模型.app/复杂字典转模型";
+			};
+			name = Debug;
+		};
+		3517F8941BE0A38A009B767B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "复杂字典转模型Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/复杂字典转模型.app/复杂字典转模型";
+			};
+			name = Release;
+		};
+		3517F8961BE0A38A009B767B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "复杂字典转模型UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "复杂字典转模型";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3517F8971BE0A38A009B767B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "复杂字典转模型UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "复杂字典转模型";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3517F85D1BE0A38A009B767B /* Build configuration list for PBXProject "复杂字典转模型" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3517F88D1BE0A38A009B767B /* Debug */,
+				3517F88E1BE0A38A009B767B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3517F88F1BE0A38A009B767B /* Build configuration list for PBXNativeTarget "复杂字典转模型" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3517F8901BE0A38A009B767B /* Debug */,
+				3517F8911BE0A38A009B767B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3517F8921BE0A38A009B767B /* Build configuration list for PBXNativeTarget "复杂字典转模型Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3517F8931BE0A38A009B767B /* Debug */,
+				3517F8941BE0A38A009B767B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3517F8951BE0A38A009B767B /* Build configuration list for PBXNativeTarget "复杂字典转模型UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3517F8961BE0A38A009B767B /* Debug */,
+				3517F8971BE0A38A009B767B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3517F85A1BE0A38A009B767B /* Project object */;
+}
