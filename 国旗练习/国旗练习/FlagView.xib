@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FlagView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afg-Ak-Qnz">
+                    <rect key="frame" x="8" y="19" width="42" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="hB4-Lo-5de"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7qJ-xT-NIc">
+                    <rect key="frame" x="208" y="0.0" width="104" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="DgF-3u-rSA"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="afg-Ak-Qnz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="AZB-Bn-EfS"/>
+                <constraint firstItem="7qJ-xT-NIc" firstAttribute="leading" secondItem="afg-Ak-Qnz" secondAttribute="trailing" constant="158" id="Mfw-ru-izT"/>
+                <constraint firstItem="7qJ-xT-NIc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N49-mh-Wft"/>
+                <constraint firstAttribute="trailing" secondItem="7qJ-xT-NIc" secondAttribute="trailing" constant="8" id="PYG-9L-foD"/>
+                <constraint firstItem="7qJ-xT-NIc" firstAttribute="leading" secondItem="afg-Ak-Qnz" secondAttribute="trailing" constant="10" id="Z6d-yx-k1m"/>
+                <constraint firstItem="afg-Ak-Qnz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="19" id="cJn-yc-u9F"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Z6d-yx-k1m"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="iconView" destination="7qJ-xT-NIc" id="BmL-Fe-3Ra"/>
+                <outlet property="nameView" destination="afg-Ak-Qnz" id="c3E-PI-x8T"/>
+            </connections>
+        </view>
+    </objects>
+</document>
