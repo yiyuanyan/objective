@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OzN-J1-erO" customClass="CZToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <animations/>
+            <items>
+                <barButtonItem title="上一个" id="4WD-xh-80T">
+                    <connections>
+                        <action selector="preBtnClick:" destination="OzN-J1-erO" id="mdt-3B-0sS"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="下一个" id="bDl-s6-UBN">
+                    <connections>
+                        <action selector="nextBtnClick:" destination="OzN-J1-erO" id="Mkb-Lj-FaG"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="ef4-AE-76j"/>
+                <barButtonItem title="关闭" id="odq-2y-5dX">
+                    <connections>
+                        <action selector="doneBtnClick:" destination="OzN-J1-erO" id="w7q-54-iQZ"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+            <connections>
+                <outlet property="doneButton" destination="odq-2y-5dX" id="XPA-7P-tXf"/>
+                <outlet property="nextButton" destination="bDl-s6-UBN" id="TSw-FD-HQ2"/>
+                <outlet property="preButton" destination="4WD-xh-80T" id="kpJ-Et-wh4"/>
+            </connections>
+            <point key="canvasLocation" x="348" y="271"/>
+        </toolbar>
+    </objects>
+</document>
