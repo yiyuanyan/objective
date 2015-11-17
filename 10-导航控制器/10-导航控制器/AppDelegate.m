@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "OneViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    //创建栈点控制器
+    OneViewController *one = [[OneViewController alloc]init];
+    //创建导航控制器
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:one];
+    
+    //将nav设置为window的根控制器
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
