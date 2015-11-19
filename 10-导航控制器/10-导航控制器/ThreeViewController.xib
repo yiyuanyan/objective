@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThreeViewController">
@@ -15,21 +15,61 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-Wz-A83">
-                    <rect key="frame" x="65" y="87" width="46" height="30"/>
+                    <rect key="frame" x="65" y="87" width="200" height="30"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="46" id="6VV-Hd-FEg"/>
                         <constraint firstAttribute="height" constant="30" id="YlA-ix-xrl"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="sMQ-pj-5S2"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="返回上一个控制器"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="6VV-Hd-FEg"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="RPw-v9-v42"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是第三个控制器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghl-ET-VLc">
+                    <rect key="frame" x="129" y="216" width="136" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WM9-x9-EUk">
+                    <rect key="frame" x="255" y="300" width="90" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="PAz-ey-yye"/>
+                        <constraint firstAttribute="width" constant="90" id="teI-FU-yB0"/>
+                    </constraints>
+                    <state key="normal" title="返回跟控制器"/>
+                    <connections>
+                        <action selector="returnRootCon:" destination="-1" eventType="touchUpInside" id="f98-Vp-Loj"/>
+                    </connections>
                 </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="1" green="0.78351288060000002" blue="0.81119090900000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="as8-Wz-A83" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="65" id="3LX-ZB-dPN"/>
+                <constraint firstItem="WM9-x9-EUk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="255" id="FhG-59-zoX"/>
                 <constraint firstItem="as8-Wz-A83" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="87" id="OEK-ok-JbV"/>
+                <constraint firstItem="ghl-ET-VLc" firstAttribute="top" secondItem="as8-Wz-A83" secondAttribute="bottom" constant="99" id="TOq-lT-aGq"/>
+                <constraint firstItem="WM9-x9-EUk" firstAttribute="top" secondItem="ghl-ET-VLc" secondAttribute="bottom" constant="63" id="e5p-ah-2ol"/>
+                <constraint firstItem="as8-Wz-A83" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="87" id="hjg-sB-sNd"/>
+                <constraint firstItem="as8-Wz-A83" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="200" id="oYE-vx-vNh"/>
+                <constraint firstItem="ghl-ET-VLc" firstAttribute="trailing" secondItem="as8-Wz-A83" secondAttribute="trailing" id="qAc-cA-Y2s"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="oYE-vx-vNh"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="374" y="366"/>
         </view>
     </objects>
 </document>

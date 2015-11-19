@@ -7,8 +7,10 @@
 //
 
 #import "ThreeViewController.h"
-
+#import "OneViewController.h"
 @interface ThreeViewController ()
+- (IBAction)back:(UIButton *)sender;
+- (IBAction)returnRootCon:(UIButton *)sender;
 
 @end
 
@@ -34,4 +36,17 @@
 }
 */
 
+- (IBAction)back:(UIButton *)sender {
+    //弹出到上一个控制器
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)returnRootCon:(UIButton *)sender {
+    //NSArray *arr = self.navigationController.viewControllers;
+    
+    //[self.navigationController popToRootViewControllerAnimated:YES];
+    
+    [self.navigationController popToViewController:self.navigationController.viewControllers[0] animated:YES];
+}
 @end

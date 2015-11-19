@@ -7,8 +7,9 @@
 //
 
 #import "TwoViewController.h"
-
+#import "ThreeViewController.h"
 @interface TwoViewController ()
+- (IBAction)jump2three:(UIButton *)sender;
 
 @end
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navigationItem.title = @"这是第二个控制器";
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +37,9 @@
 }
 */
 
+- (IBAction)jump2three:(UIButton *)sender {
+    UINavigationController *nav = self.navigationController;
+    ThreeViewController *vc = [[ThreeViewController alloc]init];
+    [nav pushViewController:vc animated:YES];
+}
 @end
