@@ -64,10 +64,11 @@
     [UIView animateWithDuration:1 animations:^{
         self.coverView.alpha = 0;
         self.imageView.frame = CGRectMake(40, 45, 0, 0);
-        [self.closeButton removeFromSuperview];
+        self.closeButton.frame = CGRectMake(0, 0, 0, 0);
     } completion:^(BOOL finished) {
         [self.coverView removeFromSuperview];
         [self.imageView removeFromSuperview];
+        [self.closeButton removeFromSuperview];
         
     }];
 }
@@ -75,23 +76,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return 13;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    NSString *cellId = @"reuseIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
-    // Configure the cell...
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        
+    }
+    cell.textLabel.text = @"这里是数据";
+    
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

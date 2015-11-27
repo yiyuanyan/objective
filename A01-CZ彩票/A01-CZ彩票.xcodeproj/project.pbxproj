@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		352381641C07F631003D9021 /* CZTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 352381631C07F631003D9021 /* CZTabBarButton.m */; };
+		3523816C1C084539003D9021 /* CZArenaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3523816B1C084539003D9021 /* CZArenaController.m */; };
+		3523816F1C084608003D9021 /* CZArenaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3523816E1C084608003D9021 /* CZArenaView.m */; };
 		3536B3F61C06CABA0051C27D /* LotteryHall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3536B3F51C06CABA0051C27D /* LotteryHall.storyboard */; };
 		3536B3F81C06CB2E0051C27D /* 笔记 in Resources */ = {isa = PBXBuildFile; fileRef = 3536B3F71C06CB2E0051C27D /* 笔记 */; };
 		3536B3FB1C06CC320051C27D /* CZLotteryHallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3536B3FA1C06CC320051C27D /* CZLotteryHallController.m */; };
@@ -48,6 +50,10 @@
 /* Begin PBXFileReference section */
 		352381621C07F631003D9021 /* CZTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBarButton.h; sourceTree = "<group>"; };
 		352381631C07F631003D9021 /* CZTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarButton.m; sourceTree = "<group>"; };
+		3523816A1C084539003D9021 /* CZArenaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZArenaController.h; sourceTree = "<group>"; };
+		3523816B1C084539003D9021 /* CZArenaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZArenaController.m; sourceTree = "<group>"; };
+		3523816D1C084608003D9021 /* CZArenaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZArenaView.h; sourceTree = "<group>"; };
+		3523816E1C084608003D9021 /* CZArenaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZArenaView.m; sourceTree = "<group>"; };
 		3536B3F51C06CABA0051C27D /* LotteryHall.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LotteryHall.storyboard; sourceTree = "<group>"; };
 		3536B3F71C06CB2E0051C27D /* 笔记 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "笔记"; sourceTree = "<group>"; };
 		3536B3F91C06CC320051C27D /* CZLotteryHallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLotteryHallController.h; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 		3536B3E11C06C90A0051C27D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3523816A1C084539003D9021 /* CZArenaController.h */,
+				3523816B1C084539003D9021 /* CZArenaController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -148,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				3536B3FC1C06CE730051C27D /* Arena.storyboard */,
+				3523816D1C084608003D9021 /* CZArenaView.h */,
+				3523816E1C084608003D9021 /* CZArenaView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,11 +559,13 @@
 				352381641C07F631003D9021 /* CZTabBarButton.m in Sources */,
 				35C573141C06F68100B0207F /* CZTabBar.m in Sources */,
 				35C573111C06F35400B0207F /* CZTabBarController.m in Sources */,
+				3523816C1C084539003D9021 /* CZArenaController.m in Sources */,
 				35C573091C06EEDB00B0207F /* UIImage+Ex.m in Sources */,
 				356B17141C06B015003AEF36 /* AppDelegate.m in Sources */,
 				356B17111C06B015003AEF36 /* main.m in Sources */,
 				35C573171C06FF0600B0207F /* UIView+Ex.m in Sources */,
 				3536B3FB1C06CC320051C27D /* CZLotteryHallController.m in Sources */,
+				3523816F1C084608003D9021 /* CZArenaView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
