@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ContactsViewController : UITableViewController
+//定义属性，用于接收用户名
 @property(nonatomic, copy)NSString *userName;
+
 @end

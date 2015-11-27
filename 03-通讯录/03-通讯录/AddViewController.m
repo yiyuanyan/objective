@@ -7,7 +7,7 @@
 //
 
 #import "AddViewController.h"
-
+#import "Contact.h"
 @interface AddViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *numberField;
@@ -38,9 +38,13 @@
 }
 //保存按钮的点击事件
 - (IBAction)addContact:(UIButton *)sender {
+    
     //如果代理能够响应这个方法就执行下面代码
-    if ([_addViewControllerDelegate respondsToSelector:@selector(addViewController:withName:andNumber:)]) {
-        [_addViewControllerDelegate addViewController:self withName:self.nameField.text andNumber:self.numberField.text];
+    if ([_addViewControllerDelegate respondsToSelector:@selector(addViewController:withCibtact:)]) {
+        Contact *con = [[Contact alloc]init];
+        con.name = self.nameField.text;
+        con.number = self.numberField.text;
+        [_addViewControllerDelegate addViewController:self withCibtact:con];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }

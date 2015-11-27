@@ -1,0 +1,801 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		352381641C07F631003D9021 /* CZTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 352381631C07F631003D9021 /* CZTabBarButton.m */; };
+		3536B3F61C06CABA0051C27D /* LotteryHall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3536B3F51C06CABA0051C27D /* LotteryHall.storyboard */; };
+		3536B3F81C06CB2E0051C27D /* 笔记 in Resources */ = {isa = PBXBuildFile; fileRef = 3536B3F71C06CB2E0051C27D /* 笔记 */; };
+		3536B3FB1C06CC320051C27D /* CZLotteryHallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3536B3FA1C06CC320051C27D /* CZLotteryHallController.m */; };
+		3536B3FD1C06CE730051C27D /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3536B3FC1C06CE730051C27D /* Arena.storyboard */; };
+		3536B3FF1C06CF890051C27D /* Discovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3536B3FE1C06CF890051C27D /* Discovery.storyboard */; };
+		3536B4011C06D3410051C27D /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3536B4001C06D3410051C27D /* History.storyboard */; };
+		3536B4031C06D3880051C27D /* MyLottery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3536B4021C06D3880051C27D /* MyLottery.storyboard */; };
+		356B17111C06B015003AEF36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 356B17101C06B015003AEF36 /* main.m */; };
+		356B17141C06B015003AEF36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 356B17131C06B015003AEF36 /* AppDelegate.m */; };
+		356B171C1C06B015003AEF36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356B171B1C06B015003AEF36 /* Assets.xcassets */; };
+		356B171F1C06B015003AEF36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356B171D1C06B015003AEF36 /* LaunchScreen.storyboard */; };
+		356B172A1C06B015003AEF36 /* A01_CZ__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 356B17291C06B015003AEF36 /* A01_CZ__Tests.m */; };
+		356B17351C06B015003AEF36 /* A01_CZ__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 356B17341C06B015003AEF36 /* A01_CZ__UITests.m */; };
+		356B17431C06B37F003AEF36 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356B17421C06B37F003AEF36 /* Images.xcassets */; };
+		35C573091C06EEDB00B0207F /* UIImage+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C573081C06EEDB00B0207F /* UIImage+Ex.m */; };
+		35C573111C06F35400B0207F /* CZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C573101C06F35400B0207F /* CZTabBarController.m */; };
+		35C573141C06F68100B0207F /* CZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C573131C06F68100B0207F /* CZTabBar.m */; };
+		35C573171C06FF0600B0207F /* UIView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C573161C06FF0600B0207F /* UIView+Ex.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		356B17261C06B015003AEF36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 356B17041C06B015003AEF36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 356B170B1C06B015003AEF36;
+			remoteInfo = "A01-CZ彩票";
+		};
+		356B17311C06B015003AEF36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 356B17041C06B015003AEF36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 356B170B1C06B015003AEF36;
+			remoteInfo = "A01-CZ彩票";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		352381621C07F631003D9021 /* CZTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBarButton.h; sourceTree = "<group>"; };
+		352381631C07F631003D9021 /* CZTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarButton.m; sourceTree = "<group>"; };
+		3536B3F51C06CABA0051C27D /* LotteryHall.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LotteryHall.storyboard; sourceTree = "<group>"; };
+		3536B3F71C06CB2E0051C27D /* 笔记 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "笔记"; sourceTree = "<group>"; };
+		3536B3F91C06CC320051C27D /* CZLotteryHallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLotteryHallController.h; sourceTree = "<group>"; };
+		3536B3FA1C06CC320051C27D /* CZLotteryHallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLotteryHallController.m; sourceTree = "<group>"; };
+		3536B3FC1C06CE730051C27D /* Arena.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arena.storyboard; sourceTree = "<group>"; };
+		3536B3FE1C06CF890051C27D /* Discovery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discovery.storyboard; sourceTree = "<group>"; };
+		3536B4001C06D3410051C27D /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		3536B4021C06D3880051C27D /* MyLottery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyLottery.storyboard; sourceTree = "<group>"; };
+		356B170C1C06B015003AEF36 /* A01-CZ彩票.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A01-CZ彩票.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		356B17101C06B015003AEF36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		356B17121C06B015003AEF36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
+		356B17131C06B015003AEF36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
+		356B171B1C06B015003AEF36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		356B171E1C06B015003AEF36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		356B17201C06B015003AEF36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		356B17251C06B015003AEF36 /* A01-CZ彩票Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "A01-CZ彩票Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		356B17291C06B015003AEF36 /* A01_CZ__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = A01_CZ__Tests.m; sourceTree = "<group>"; };
+		356B172B1C06B015003AEF36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		356B17301C06B015003AEF36 /* A01-CZ彩票UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "A01-CZ彩票UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		356B17341C06B015003AEF36 /* A01_CZ__UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = A01_CZ__UITests.m; sourceTree = "<group>"; };
+		356B17361C06B015003AEF36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		356B17421C06B37F003AEF36 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		35C573071C06EEDB00B0207F /* UIImage+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Ex.h"; sourceTree = "<group>"; };
+		35C573081C06EEDB00B0207F /* UIImage+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Ex.m"; sourceTree = "<group>"; };
+		35C5730F1C06F35400B0207F /* CZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBarController.h; sourceTree = "<group>"; };
+		35C573101C06F35400B0207F /* CZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarController.m; sourceTree = "<group>"; };
+		35C573121C06F68100B0207F /* CZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBar.h; sourceTree = "<group>"; };
+		35C573131C06F68100B0207F /* CZTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBar.m; sourceTree = "<group>"; };
+		35C573151C06FF0600B0207F /* UIView+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ex.h"; sourceTree = "<group>"; };
+		35C573161C06FF0600B0207F /* UIView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ex.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		356B17091C06B015003AEF36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356B17221C06B015003AEF36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356B172D1C06B015003AEF36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3536B3DF1C06C8F50051C27D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				35C5730B1C06F32E00B0207F /* Main */,
+				3536B3EC1C06C90A0051C27D /* LotteryHall(购彩大厅) */,
+				3536B3E01C06C90A0051C27D /* Arena(竞技场) */,
+				3536B3E41C06C90A0051C27D /* Discovery(发现) */,
+				3536B3E81C06C90A0051C27D /* History(开奖信息) */,
+				3536B3F01C06C90A0051C27D /* MyLottery(我的彩票) */,
+				3536B3F41C06C90A0051C27D /* Others */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		3536B3E01C06C90A0051C27D /* Arena(竞技场) */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3E11C06C90A0051C27D /* Controller */,
+				3536B3E21C06C90A0051C27D /* Model */,
+				3536B3E31C06C90A0051C27D /* View */,
+			);
+			name = "Arena(竞技场)";
+			path = "Classes/Arena(竞技场)";
+			sourceTree = "<group>";
+		};
+		3536B3E11C06C90A0051C27D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3536B3E21C06C90A0051C27D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3536B3E31C06C90A0051C27D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3FC1C06CE730051C27D /* Arena.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3536B3E41C06C90A0051C27D /* Discovery(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3E51C06C90A0051C27D /* Controller */,
+				3536B3E61C06C90A0051C27D /* Model */,
+				3536B3E71C06C90A0051C27D /* View */,
+			);
+			name = "Discovery(发现)";
+			path = Classes/Discovery;
+			sourceTree = "<group>";
+		};
+		3536B3E51C06C90A0051C27D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3536B3E61C06C90A0051C27D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3536B3E71C06C90A0051C27D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3FE1C06CF890051C27D /* Discovery.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3536B3E81C06C90A0051C27D /* History(开奖信息) */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3E91C06C90A0051C27D /* Controller */,
+				3536B3EA1C06C90A0051C27D /* Model */,
+				3536B3EB1C06C90A0051C27D /* View */,
+			);
+			name = "History(开奖信息)";
+			path = Classes/History;
+			sourceTree = "<group>";
+		};
+		3536B3E91C06C90A0051C27D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3536B3EA1C06C90A0051C27D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3536B3EB1C06C90A0051C27D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3536B4001C06D3410051C27D /* History.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3536B3EC1C06C90A0051C27D /* LotteryHall(购彩大厅) */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3ED1C06C90A0051C27D /* Controller */,
+				3536B3EE1C06C90A0051C27D /* Model */,
+				3536B3EF1C06C90A0051C27D /* View */,
+			);
+			name = "LotteryHall(购彩大厅)";
+			path = Classes/LotteryHall;
+			sourceTree = "<group>";
+		};
+		3536B3ED1C06C90A0051C27D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3F91C06CC320051C27D /* CZLotteryHallController.h */,
+				3536B3FA1C06CC320051C27D /* CZLotteryHallController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3536B3EE1C06C90A0051C27D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3536B3EF1C06C90A0051C27D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3F51C06CABA0051C27D /* LotteryHall.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3536B3F01C06C90A0051C27D /* MyLottery(我的彩票) */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3F11C06C90A0051C27D /* Controller */,
+				3536B3F21C06C90A0051C27D /* Model */,
+				3536B3F31C06C90A0051C27D /* View */,
+			);
+			name = "MyLottery(我的彩票)";
+			path = Classes/MyLottery;
+			sourceTree = "<group>";
+		};
+		3536B3F11C06C90A0051C27D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3536B3F21C06C90A0051C27D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3536B3F31C06C90A0051C27D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3536B4021C06D3880051C27D /* MyLottery.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3536B3F41C06C90A0051C27D /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				35C5730A1C06EEDF00B0207F /* Extension */,
+				356B17121C06B015003AEF36 /* AppDelegate.h */,
+				356B17131C06B015003AEF36 /* AppDelegate.m */,
+			);
+			name = Others;
+			path = Classes/Others;
+			sourceTree = "<group>";
+		};
+		356B17031C06B015003AEF36 = {
+			isa = PBXGroup;
+			children = (
+				356B170E1C06B015003AEF36 /* A01-CZ彩票 */,
+				356B17281C06B015003AEF36 /* A01-CZ彩票Tests */,
+				356B17331C06B015003AEF36 /* A01-CZ彩票UITests */,
+				356B170D1C06B015003AEF36 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		356B170D1C06B015003AEF36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				356B170C1C06B015003AEF36 /* A01-CZ彩票.app */,
+				356B17251C06B015003AEF36 /* A01-CZ彩票Tests.xctest */,
+				356B17301C06B015003AEF36 /* A01-CZ彩票UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		356B170E1C06B015003AEF36 /* A01-CZ彩票 */ = {
+			isa = PBXGroup;
+			children = (
+				3536B3DF1C06C8F50051C27D /* Classes */,
+				356B170F1C06B015003AEF36 /* Supporting Files */,
+				3536B3F71C06CB2E0051C27D /* 笔记 */,
+			);
+			path = "A01-CZ彩票";
+			sourceTree = "<group>";
+		};
+		356B170F1C06B015003AEF36 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				356B171B1C06B015003AEF36 /* Assets.xcassets */,
+				356B171D1C06B015003AEF36 /* LaunchScreen.storyboard */,
+				356B17201C06B015003AEF36 /* Info.plist */,
+				356B17421C06B37F003AEF36 /* Images.xcassets */,
+				356B17101C06B015003AEF36 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		356B17281C06B015003AEF36 /* A01-CZ彩票Tests */ = {
+			isa = PBXGroup;
+			children = (
+				356B17291C06B015003AEF36 /* A01_CZ__Tests.m */,
+				356B172B1C06B015003AEF36 /* Info.plist */,
+			);
+			path = "A01-CZ彩票Tests";
+			sourceTree = "<group>";
+		};
+		356B17331C06B015003AEF36 /* A01-CZ彩票UITests */ = {
+			isa = PBXGroup;
+			children = (
+				356B17341C06B015003AEF36 /* A01_CZ__UITests.m */,
+				356B17361C06B015003AEF36 /* Info.plist */,
+			);
+			path = "A01-CZ彩票UITests";
+			sourceTree = "<group>";
+		};
+		35C5730A1C06EEDF00B0207F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				35C573071C06EEDB00B0207F /* UIImage+Ex.h */,
+				35C573081C06EEDB00B0207F /* UIImage+Ex.m */,
+				35C573151C06FF0600B0207F /* UIView+Ex.h */,
+				35C573161C06FF0600B0207F /* UIView+Ex.m */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		35C5730B1C06F32E00B0207F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				35C5730C1C06F32E00B0207F /* Controller */,
+				35C5730D1C06F32E00B0207F /* Model */,
+				35C5730E1C06F32E00B0207F /* View */,
+			);
+			name = Main;
+			path = Classes/Main;
+			sourceTree = "<group>";
+		};
+		35C5730C1C06F32E00B0207F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35C5730F1C06F35400B0207F /* CZTabBarController.h */,
+				35C573101C06F35400B0207F /* CZTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35C5730D1C06F32E00B0207F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35C5730E1C06F32E00B0207F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35C573121C06F68100B0207F /* CZTabBar.h */,
+				35C573131C06F68100B0207F /* CZTabBar.m */,
+				352381621C07F631003D9021 /* CZTabBarButton.h */,
+				352381631C07F631003D9021 /* CZTabBarButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		356B170B1C06B015003AEF36 /* A01-CZ彩票 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 356B17391C06B015003AEF36 /* Build configuration list for PBXNativeTarget "A01-CZ彩票" */;
+			buildPhases = (
+				356B17081C06B015003AEF36 /* Sources */,
+				356B17091C06B015003AEF36 /* Frameworks */,
+				356B170A1C06B015003AEF36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "A01-CZ彩票";
+			productName = "A01-CZ彩票";
+			productReference = 356B170C1C06B015003AEF36 /* A01-CZ彩票.app */;
+			productType = "com.apple.product-type.application";
+		};
+		356B17241C06B015003AEF36 /* A01-CZ彩票Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 356B173C1C06B015003AEF36 /* Build configuration list for PBXNativeTarget "A01-CZ彩票Tests" */;
+			buildPhases = (
+				356B17211C06B015003AEF36 /* Sources */,
+				356B17221C06B015003AEF36 /* Frameworks */,
+				356B17231C06B015003AEF36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				356B17271C06B015003AEF36 /* PBXTargetDependency */,
+			);
+			name = "A01-CZ彩票Tests";
+			productName = "A01-CZ彩票Tests";
+			productReference = 356B17251C06B015003AEF36 /* A01-CZ彩票Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		356B172F1C06B015003AEF36 /* A01-CZ彩票UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 356B173F1C06B015003AEF36 /* Build configuration list for PBXNativeTarget "A01-CZ彩票UITests" */;
+			buildPhases = (
+				356B172C1C06B015003AEF36 /* Sources */,
+				356B172D1C06B015003AEF36 /* Frameworks */,
+				356B172E1C06B015003AEF36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				356B17321C06B015003AEF36 /* PBXTargetDependency */,
+			);
+			name = "A01-CZ彩票UITests";
+			productName = "A01-CZ彩票UITests";
+			productReference = 356B17301C06B015003AEF36 /* A01-CZ彩票UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		356B17041C06B015003AEF36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CZ;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "何建新";
+				TargetAttributes = {
+					356B170B1C06B015003AEF36 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = SXAMGGC2DK;
+					};
+					356B17241C06B015003AEF36 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = SXAMGGC2DK;
+						TestTargetID = 356B170B1C06B015003AEF36;
+					};
+					356B172F1C06B015003AEF36 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = SXAMGGC2DK;
+						TestTargetID = 356B170B1C06B015003AEF36;
+					};
+				};
+			};
+			buildConfigurationList = 356B17071C06B015003AEF36 /* Build configuration list for PBXProject "A01-CZ彩票" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 356B17031C06B015003AEF36;
+			productRefGroup = 356B170D1C06B015003AEF36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				356B170B1C06B015003AEF36 /* A01-CZ彩票 */,
+				356B17241C06B015003AEF36 /* A01-CZ彩票Tests */,
+				356B172F1C06B015003AEF36 /* A01-CZ彩票UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		356B170A1C06B015003AEF36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3536B3FF1C06CF890051C27D /* Discovery.storyboard in Resources */,
+				3536B4031C06D3880051C27D /* MyLottery.storyboard in Resources */,
+				3536B3FD1C06CE730051C27D /* Arena.storyboard in Resources */,
+				3536B3F81C06CB2E0051C27D /* 笔记 in Resources */,
+				3536B4011C06D3410051C27D /* History.storyboard in Resources */,
+				356B171F1C06B015003AEF36 /* LaunchScreen.storyboard in Resources */,
+				3536B3F61C06CABA0051C27D /* LotteryHall.storyboard in Resources */,
+				356B17431C06B37F003AEF36 /* Images.xcassets in Resources */,
+				356B171C1C06B015003AEF36 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356B17231C06B015003AEF36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356B172E1C06B015003AEF36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		356B17081C06B015003AEF36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				352381641C07F631003D9021 /* CZTabBarButton.m in Sources */,
+				35C573141C06F68100B0207F /* CZTabBar.m in Sources */,
+				35C573111C06F35400B0207F /* CZTabBarController.m in Sources */,
+				35C573091C06EEDB00B0207F /* UIImage+Ex.m in Sources */,
+				356B17141C06B015003AEF36 /* AppDelegate.m in Sources */,
+				356B17111C06B015003AEF36 /* main.m in Sources */,
+				35C573171C06FF0600B0207F /* UIView+Ex.m in Sources */,
+				3536B3FB1C06CC320051C27D /* CZLotteryHallController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356B17211C06B015003AEF36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356B172A1C06B015003AEF36 /* A01_CZ__Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356B172C1C06B015003AEF36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356B17351C06B015003AEF36 /* A01_CZ__UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		356B17271C06B015003AEF36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 356B170B1C06B015003AEF36 /* A01-CZ彩票 */;
+			targetProxy = 356B17261C06B015003AEF36 /* PBXContainerItemProxy */;
+		};
+		356B17321C06B015003AEF36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 356B170B1C06B015003AEF36 /* A01-CZ彩票 */;
+			targetProxy = 356B17311C06B015003AEF36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		356B171D1C06B015003AEF36 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				356B171E1C06B015003AEF36 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		356B17371C06B015003AEF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		356B17381C06B015003AEF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		356B173A1C06B015003AEF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = "A01-CZ彩票/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.A01-CZ--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		356B173B1C06B015003AEF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = "A01-CZ彩票/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.A01-CZ--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		356B173D1C06B015003AEF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "A01-CZ彩票Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.A01-CZ--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/A01-CZ彩票.app/A01-CZ彩票";
+			};
+			name = Debug;
+		};
+		356B173E1C06B015003AEF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "A01-CZ彩票Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.A01-CZ--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/A01-CZ彩票.app/A01-CZ彩票";
+			};
+			name = Release;
+		};
+		356B17401C06B015003AEF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "A01-CZ彩票UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.A01-CZ--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "A01-CZ彩票";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		356B17411C06B015003AEF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "A01-CZ彩票UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.A01-CZ--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "A01-CZ彩票";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		356B17071C06B015003AEF36 /* Build configuration list for PBXProject "A01-CZ彩票" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356B17371C06B015003AEF36 /* Debug */,
+				356B17381C06B015003AEF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		356B17391C06B015003AEF36 /* Build configuration list for PBXNativeTarget "A01-CZ彩票" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356B173A1C06B015003AEF36 /* Debug */,
+				356B173B1C06B015003AEF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		356B173C1C06B015003AEF36 /* Build configuration list for PBXNativeTarget "A01-CZ彩票Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356B173D1C06B015003AEF36 /* Debug */,
+				356B173E1C06B015003AEF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		356B173F1C06B015003AEF36 /* Build configuration list for PBXNativeTarget "A01-CZ彩票UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356B17401C06B015003AEF36 /* Debug */,
+				356B17411C06B015003AEF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 356B17041C06B015003AEF36 /* Project object */;
+}

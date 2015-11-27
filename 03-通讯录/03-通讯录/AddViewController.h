@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @class AddViewController;
+@class Contact;
 @protocol AddViewControllerDelegate <NSObject>
 
--(void)addViewController:(AddViewController *)viewController withName:(NSString *)name andNumber:(NSString *)number;
+-(void)addViewController:(AddViewController *)viewController withCibtact:(Contact *)contact;
 
 @end
 @interface AddViewController : UIViewController

@@ -9,6 +9,11 @@
 #import "LoginViewController.h"
 #import "MBProgressHUD/MBProgressHUD+MJ.h"
 #import "ContactsViewController.h"
+
+#define kAccountKey @"account"
+#define kPwdKey @"passowrd"
+#define kRemPwdSwitchKey @"remPwdSwitch"
+#define kAutoLoginSwitchKey @"autoLoginSwitch"
 @interface LoginViewController ()<UITextFieldDelegate>
 //账号
 @property (weak, nonatomic) IBOutlet UITextField *accountField;
@@ -20,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *remPwdSwitch;
 //自动登录
 @property (weak, nonatomic) IBOutlet UISwitch *autoLoginSwitch;
+//登录按钮
 - (IBAction)login:(UIButton *)sender;
 
 @end
@@ -39,6 +45,22 @@
     [self.remPwdSwitch addTarget:self action:@selector(remPwdSwitchChange) forControlEvents:UIControlEventValueChanged];
     //监听自动登录switch状态
     [self.autoLoginSwitch addTarget:self action:@selector(autoLoginSwitchChange) forControlEvents:UIControlEventValueChanged];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    self.accountField.text = [ud objectForKey:kAccountKey];
+    
+    self.remPwdSwitch.on = [ud boolForKey:kRemPwdSwitchKey];
+    self.autoLoginSwitch.on = [ud boolForKey:kAutoLoginSwitchKey];
+    //如果记住密码是开启状态在去给密码文本赋值
+    if (self.remPwdSwitch.isOn) {
+        self.passwordField.text = [ud objectForKey:kPwdKey];
+    }
+    if (self.autoLoginSwitch.isOn) {
+        
+        //[self login:nil];
+    }
+    //监听登录按钮是否可用
+    [self textChange];
 }
 //通过segue跳转后比定执行这个方法。用来进行两个界面进行传值
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -70,6 +92,7 @@
 }
 //账户输入框监听方法
 -(void)textChange{
+    //判断用户名输入框和密码输入框是否有长度，没有则登录按钮不可用
     if(self.accountField.text.length && self.passwordField.text.length){
         self.loginButton.enabled = YES;
     }else{
@@ -78,13 +101,24 @@
 }
 //点击登录按钮事件，跳转到segua的id为login2contacts所指向的界面
 - (IBAction)login:(UIButton *)sender {
+    //调用MBProgressHUD框架的showMessage:方法。弹出提示框
     [MBProgressHUD showMessage:@"正在加载"];
     //延时多少秒执行闭包内代码
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //关闭MBProgressHUD的提示框
         [MBProgressHUD hideHUD];
+        //判断用户名和密码是否等于hjx
         if ([self.accountField.text isEqualToString:@"hjx"] && [self.passwordField.text isEqualToString:@"hjx"]) {
-            
+            //跳转到segue得ID为login2contacts的页面
             [self performSegueWithIdentifier:@"login2contacts" sender:nil];
+            //保存登录信息
+            NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+            [ud setObject:self.accountField.text forKey:kAccountKey];
+            [ud setObject:self.passwordField.text forKey:kPwdKey];
+            [ud setBool:self.remPwdSwitch.isOn forKey:kRemPwdSwitchKey];
+            [ud setBool:self.autoLoginSwitch.isOn forKey:kAutoLoginSwitchKey];
+            //立即存储
+            [ud synchronize];
         }else{
             //使用框架的类方法提示信息
             [MBProgressHUD showError:@"用户名活密码错误"];

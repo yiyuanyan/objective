@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35019A411BFDAE6E00EE3B69 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35019A401BFDAE6E00EE3B69 /* EditViewController.m */; };
 		3585AA0D1BFC1592005E7E8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3585AA0C1BFC1592005E7E8C /* main.m */; };
 		3585AA101BFC1592005E7E8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3585AA0F1BFC1592005E7E8C /* AppDelegate.m */; };
 		3585AA161BFC1592005E7E8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3585AA141BFC1592005E7E8C /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		3585AA4B1BFC555C005E7E8C /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3585AA471BFC555C005E7E8C /* MBProgressHUD.bundle */; };
 		3585AA4C1BFC555C005E7E8C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3585AA491BFC555C005E7E8C /* MBProgressHUD.m */; };
 		3585AA4F1BFC70B5005E7E8C /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3585AA4E1BFC70B5005E7E8C /* AddViewController.m */; };
+		359797801BFD7DD200BC53C2 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3597977F1BFD7DD200BC53C2 /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35019A3F1BFDAE6E00EE3B69 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		35019A401BFDAE6E00EE3B69 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		3585AA081BFC1592005E7E8C /* 03-通讯录.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "03-通讯录.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3585AA0C1BFC1592005E7E8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3585AA0E1BFC1592005E7E8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 		3585AA491BFC555C005E7E8C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		3585AA4D1BFC70B5005E7E8C /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		3585AA4E1BFC70B5005E7E8C /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		3597977E1BFD7DD200BC53C2 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		3597977F1BFD7DD200BC53C2 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +130,15 @@
 				3585AA421BFC3E54005E7E8C /* ContactsViewController.m */,
 				3585AA4D1BFC70B5005E7E8C /* AddViewController.h */,
 				3585AA4E1BFC70B5005E7E8C /* AddViewController.m */,
+				35019A3F1BFDAE6E00EE3B69 /* EditViewController.h */,
+				35019A401BFDAE6E00EE3B69 /* EditViewController.m */,
 				3585AA141BFC1592005E7E8C /* Main.storyboard */,
 				3585AA171BFC1592005E7E8C /* Assets.xcassets */,
 				3585AA191BFC1592005E7E8C /* LaunchScreen.storyboard */,
 				3585AA1C1BFC1592005E7E8C /* Info.plist */,
 				3585AA0B1BFC1592005E7E8C /* Supporting Files */,
+				3597977E1BFD7DD200BC53C2 /* Contact.h */,
+				3597977F1BFD7DD200BC53C2 /* Contact.m */,
 			);
 			path = "03-通讯录";
 			sourceTree = "<group>";
@@ -305,6 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359797801BFD7DD200BC53C2 /* Contact.m in Sources */,
+				35019A411BFDAE6E00EE3B69 /* EditViewController.m in Sources */,
 				3585AA101BFC1592005E7E8C /* AppDelegate.m in Sources */,
 				3585AA4C1BFC555C005E7E8C /* MBProgressHUD.m in Sources */,
 				3585AA4A1BFC555C005E7E8C /* MBProgressHUD+MJ.m in Sources */,
@@ -539,6 +551,7 @@
 				3585AA371BFC1593005E7E8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3585AA381BFC1593005E7E8C /* Build configuration list for PBXNativeTarget "03-通讯录Tests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +560,7 @@
 				3585AA3A1BFC1593005E7E8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3585AA3B1BFC1593005E7E8C /* Build configuration list for PBXNativeTarget "03-通讯录UITests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +569,7 @@
 				3585AA3D1BFC1593005E7E8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

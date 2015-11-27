@@ -1,0 +1,26 @@
+1、创建项目
+2、设置APP图标和启动图片（启动图片决定 APP 中view的大小）320*568
+3、创建项目结构（组，根据每一个模块创建，模块的名称和sb的名称和tabBar中得图片的名称一样）
+4、创建tabBarController 在APPDelegate中 代码创建
+5、创建每一个模块的sb并欠佳所需要的控制器(导航控制器)
+6、设置每一个子控制器的tabBarItem
+    6.1tabBarItem的图片会被加上蒙版  。。。解决
+    6.2tabBarItem中的图片显示考上。。。解决--自定义tabBar
+7、自定义tabBarController，把添加子控制器的方法封装起来
+
+8、自定义tabBar
+    8.1 方法 添加tabBarIem按钮
+    8.2 按钮的图片 按钮的大小sizeToFit 给按钮注册事件
+    8.3 点击按钮 设置按钮选中状态 通知控制器 改变当前选中的子控制器
+    8.4 计算每一个按钮的位置
+    8.5 在controller中调用
+    8.6 鼠标按下就把按钮的状态设置为选中
+    8.7 点击了按钮 代理通知控制器 改变当前选中的子控制器
+
+9、写UIView的分类 x,y,width,height
+
+10、设置状态
+    10.1 取消启动图片上的时间
+    10.2 设置所有控制器上的状态栏的高亮显示
+    10.3 在tabBarController中设置所有导航条的样式
+        [UINavigationBar appearance]可以获取所有的导航条
