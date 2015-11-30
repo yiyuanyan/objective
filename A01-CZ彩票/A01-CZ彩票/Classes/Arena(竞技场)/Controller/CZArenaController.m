@@ -45,6 +45,7 @@
         NSLog(@"第一个视图");
     }else{
         NSLog(@"第二个视图");
+        
     }
     //获取当前对应的segment的文本标题
     NSString *title = [sender titleForSegmentAtIndex:sender.selectedSegmentIndex];
