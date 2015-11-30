@@ -19,16 +19,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //创建自定义tabBar
-    CZTabBar *tabBar = [[CZTabBar alloc]init];
-    //设置CZTabBar的代理
+//    CZTabBar *tabBar = [[CZTabBar alloc]init];
+//    //设置CZTabBar的代理
+//    tabBar.delegate = self;
+//    [self.view addSubview:tabBar];
+//    //设置tabBar的大小
+//    tabBar.frame = self.tabBar.frame;
+//    //移除掉系统的tabBar
+//    [self.tabBar removeFromSuperview];
+    CZTabBar* tabBar = [[CZTabBar alloc]init];
+    
     tabBar.delegate = self;
-    [self.view addSubview:tabBar];
-    //设置tabBar的大小
-    tabBar.frame = self.tabBar.frame;
-    //移除掉系统的tabBar
-    [self.tabBar removeFromSuperview];
+    tabBar.frame = self.tabBar.bounds;
     //添加子控制器
     [self addChildControllers:tabBar];
+    //把自定义tabBar添加到系统的tabBar上,最后添加可以防止系统自动生成的tabBarItem覆盖在自定义tabBarItem上！
+    [self.tabBar addSubview:tabBar];
+    
+    
+    
     //设置导航条的样式,可以获取所有导航条
     UINavigationBar *navBar = [UINavigationBar appearance];
     [navBar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:UIBarMetricsDefault];

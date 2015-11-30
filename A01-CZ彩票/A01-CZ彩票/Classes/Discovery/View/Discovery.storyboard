@@ -5,21 +5,223 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--发现-->
         <scene sceneID="JCG-XW-YYT">
             <objects>
-                <tableViewController id="k4h-Lu-W4b" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eka-kQ-SbS">
+                <tableViewController id="k4h-Lu-W4b" customClass="CZDiscoveryController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="eka-kQ-SbS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="tZQ-f5-zP7">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="3Bu-Bo-hlE" detailTextLabel="d9J-gr-xrR" imageView="WHU-7d-tYx" style="IBUITableViewCellStyleSubtitle" id="GlH-9Y-s18">
+                                        <rect key="frame" x="0.0" y="99" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GlH-9Y-s18" id="Nbm-EQ-e1h">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="合买" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Bu-Bo-hlE">
+                                                    <rect key="frame" x="69" y="12" width="36" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="d9J-gr-xrR">
+                                                    <rect key="frame" x="69" y="33" width="143" height="15.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="groupBuyIcon" id="WHU-7d-tYx">
+                                                    <rect key="frame" x="15" y="9" width="39" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="O4X-eg-3H1" kind="show" id="QDW-xM-iwu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="Es4-b0-EZY">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="XAS-tQ-m7q" detailTextLabel="jES-XQ-rFK" imageView="S99-HG-ijK" style="IBUITableViewCellStyleSubtitle" id="svX-9q-AvA">
+                                        <rect key="frame" x="0.0" y="195" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="svX-9q-AvA" id="vF6-tr-PTn">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="合买" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XAS-tQ-m7q">
+                                                    <rect key="frame" x="69" y="12" width="36" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="jES-XQ-rFK">
+                                                    <rect key="frame" x="69" y="33" width="143" height="15.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="groupBuyIcon" id="S99-HG-ijK">
+                                                    <rect key="frame" x="15" y="9" width="39" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="tFR-8Y-kuC" detailTextLabel="bPo-T8-6dA" imageView="wcp-Ua-yYM" style="IBUITableViewCellStyleSubtitle" id="fQD-0o-J1o">
+                                        <rect key="frame" x="0.0" y="255" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fQD-0o-J1o" id="OvD-Jr-eNJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="幸运转盘" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tFR-8Y-kuC">
+                                                    <rect key="frame" x="69" y="12" width="72" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="bPo-T8-6dA">
+                                                    <rect key="frame" x="69" y="33" width="143" height="15.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="luckBetIcon" id="wcp-Ua-yYM">
+                                                    <rect key="frame" x="15" y="10" width="39" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="D9Q-Oj-A1W">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ndf-jP-sce" detailTextLabel="pdj-dD-g9k" imageView="mpw-UQ-5OX" style="IBUITableViewCellStyleSubtitle" id="VL2-W4-aml">
+                                        <rect key="frame" x="0.0" y="351" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VL2-W4-aml" id="afa-a4-jec">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="合买" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ndf-jP-sce">
+                                                    <rect key="frame" x="69" y="12" width="36" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="pdj-dD-g9k">
+                                                    <rect key="frame" x="69" y="33" width="143" height="15.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="groupBuyIcon" id="mpw-UQ-5OX">
+                                                    <rect key="frame" x="15" y="9" width="39" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="zlK-12-nt1" detailTextLabel="byR-P9-mwP" imageView="Sws-gW-msK" style="IBUITableViewCellStyleSubtitle" id="Ifo-Lo-gBV">
+                                        <rect key="frame" x="0.0" y="411" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ifo-Lo-gBV" id="weN-Ak-ykM">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="合买" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zlK-12-nt1">
+                                                    <rect key="frame" x="69" y="12" width="36" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="byR-P9-mwP">
+                                                    <rect key="frame" x="69" y="33" width="143" height="15.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="groupBuyIcon" id="Sws-gW-msK">
+                                                    <rect key="frame" x="15" y="9" width="39" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="k4h-Lu-W4b" id="pYc-Wb-pWS"/>
+                            <outlet property="delegate" destination="k4h-Lu-W4b" id="SHw-Cb-VxG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="发现" id="qmv-cH-fWZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGT-Q3-N1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="528"/>
+        </scene>
+        <!--购买全部-->
+        <scene sceneID="44v-nH-dN3">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="O4X-eg-3H1" customClass="CZGroupBuyController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RIY-bw-Wg8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GlH-9Y-s18">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="add-wM-y7K">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GlH-9Y-s18" id="Nbm-EQ-e1h">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="add-wM-y7K" id="0ED-gF-6XC">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -27,15 +229,15 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="k4h-Lu-W4b" id="pYc-Wb-pWS"/>
-                            <outlet property="delegate" destination="k4h-Lu-W4b" id="SHw-Cb-VxG"/>
+                            <outlet property="dataSource" destination="O4X-eg-3H1" id="k0n-5e-aTQ"/>
+                            <outlet property="delegate" destination="O4X-eg-3H1" id="6r2-Ql-vKh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="qmv-cH-fWZ"/>
+                    <navigationItem key="navigationItem" title="购买全部" id="b41-SB-wa1"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tGT-Q3-N1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUg-xa-gZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="475" y="528"/>
+            <point key="canvasLocation" x="1135" y="527"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MXL-Dp-eNr">
@@ -55,4 +257,8 @@
             <point key="canvasLocation" x="-345" y="528"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="groupBuyIcon" width="39" height="40"/>
+        <image name="luckBetIcon" width="39" height="39"/>
+    </resources>
 </document>
