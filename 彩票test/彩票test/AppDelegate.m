@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  A01-CZ彩票
+//  彩票test
 //
-//  Created by 何建新 on 15/11/26.
+//  Created by 何建新 on 15/11/30.
 //  Copyright © 2015年 何建新. All rights reserved.
 //
 
@@ -16,19 +16,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    //创建window,初始化window对象,屏幕(UIScreen)大小是(bounds)边界大小
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    //设置window为key并显示
+    //创建一个window。大小是SCreen的bounds
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //设置window为主显示界面
     [self.window makeKeyAndVisible];
-    //创建tabBarController 底部自定义导航栏
-    CZTabBarController *tabBarController = [CZTabBarController new];
-    //设置根控制器为底部自定义导航栏
+    //创建底部tabBarController
+    CZTabBarController *tabBarController = [[CZTabBarController alloc] init];
+    //将tabBarController设置为根控制器
     self.window.rootViewController = tabBarController;
+    
+    
     
     //设置状态栏，修改info.plist
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
     [application setStatusBarHidden:NO];
+    
+    
     
     
     

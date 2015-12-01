@@ -21,7 +21,9 @@
 -(void)addTabBarItem:(NSString *)name{
     //使用重新定义的类创建一个btn。类里面重新写了setHighlighted:方法
     CZTabBarButton *btn = [CZTabBarButton buttonWithType:UIButtonTypeCustom];
+    //self就是底部导航栏。将btn按钮加入
     [self addSubview:btn];  //self.subviews是个数组
+    //设置每个按钮的tag的值
     btn.tag = self.subviews.count - 1;
     //设置图片按钮
     [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"TabBar_%@_new",name]] forState:UIControlStateNormal];

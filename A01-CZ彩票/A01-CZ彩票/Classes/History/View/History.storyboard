@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1211" y="433"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav Controller-->
         <scene sceneID="qzW-TM-RGc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bNQ-yj-4p6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bNQ-yj-4p6" customClass="CZNavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UVn-vO-zn6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1216" y="416"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav Controller-->
         <scene sceneID="PjV-Rp-3q9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="axo-vm-oYI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="axo-vm-oYI" customClass="CZNavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ikb-pi-gzF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

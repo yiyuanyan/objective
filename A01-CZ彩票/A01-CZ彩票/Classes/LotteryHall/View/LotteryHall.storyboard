@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="1418" y="444"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav Controller-->
         <scene sceneID="Eqc-gj-keF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JNw-F6-Rvu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JNw-F6-Rvu" customClass="CZNavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hyY-OD-qzW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

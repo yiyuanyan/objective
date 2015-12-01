@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--发现-->
@@ -13,7 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="tZQ-f5-zP7">
                                 <cells>
@@ -29,7 +30,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="d9J-gr-xrR">
@@ -69,7 +70,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="jES-XQ-rFK">
@@ -102,7 +103,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="bPo-T8-6dA">
@@ -122,6 +123,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="FT0-Rw-1fV" kind="show" id="wZ3-0C-FQz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -139,7 +143,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="pdj-dD-g9k">
@@ -172,7 +176,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="跟着高手买，奖金分给我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" id="byR-P9-mwP">
@@ -207,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="475" y="528"/>
         </scene>
-        <!--购买全部-->
+        <!--全部彩种-->
         <scene sceneID="44v-nH-dN3">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="O4X-eg-3H1" customClass="CZGroupBuyController" sceneMemberID="viewController">
+                <tableViewController id="O4X-eg-3H1" customClass="CZGroupBuyController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RIY-bw-Wg8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,16 +237,130 @@
                             <outlet property="delegate" destination="O4X-eg-3H1" id="6r2-Ql-vKh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="购买全部" id="b41-SB-wa1"/>
+                    <navigationItem key="navigationItem" title="全部彩种" id="b41-SB-wa1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUg-xa-gZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="527"/>
+            <point key="canvasLocation" x="1161" y="219"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--幸运选号-->
+        <scene sceneID="4hM-qx-YjB">
+            <objects>
+                <viewController id="FT0-Rw-1fV" customClass="CZLuckyController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P7G-Rm-28v"/>
+                        <viewControllerLayoutGuide type="bottom" id="gVL-H3-dmV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d6A-tP-cem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luck_entry_background" translatesAutoresizingMaskIntoConstraints="NO" id="5jO-xf-GiR">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-FR-9bo">
+                                <rect key="frame" x="161" y="259" width="140" height="144"/>
+                                <animations/>
+                                <state key="normal" image="luck_entry_roulette_button_normal"/>
+                                <connections>
+                                    <segue destination="1tY-OQ-3uV" kind="presentation" id="n3I-3D-AW0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxd-hZ-FNN">
+                                <rect key="frame" x="26" y="259" width="130" height="139"/>
+                                <animations/>
+                                <state key="normal" image="luck_entry_number_button_normal"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx6-nH-I83">
+                                <rect key="frame" x="166" y="81" width="130" height="139"/>
+                                <animations/>
+                                <state key="normal" image="luck_entry_number_button_normal"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMx-X1-bPS">
+                                <rect key="frame" x="26" y="81" width="130" height="139"/>
+                                <animations/>
+                                <state key="normal" image="luck_entry_number_button_normal"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lucky_entry_light0" translatesAutoresizingMaskIntoConstraints="NO" id="uYd-yK-PrA">
+                                <rect key="frame" x="72" y="37" width="231" height="29"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5jO-xf-GiR" firstAttribute="top" secondItem="lMx-X1-bPS" secondAttribute="bottom" constant="-220" id="25p-Kv-SbI"/>
+                            <constraint firstItem="5jO-xf-GiR" firstAttribute="leading" secondItem="d6A-tP-cem" secondAttribute="leadingMargin" constant="-20" id="3Tz-3n-ROt"/>
+                            <constraint firstItem="uYd-yK-PrA" firstAttribute="centerX" secondItem="5jO-xf-GiR" secondAttribute="centerX" id="532-GB-WUM"/>
+                            <constraint firstItem="cgn-FR-9bo" firstAttribute="centerX" secondItem="cx6-nH-I83" secondAttribute="centerX" id="6gx-Rs-cs4"/>
+                            <constraint firstItem="Zxd-hZ-FNN" firstAttribute="top" secondItem="lMx-X1-bPS" secondAttribute="bottom" constant="39" id="KOG-7g-Wm4"/>
+                            <constraint firstItem="cx6-nH-I83" firstAttribute="leading" secondItem="lMx-X1-bPS" secondAttribute="trailing" constant="10" id="NLB-DR-j5p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5jO-xf-GiR" secondAttribute="trailing" constant="-20" id="PI7-09-AK9"/>
+                            <constraint firstItem="5jO-xf-GiR" firstAttribute="top" secondItem="uYd-yK-PrA" secondAttribute="bottom" constant="-66" id="R1D-Pd-b0s"/>
+                            <constraint firstItem="cgn-FR-9bo" firstAttribute="top" secondItem="cx6-nH-I83" secondAttribute="bottom" constant="39" id="Z4f-Zp-rxC"/>
+                            <constraint firstItem="cx6-nH-I83" firstAttribute="centerY" secondItem="lMx-X1-bPS" secondAttribute="centerY" id="ZVF-E7-3EY"/>
+                            <constraint firstItem="lMx-X1-bPS" firstAttribute="leading" secondItem="d6A-tP-cem" secondAttribute="leadingMargin" constant="10" id="bL3-GH-fTD"/>
+                            <constraint firstItem="5jO-xf-GiR" firstAttribute="bottom" secondItem="d6A-tP-cem" secondAttribute="bottomMargin" id="d5L-tF-Hpu"/>
+                            <constraint firstItem="Zxd-hZ-FNN" firstAttribute="centerX" secondItem="lMx-X1-bPS" secondAttribute="centerX" id="fwD-QD-P9e"/>
+                            <constraint firstItem="5jO-xf-GiR" firstAttribute="top" secondItem="d6A-tP-cem" secondAttribute="topMargin" id="hcl-UJ-VHs"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="幸运选号" id="hL2-lh-d5a"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="uYd-yK-PrA" id="Hoi-3G-CDP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCv-i6-ioa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161.5" y="906.5"/>
+        </scene>
+        <!--Wheel Controller-->
+        <scene sceneID="eil-XA-3pu">
+            <objects>
+                <viewController id="1tY-OQ-3uV" customClass="CZWheelController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Knx-Mc-pMM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vdp-he-drn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1cb-GM-51h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LuckyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="06e-6x-lJc">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JX0-dV-s4E">
+                                <rect key="frame" x="15" y="20" width="22" height="22"/>
+                                <animations/>
+                                <state key="normal" image="LuckyConfirmClose"/>
+                                <connections>
+                                    <action selector="closeClick:" destination="1tY-OQ-3uV" eventType="touchUpInside" id="8RC-Yf-lQW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="06e-6x-lJc" firstAttribute="top" secondItem="1cb-GM-51h" secondAttribute="topMargin" id="5t1-bA-luy"/>
+                            <constraint firstItem="06e-6x-lJc" firstAttribute="leading" secondItem="1cb-GM-51h" secondAttribute="leadingMargin" constant="-20" id="Jcv-Pa-I5G"/>
+                            <constraint firstItem="Vdp-he-drn" firstAttribute="top" secondItem="06e-6x-lJc" secondAttribute="bottom" id="N9H-2g-wnR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="06e-6x-lJc" secondAttribute="trailing" constant="-20" id="NC1-oQ-o77"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ghe-dG-ajj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666.5" y="869.5"/>
+        </scene>
+        <!--Nav Controller-->
         <scene sceneID="MXL-Dp-eNr">
             <objects>
-                <navigationController id="Sr3-U0-7oY" sceneMemberID="viewController">
+                <navigationController id="Sr3-U0-7oY" customClass="CZNavController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ie-gR-o08">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -258,7 +376,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LuckyBackground" width="320" height="368"/>
+        <image name="LuckyConfirmClose" width="22" height="22"/>
         <image name="groupBuyIcon" width="39" height="40"/>
         <image name="luckBetIcon" width="39" height="39"/>
+        <image name="luck_entry_background" width="320" height="368"/>
+        <image name="luck_entry_number_button_normal" width="130" height="139"/>
+        <image name="luck_entry_roulette_button_normal" width="140" height="144"/>
+        <image name="lucky_entry_light0" width="231" height="29"/>
     </resources>
 </document>
