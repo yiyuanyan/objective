@@ -5,25 +5,90 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--我的彩票-->
         <scene sceneID="nDe-0k-qmc">
             <objects>
-                <viewController id="VHm-ss-19r" sceneMemberID="viewController">
+                <viewController id="VHm-ss-19r" customClass="CZMyLotterController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JTc-sn-QPg"/>
                         <viewControllerLayoutGuide type="bottom" id="do3-a3-7kO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hHJ-Z7-dJI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginScreen" translatesAutoresizingMaskIntoConstraints="NO" id="1yu-Ir-cgK">
+                                <rect key="frame" x="39" y="72" width="296" height="138"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用网易帐号登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e97-cd-fxd">
+                                <rect key="frame" x="128" y="244" width="119" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75O-ND-LzA">
+                                <rect key="frame" x="37" y="300" width="300" height="34"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="OhI-K2-do4"/>
+                                    <constraint firstAttribute="height" constant="34" id="Ru7-Ov-Ecr"/>
+                                </constraints>
+                                <state key="normal" title="登录" backgroundImage="RedButton">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginClick:" destination="VHm-ss-19r" eventType="touchUpInside" id="bGQ-PZ-aM2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e97-cd-fxd" firstAttribute="centerX" secondItem="1yu-Ir-cgK" secondAttribute="centerX" id="3nK-4C-4Wi"/>
+                            <constraint firstItem="e97-cd-fxd" firstAttribute="top" secondItem="1yu-Ir-cgK" secondAttribute="bottom" constant="34" id="Djm-79-hVG"/>
+                            <constraint firstItem="1yu-Ir-cgK" firstAttribute="centerX" secondItem="hHJ-Z7-dJI" secondAttribute="centerX" id="HCI-SN-VAr"/>
+                            <constraint firstItem="1yu-Ir-cgK" firstAttribute="top" secondItem="JTc-sn-QPg" secondAttribute="bottom" constant="8" id="VHa-Pz-xX4"/>
+                            <constraint firstItem="75O-ND-LzA" firstAttribute="centerX" secondItem="e97-cd-fxd" secondAttribute="centerX" id="ZD2-h8-HSL"/>
+                            <constraint firstItem="75O-ND-LzA" firstAttribute="top" secondItem="e97-cd-fxd" secondAttribute="bottom" constant="35" id="nwO-Yc-Bp4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的彩票" id="0n2-dn-lto">
+                        <barButtonItem key="rightBarButtonItem" image="Mylottery_config" id="lDF-mk-UJs">
+                            <connections>
+                                <action selector="configClick:" destination="VHm-ss-19r" id="Gat-ab-1HF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="configItem" destination="lDF-mk-UJs" id="z3p-Cx-DkM"/>
+                        <outlet property="loginView" destination="75O-ND-LzA" id="2Cy-V0-NUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1N-aL-egp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="416"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="1ZP-nG-X5o">
+            <objects>
+                <viewController id="wjE-Qd-rbk" customClass="CZLoginController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y5X-Rl-l5g"/>
+                        <viewControllerLayoutGuide type="bottom" id="EUj-Rx-kmC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="57N-t4-2yD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0n2-dn-lto"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c1N-aL-egp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgh-y2-NUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="416"/>
+            <point key="canvasLocation" x="1774" y="382"/>
         </scene>
         <!--Nav Controller-->
         <scene sceneID="PjV-Rp-3q9">
@@ -45,4 +110,9 @@
             <point key="canvasLocation" x="404" y="416"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LoginScreen" width="296" height="138"/>
+        <image name="Mylottery_config" width="22" height="22"/>
+        <image name="RedButton" width="61" height="34"/>
+    </resources>
 </document>

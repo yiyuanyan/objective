@@ -5,6 +5,20 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 31,
+          "top" : 24,
+          "right" : 52,
+          "left" : 39
+        }
+      },
       "idiom" : "universal",
       "filename" : "RedButtonPressed@2x.png",
       "scale" : "2x"

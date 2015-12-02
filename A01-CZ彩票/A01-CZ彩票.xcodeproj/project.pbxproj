@@ -19,6 +19,12 @@
 		3536B3FF1C06CF890051C27D /* Discovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3536B3FE1C06CF890051C27D /* Discovery.storyboard */; };
 		3536B4011C06D3410051C27D /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3536B4001C06D3410051C27D /* History.storyboard */; };
 		3536B4031C06D3880051C27D /* MyLottery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3536B4021C06D3880051C27D /* MyLottery.storyboard */; };
+		354929331C0E852900C93DF8 /* CZWheelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 354929321C0E852900C93DF8 /* CZWheelButton.m */; };
+		354929361C0EBA3D00C93DF8 /* CZMyLotterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 354929351C0EBA3D00C93DF8 /* CZMyLotterController.m */; };
+		354929391C0EBCE200C93DF8 /* CZLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 354929381C0EBCE200C93DF8 /* CZLoginController.m */; };
+		354929401C0EC33E00C93DF8 /* CZSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3549293F1C0EC33E00C93DF8 /* CZSettingsController.m */; };
+		354929431C0ED56A00C93DF8 /* CZGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 354929421C0ED56A00C93DF8 /* CZGroup.m */; };
+		354929461C0ED57400C93DF8 /* CZItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 354929451C0ED57400C93DF8 /* CZItem.m */; };
 		3552EFED1C0D64B60097D50B /* CZLuckyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552EFEC1C0D64B60097D50B /* CZLuckyController.m */; };
 		3552EFF01C0D66870097D50B /* CZNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552EFEF1C0D66870097D50B /* CZNavController.m */; };
 		3552EFF31C0D8A5C0097D50B /* CZWheelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3552EFF21C0D8A5C0097D50B /* CZWheelView.xib */; };
@@ -74,6 +80,18 @@
 		3536B3FE1C06CF890051C27D /* Discovery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discovery.storyboard; sourceTree = "<group>"; };
 		3536B4001C06D3410051C27D /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		3536B4021C06D3880051C27D /* MyLottery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyLottery.storyboard; sourceTree = "<group>"; };
+		354929311C0E852900C93DF8 /* CZWheelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZWheelButton.h; sourceTree = "<group>"; };
+		354929321C0E852900C93DF8 /* CZWheelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZWheelButton.m; sourceTree = "<group>"; };
+		354929341C0EBA3D00C93DF8 /* CZMyLotterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZMyLotterController.h; sourceTree = "<group>"; };
+		354929351C0EBA3D00C93DF8 /* CZMyLotterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZMyLotterController.m; sourceTree = "<group>"; };
+		354929371C0EBCE200C93DF8 /* CZLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLoginController.h; sourceTree = "<group>"; };
+		354929381C0EBCE200C93DF8 /* CZLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLoginController.m; sourceTree = "<group>"; };
+		3549293E1C0EC33E00C93DF8 /* CZSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSettingsController.h; sourceTree = "<group>"; };
+		3549293F1C0EC33E00C93DF8 /* CZSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSettingsController.m; sourceTree = "<group>"; };
+		354929411C0ED56A00C93DF8 /* CZGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZGroup.h; sourceTree = "<group>"; };
+		354929421C0ED56A00C93DF8 /* CZGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZGroup.m; sourceTree = "<group>"; };
+		354929441C0ED57400C93DF8 /* CZItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZItem.h; sourceTree = "<group>"; };
+		354929451C0ED57400C93DF8 /* CZItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZItem.m; sourceTree = "<group>"; };
 		3552EFEB1C0D64B60097D50B /* CZLuckyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLuckyController.h; sourceTree = "<group>"; };
 		3552EFEC1C0D64B60097D50B /* CZLuckyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLuckyController.m; sourceTree = "<group>"; };
 		3552EFEE1C0D66870097D50B /* CZNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNavController.h; sourceTree = "<group>"; };
@@ -300,6 +318,7 @@
 		3536B3F01C06C90A0051C27D /* MyLottery(我的彩票) */ = {
 			isa = PBXGroup;
 			children = (
+				3549293A1C0EC2F000C93DF8 /* Settings(设置) */,
 				3536B3F11C06C90A0051C27D /* Controller */,
 				3536B3F21C06C90A0051C27D /* Model */,
 				3536B3F31C06C90A0051C27D /* View */,
@@ -311,6 +330,10 @@
 		3536B3F11C06C90A0051C27D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				354929341C0EBA3D00C93DF8 /* CZMyLotterController.h */,
+				354929351C0EBA3D00C93DF8 /* CZMyLotterController.m */,
+				354929371C0EBCE200C93DF8 /* CZLoginController.h */,
+				354929381C0EBCE200C93DF8 /* CZLoginController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,12 +364,51 @@
 			path = Classes/Others;
 			sourceTree = "<group>";
 		};
+		3549293A1C0EC2F000C93DF8 /* Settings(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				3549293D1C0EC30800C93DF8 /* Controller */,
+				3549293C1C0EC30100C93DF8 /* Model */,
+				3549293B1C0EC2FA00C93DF8 /* View */,
+			);
+			name = "Settings(设置)";
+			sourceTree = "<group>";
+		};
+		3549293B1C0EC2FA00C93DF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3549293C1C0EC30100C93DF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				354929411C0ED56A00C93DF8 /* CZGroup.h */,
+				354929421C0ED56A00C93DF8 /* CZGroup.m */,
+				354929441C0ED57400C93DF8 /* CZItem.h */,
+				354929451C0ED57400C93DF8 /* CZItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3549293D1C0EC30800C93DF8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3549293E1C0EC33E00C93DF8 /* CZSettingsController.h */,
+				3549293F1C0EC33E00C93DF8 /* CZSettingsController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		3552EFF11C0D8A1E0097D50B /* Lucky */ = {
 			isa = PBXGroup;
 			children = (
 				3552EFF21C0D8A5C0097D50B /* CZWheelView.xib */,
 				3552EFF41C0D8A6F0097D50B /* CZWheelView.h */,
 				3552EFF51C0D8A6F0097D50B /* CZWheelView.m */,
+				354929311C0E852900C93DF8 /* CZWheelButton.h */,
+				354929321C0E852900C93DF8 /* CZWheelButton.m */,
 			);
 			name = Lucky;
 			sourceTree = "<group>";
@@ -605,6 +667,7 @@
 			files = (
 				352381641C07F631003D9021 /* CZTabBarButton.m in Sources */,
 				35C573141C06F68100B0207F /* CZTabBar.m in Sources */,
+				354929401C0EC33E00C93DF8 /* CZSettingsController.m in Sources */,
 				35C573111C06F35400B0207F /* CZTabBarController.m in Sources */,
 				3552EFF01C0D66870097D50B /* CZNavController.m in Sources */,
 				3523816C1C084539003D9021 /* CZArenaController.m in Sources */,
@@ -613,10 +676,15 @@
 				3552EFF91C0D8BFE0097D50B /* CZWheelController.m in Sources */,
 				3552EFED1C0D64B60097D50B /* CZLuckyController.m in Sources */,
 				356B17141C06B015003AEF36 /* AppDelegate.m in Sources */,
+				354929331C0E852900C93DF8 /* CZWheelButton.m in Sources */,
+				354929361C0EBA3D00C93DF8 /* CZMyLotterController.m in Sources */,
 				350652DE1C0BEDA8004478DF /* CZDiscoveryController.m in Sources */,
 				352AB21F1C0C4766002D3446 /* CZTitleButton.m in Sources */,
 				356B17111C06B015003AEF36 /* main.m in Sources */,
+				354929461C0ED57400C93DF8 /* CZItem.m in Sources */,
 				35C573171C06FF0600B0207F /* UIView+Ex.m in Sources */,
+				354929391C0EBCE200C93DF8 /* CZLoginController.m in Sources */,
+				354929431C0ED56A00C93DF8 /* CZGroup.m in Sources */,
 				3536B3FB1C06CC320051C27D /* CZLotteryHallController.m in Sources */,
 				3523816F1C084608003D9021 /* CZArenaView.m in Sources */,
 				355C52BF1C0BF97B007468AF /* CZGroupBuyController.m in Sources */,
