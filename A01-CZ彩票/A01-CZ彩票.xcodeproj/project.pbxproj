@@ -25,6 +25,11 @@
 		354929401C0EC33E00C93DF8 /* CZSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3549293F1C0EC33E00C93DF8 /* CZSettingsController.m */; };
 		354929431C0ED56A00C93DF8 /* CZGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 354929421C0ED56A00C93DF8 /* CZGroup.m */; };
 		354929461C0ED57400C93DF8 /* CZItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 354929451C0ED57400C93DF8 /* CZItem.m */; };
+		354ADB761C0FD63D008B90BE /* CZItemArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 354ADB751C0FD63D008B90BE /* CZItemArrow.m */; };
+		354ADB791C0FD657008B90BE /* CZItemSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 354ADB781C0FD657008B90BE /* CZItemSwitch.m */; };
+		354ADB7C1C0FDA40008B90BE /* CZRedeemCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 354ADB7B1C0FDA40008B90BE /* CZRedeemCodeController.m */; };
+		354ADB7F1C1028F7008B90BE /* CZItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 354ADB7E1C1028F7008B90BE /* CZItemCell.m */; };
+		354ADB821C103150008B90BE /* CZMorePushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 354ADB811C103150008B90BE /* CZMorePushController.m */; };
 		3552EFED1C0D64B60097D50B /* CZLuckyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552EFEC1C0D64B60097D50B /* CZLuckyController.m */; };
 		3552EFF01C0D66870097D50B /* CZNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552EFEF1C0D66870097D50B /* CZNavController.m */; };
 		3552EFF31C0D8A5C0097D50B /* CZWheelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3552EFF21C0D8A5C0097D50B /* CZWheelView.xib */; };
@@ -92,6 +97,16 @@
 		354929421C0ED56A00C93DF8 /* CZGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZGroup.m; sourceTree = "<group>"; };
 		354929441C0ED57400C93DF8 /* CZItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZItem.h; sourceTree = "<group>"; };
 		354929451C0ED57400C93DF8 /* CZItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZItem.m; sourceTree = "<group>"; };
+		354ADB741C0FD63D008B90BE /* CZItemArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZItemArrow.h; sourceTree = "<group>"; };
+		354ADB751C0FD63D008B90BE /* CZItemArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZItemArrow.m; sourceTree = "<group>"; };
+		354ADB771C0FD657008B90BE /* CZItemSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZItemSwitch.h; sourceTree = "<group>"; };
+		354ADB781C0FD657008B90BE /* CZItemSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZItemSwitch.m; sourceTree = "<group>"; };
+		354ADB7A1C0FDA40008B90BE /* CZRedeemCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRedeemCodeController.h; sourceTree = "<group>"; };
+		354ADB7B1C0FDA40008B90BE /* CZRedeemCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRedeemCodeController.m; sourceTree = "<group>"; };
+		354ADB7D1C1028F7008B90BE /* CZItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZItemCell.h; sourceTree = "<group>"; };
+		354ADB7E1C1028F7008B90BE /* CZItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZItemCell.m; sourceTree = "<group>"; };
+		354ADB801C103150008B90BE /* CZMorePushController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZMorePushController.h; sourceTree = "<group>"; };
+		354ADB811C103150008B90BE /* CZMorePushController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZMorePushController.m; sourceTree = "<group>"; };
 		3552EFEB1C0D64B60097D50B /* CZLuckyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLuckyController.h; sourceTree = "<group>"; };
 		3552EFEC1C0D64B60097D50B /* CZLuckyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLuckyController.m; sourceTree = "<group>"; };
 		3552EFEE1C0D66870097D50B /* CZNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNavController.h; sourceTree = "<group>"; };
@@ -377,6 +392,8 @@
 		3549293B1C0EC2FA00C93DF8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				354ADB7D1C1028F7008B90BE /* CZItemCell.h */,
+				354ADB7E1C1028F7008B90BE /* CZItemCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -388,6 +405,10 @@
 				354929421C0ED56A00C93DF8 /* CZGroup.m */,
 				354929441C0ED57400C93DF8 /* CZItem.h */,
 				354929451C0ED57400C93DF8 /* CZItem.m */,
+				354ADB741C0FD63D008B90BE /* CZItemArrow.h */,
+				354ADB751C0FD63D008B90BE /* CZItemArrow.m */,
+				354ADB771C0FD657008B90BE /* CZItemSwitch.h */,
+				354ADB781C0FD657008B90BE /* CZItemSwitch.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -397,6 +418,10 @@
 			children = (
 				3549293E1C0EC33E00C93DF8 /* CZSettingsController.h */,
 				3549293F1C0EC33E00C93DF8 /* CZSettingsController.m */,
+				354ADB7A1C0FDA40008B90BE /* CZRedeemCodeController.h */,
+				354ADB7B1C0FDA40008B90BE /* CZRedeemCodeController.m */,
+				354ADB801C103150008B90BE /* CZMorePushController.h */,
+				354ADB811C103150008B90BE /* CZMorePushController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -672,7 +697,10 @@
 				3552EFF01C0D66870097D50B /* CZNavController.m in Sources */,
 				3523816C1C084539003D9021 /* CZArenaController.m in Sources */,
 				3552EFF61C0D8A6F0097D50B /* CZWheelView.m in Sources */,
+				354ADB761C0FD63D008B90BE /* CZItemArrow.m in Sources */,
 				35C573091C06EEDB00B0207F /* UIImage+Ex.m in Sources */,
+				354ADB791C0FD657008B90BE /* CZItemSwitch.m in Sources */,
+				354ADB7F1C1028F7008B90BE /* CZItemCell.m in Sources */,
 				3552EFF91C0D8BFE0097D50B /* CZWheelController.m in Sources */,
 				3552EFED1C0D64B60097D50B /* CZLuckyController.m in Sources */,
 				356B17141C06B015003AEF36 /* AppDelegate.m in Sources */,
@@ -680,8 +708,10 @@
 				354929361C0EBA3D00C93DF8 /* CZMyLotterController.m in Sources */,
 				350652DE1C0BEDA8004478DF /* CZDiscoveryController.m in Sources */,
 				352AB21F1C0C4766002D3446 /* CZTitleButton.m in Sources */,
+				354ADB7C1C0FDA40008B90BE /* CZRedeemCodeController.m in Sources */,
 				356B17111C06B015003AEF36 /* main.m in Sources */,
 				354929461C0ED57400C93DF8 /* CZItem.m in Sources */,
+				354ADB821C103150008B90BE /* CZMorePushController.m in Sources */,
 				35C573171C06FF0600B0207F /* UIView+Ex.m in Sources */,
 				354929391C0EBCE200C93DF8 /* CZLoginController.m in Sources */,
 				354929431C0ED56A00C93DF8 /* CZGroup.m in Sources */,

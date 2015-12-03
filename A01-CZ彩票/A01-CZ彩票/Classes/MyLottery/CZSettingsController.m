@@ -9,7 +9,14 @@
 #import "CZSettingsController.h"
 #import "CZGroup.h"
 #import "CZItem.h"
+#import "CZItemArrow.h"
+#import "CZRedeemCodeController.h"
+#import "CZItemSwitch.h"
+#import "CZItemCell.h"
+//推动和提醒
+#import "CZMorePushController.h"
 @interface CZSettingsController ()
+
 //存放分组
 @property(nonatomic, strong)NSArray *groups;
 @end
@@ -30,22 +37,24 @@
 //填写数据
 -(void)setData{
     //第一组
-    CZItem *item11 = [CZItem itemWithTitle:@"使用兑换码" icon:@"RedeemCode"];
+    CZItem *item11 = [CZItemArrow  itemWithTitle:@"使用兑换码" icon:@"RedeemCode" desController:[CZRedeemCodeController class]];
     
     CZGroup *group1 = [CZGroup groupWithItems:@[item11]];
     
     //第二组
-    CZItem *item21 = [CZItem itemWithTitle:@"推送和提醒" icon:@"MorePush"];
-    CZItem *item22 = [CZItem itemWithTitle:@"摇一摇机选" icon:@"handShake"];
-    CZItem *item23 = [CZItem itemWithTitle:@"声音效果" icon:@"sound_Effect"];
-    CZItem *item24 = [CZItem itemWithTitle:@"购彩小助手" icon:@"More_LotteryRecommend"];
-    CZItem *item25 = [CZItem itemWithTitle:@"圈子仅Wifi加载图片" icon:@"More_QuanZi_NetFlowSwitchImage"];
+    CZItem *item21 = [CZItemArrow itemWithTitle:@"推送和提醒" icon:@"MorePush" desController:[CZMorePushController class]];
+    CZItem *item22 = [CZItemSwitch itemWithTitle:@"摇一摇机选" icon:@"handShake"];
+    CZItem *item23 = [CZItemSwitch itemWithTitle:@"声音效果" icon:@"sound_Effect"];
+    CZItem *item24 = [CZItemSwitch itemWithTitle:@"购彩小助手" icon:@"More_LotteryRecommend"];
+    CZItem *item25 = [CZItemSwitch itemWithTitle:@"圈子仅Wifi加载图片" icon:@"More_QuanZi_NetFlowSwitchImage"];
     CZGroup *group2 = [CZGroup groupWithItems:@[item21,item22,item23,item24,item25]];
     
     
     
     //第三组
-    CZItem *item31 = [CZItem itemWithTitle:@"检查新版本" icon:@"MoreUpdate"];
+    CZItem *item31 = [CZItemArrow itemWithTitle:@"检查新版本" icon:@"MoreUpdate" option:^{
+        NSLog(@"检查新版本");
+    }];
     CZItem *item32 = [CZItem itemWithTitle:@"推荐给朋友" icon:@"MoreShare"];
     CZItem *item33 = [CZItem itemWithTitle:@"产品推荐" icon:@"MoreNetease"];
     CZItem *item34 = [CZItem itemWithTitle:@"关于" icon:@"MoreAbout"];
@@ -84,22 +93,38 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *reuseId = @"item";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId];
-    }
+    CZItemCell *cell = [CZItemCell cellWithTableView:tableView];
     CZGroup *group = self.groups[indexPath.section];
     CZItem *item = group.items[indexPath.row];
-    cell.textLabel.text = item.title;
-    cell.imageView.image = [UIImage imageNamed:item.icon];
+    cell.item = item;
     
-    
-    //设置剪头
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
+//选中某个CELL执行。tableView的代理方法 didSelectRowAtIndexPath/选中某个cell
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //去掉CELL选中的状态
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    //获取当前cell对应的模型对象
+    CZGroup *group = self.groups[indexPath.section];
+    CZItem *item = group.items[indexPath.row];
+    
+    //判断当前的对象是什么类型 是要跳转还是执行block
+    //判断item是否是CZItemArrow对象
+    if ([item isKindOfClass:[CZItemArrow class]]) {
+        if (item.option) {
+            //执行block方法
+            item.option();
+        }else if (item.desController){
+            //如果控制器不为空，跳转
+            UIViewController *vc = [[item.desController alloc]init];
+            vc.title = item.title;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

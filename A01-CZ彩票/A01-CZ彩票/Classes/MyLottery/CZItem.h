@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//定义一个block
+typedef void (^CZItemOption)();
 @interface CZItem : NSObject
 @property(nonatomic, copy)NSString *title;
 @property(nonatomic, copy)NSString *icon;
-
+@property(nonatomic, strong)Class desController;  //类属性
+@property(nonatomic, copy) CZItemOption option;
 +(instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon;
 @end

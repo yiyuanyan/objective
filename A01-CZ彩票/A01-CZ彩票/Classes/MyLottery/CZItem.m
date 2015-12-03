@@ -11,7 +11,7 @@
 @implementation CZItem
 +(instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon
 {
-    CZItem *item = [[CZItem alloc]init];
+    CZItem *item = [[self alloc]init];
     item.title = title;
     item.icon = icon;
     return item;
