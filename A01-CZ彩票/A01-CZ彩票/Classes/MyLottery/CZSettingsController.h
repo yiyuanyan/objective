@@ -2,12 +2,12 @@
 //  CZSettingsController.h
 //  A01-CZ彩票
 //
-//  Created by 何建新 on 15/12/2.
-//  Copyright © 2015年 何建新. All rights reserved.
+//  Created by apple on 15-6-14.
+//  Copyright (c) 2015年 itcast. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CZBaseSettingController.h"
 
-@interface CZSettingsController : UITableViewController
+@interface CZSettingsController : CZBaseSettingController
 
 @end

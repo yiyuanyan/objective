@@ -9,5 +9,11 @@
 #import "CZItemSwitch.h"
 
 @implementation CZItemSwitch
-
++(instancetype)itemWithTitle:(NSString *)title subTitle:(NSString *)subTitle
+{
+    CZItemSwitch *item = [self itemWithTitle:title];
+    item.subTitle = subTitle;
+    
+    return item;
+}
 @end

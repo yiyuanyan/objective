@@ -14,5 +14,10 @@ typedef void (^CZItemOption)();
 @property(nonatomic, copy)NSString *icon;
 @property(nonatomic, strong)Class desController;  //类属性
 @property(nonatomic, copy) CZItemOption option;
+@property(nonatomic, copy)NSString *subTitle;
+@property(nonatomic, copy)NSString *time;
+
 +(instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon;
++(instancetype)itemWithTitle:(NSString *)title;
++(instancetype)itemWithTitle:(NSString *)title time:(NSString *)time;
 @end

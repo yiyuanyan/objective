@@ -12,4 +12,5 @@
 @property(nonatomic, strong)CZItem *item;
 //创建一个可重用的cell
 +(instancetype)cellWithTableView:(UITableView *)tableView;
++(instancetype)cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style;
 @end

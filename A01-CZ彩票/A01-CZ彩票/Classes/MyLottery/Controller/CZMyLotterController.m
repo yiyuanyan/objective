@@ -10,6 +10,7 @@
 #import "CZLoginController.h"
 #import "CZSettingsController.h"
 #import "UIImage+Ex.h"
+#import "CZQuestionController.h"
 @interface CZMyLotterController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginView;
 
@@ -65,7 +66,9 @@
 
 //点击常见问题
 -(void)questionClick{
-
+    CZQuestionController *vc = [[CZQuestionController alloc]init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

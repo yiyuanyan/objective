@@ -2,12 +2,12 @@
 //  CZMorePushController.h
 //  A01-CZ彩票
 //
-//  Created by 何建新 on 15/12/3.
-//  Copyright © 2015年 何建新. All rights reserved.
+//  Created by apple on 15-6-16.
+//  Copyright (c) 2015年 itcast. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CZBaseSettingController.h"
 
-@interface CZMorePushController : UITableViewController
+@interface CZMorePushController : CZBaseSettingController
 
 @end

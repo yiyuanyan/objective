@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="image" id="LtB-sX-mJk" customClass="CZNewFeatureCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide1Background" translatesAutoresizingMaskIntoConstraints="NO" id="kLU-Sw-096">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <animations/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81b-5G-pWd">
+                        <rect key="frame" x="80" y="493" width="161" height="40"/>
+                        <animations/>
+                        <state key="normal" image="guideStart"/>
+                        <connections>
+                            <action selector="startClicked:" destination="LtB-sX-mJk" eventType="touchUpInside" id="qFM-EC-rTR"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="81b-5G-pWd" secondAttribute="bottom" constant="35" id="MWf-z2-xhz"/>
+                <constraint firstItem="81b-5G-pWd" firstAttribute="top" secondItem="LtB-sX-mJk" secondAttribute="top" constant="493" id="SIe-jz-3wJ"/>
+                <constraint firstAttribute="trailing" secondItem="81b-5G-pWd" secondAttribute="trailing" constant="79" id="ZoW-c5-VpE"/>
+                <constraint firstItem="81b-5G-pWd" firstAttribute="leading" secondItem="LtB-sX-mJk" secondAttribute="leading" constant="80" id="hZG-Ot-klK"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroudView" destination="kLU-Sw-096" id="5QB-KU-mvw"/>
+                <outlet property="startView" destination="81b-5G-pWd" id="And-J3-m4u"/>
+            </connections>
+            <point key="canvasLocation" x="293.5" y="305.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="guide1Background" width="320" height="480"/>
+        <image name="guideStart" width="161" height="40"/>
+    </resources>
+</document>

@@ -11,9 +11,15 @@
 @implementation CZItem
 +(instancetype)itemWithTitle:(NSString *)title icon:(NSString *)icon
 {
-    CZItem *item = [[self alloc]init];
-    item.title = title;
+    CZItem *item = [self itemWithTitle:title];
     item.icon = icon;
     return item;
 }
++(instancetype)itemWithTitle:(NSString *)title
+{
+    CZItem *item = [[self alloc]init];
+    item.title = title;
+    return item;
+}
+
 @end

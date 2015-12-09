@@ -15,4 +15,23 @@
     group.items = items;
     return group;
 }
++(instancetype)groupWithHeader:(NSString *)header items:(NSArray *)items{
+    CZGroup *group = [CZGroup groupWithItems:items];
+    group.header = header;
+    return group;
+    
+}
+
++(instancetype)groupWithFooter:(NSString *)footer items:(NSArray *)items{
+    CZGroup *group = [CZGroup groupWithItems:items];
+    group.footer = footer;
+    return group;
+}
+
++(instancetype)groupWithHeader:(NSString *)header footer:(NSString *)footer items:(NSArray *)items
+{
+    CZGroup *group = [CZGroup groupWithHeader:header items:items];
+    group.footer = footer;
+    return group;
+}
 @end

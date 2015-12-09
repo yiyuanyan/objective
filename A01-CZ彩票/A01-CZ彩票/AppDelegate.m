@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CZTabBarController.h"
+#import "CZNewFeatureController.h"
 @interface AppDelegate ()
 
 @end
@@ -21,10 +22,33 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     //设置window为key并显示
     [self.window makeKeyAndVisible];
-    //创建tabBarController 底部自定义导航栏
-    CZTabBarController *tabBarController = [CZTabBarController new];
-    //设置根控制器为底部自定义导航栏
-    self.window.rootViewController = tabBarController;
+    //判断当前应用是否是第一次安装运行还是升级运行
+    //根据软件的版本号
+    //获取当前版本号
+    float version = [[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"] floatValue];
+    //如果升级安装，获取上一次的版本号
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    float oldVersion = [userDefaults floatForKey:@"version"];
+    if (version > oldVersion) {
+        //如果当前版本号大于之前版本号，显示新特性，并且将当前版本号存储到设置中
+        CZNewFeatureController *vc = [[CZNewFeatureController alloc]init];
+        self.window.rootViewController = vc;
+//        [userDefaults setFloat:version forKey:@"version"];
+//        //进行同步
+//        [userDefaults synchronize];
+        //显示新特性
+        
+        
+    }else{
+        //进入APP
+        //创建tabBarController 底部自定义导航栏
+        CZTabBarController *tabBarController = [CZTabBarController new];
+        //设置根控制器为底部自定义导航栏
+        self.window.rootViewController = tabBarController;
+    }
+    
+    
+    
     
     //设置状态栏，修改info.plist
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
