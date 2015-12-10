@@ -14,6 +14,7 @@
 #import "CZMorePushController.h"
 
 #import "CZProductsController.h"
+#import "CZShareController.h"
 @interface CZSettingsController ()
 @end
 
@@ -47,7 +48,7 @@
     }];
     
     
-    CZItem *item32 = [CZItem itemWithTitle:@"推荐给朋友" icon:@"MoreShare"];
+    CZItem *item32 = [CZItemArrow itemWithTitle:@"推荐给朋友" icon:@"MoreShare" desController:[CZShareController class]];
     CZItem *item33 = [CZItemArrow itemWithTitle:@"产品推荐" icon:@"MoreNetease"  desController:[CZProductsController class]];
     CZItem *item34 = [CZItem itemWithTitle:@"关于" icon:@"MoreAbout"];
     CZGroup *group3 = [CZGroup groupWithItems:@[item31,item32,item33,item34]];

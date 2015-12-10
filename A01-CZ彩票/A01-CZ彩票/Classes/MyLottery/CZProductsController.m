@@ -70,6 +70,20 @@
     return cell;
     
 }
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    //打开对应的应用，如果没有安装，跳转到appStore
+    CZProduct *product = self.products[indexPath.item];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@",product.customUrl,product.id]];
+    //判断是否能打开该应用
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }else{
+        //跳转到APPSTORY
+        url = [NSURL URLWithString:product.url];
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    
+}
 
 @end

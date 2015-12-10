@@ -33,9 +33,9 @@
         //如果当前版本号大于之前版本号，显示新特性，并且将当前版本号存储到设置中
         CZNewFeatureController *vc = [[CZNewFeatureController alloc]init];
         self.window.rootViewController = vc;
-//        [userDefaults setFloat:version forKey:@"version"];
-//        //进行同步
-//        [userDefaults synchronize];
+        [userDefaults setFloat:version forKey:@"version"];
+        //进行同步
+        [userDefaults synchronize];
         //显示新特性
         
         

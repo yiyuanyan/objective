@@ -11,6 +11,12 @@
 #import "CZItemArrow.h"
 #import "CZItemSwitch.h"
 #import "CZItemLabel.h"
+
+@interface CZItemCell()
+@property(nonatomic, strong)UIImageView *iconView;
+@property(nonatomic, strong)UISwitch *switchView;
+@property(nonatomic, strong)UILabel *timeView;
+@end
 @implementation CZItemCell
 
 +(instancetype)cellWithTableView:(UITableView *)tableView
@@ -25,6 +31,45 @@
         cell = [[self alloc] initWithStyle:style reuseIdentifier:reuseId];
     }
     return cell;
+}
+-(UIImageView *)iconView
+{
+    if (_iconView == nil) {
+        
+        _iconView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"CellArrow"]];
+    }
+    
+    return _iconView;
+}
+-(UISwitch *)switchView
+{
+    if (_switchView == nil) {
+        _switchView = [[UISwitch alloc]init];
+        //加载开关的创造
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [_switchView setOn:[userDefaults boolForKey:self.item.title]];
+        [_switchView addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
+    }
+    
+    return _switchView;
+}
+//点击开关存储开关状态
+-(void)valueChange:(UISwitch *)sender
+{
+    //创建用户默认模式
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    //默认模式存储BOOL类型，setBool为值  forkey为键
+    [userDefaults setBool:sender.isOn forKey:self.item.title];
+    //立即保存
+    [userDefaults synchronize];
+}
+-(UILabel *)timeView
+{
+    if (_timeView ==nil) {
+        _timeView = [[UILabel alloc]init];
+        _timeView.textColor = [UIColor grayColor];
+    }
+    return _timeView;
 }
 -(void)setItem:(CZItem *)item
 {
@@ -41,17 +86,17 @@
     
     //判断是箭头还是开关
     if ([item isKindOfClass:[CZItemArrow class]]) {
-        self.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"CellArrow"]];
+        self.accessoryView = self.iconView;
     }else if([item isKindOfClass:[CZItemSwitch class]]){
         //不允许CELL选中
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.accessoryView = [[UISwitch alloc] init];
+        self.accessoryView = self.switchView;
     }else if ([item isKindOfClass:[CZItemLabel class]]){
-        UILabel *label = [[UILabel alloc]init];
-        label.text = item.time;
-        label.textColor = [UIColor grayColor];
-        [label sizeToFit];
-        self.accessoryView = label;
+        
+        self.timeView.text = item.time;
+        
+        [self.timeView sizeToFit];
+        self.accessoryView = self.timeView;
     } else{
         
         self.accessoryView = nil;
