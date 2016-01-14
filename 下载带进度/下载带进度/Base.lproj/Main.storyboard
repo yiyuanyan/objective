@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVh-ti-dWY">
+                                <rect key="frame" x="132" y="227" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="I6T-Lg-jZg"/>
+                                    <constraint firstAttribute="width" constant="30" id="glI-de-JwW"/>
+                                </constraints>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LgI-CK-Vgr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hM4-7k-5gY">
+                                <rect key="frame" x="285" y="227" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="bEt-Bz-j4L"/>
+                                    <constraint firstAttribute="height" constant="30" id="hky-3H-l8C"/>
+                                </constraints>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kFB-UP-gYl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nt2-Rw-HQM">
+                                <rect key="frame" x="450" y="227" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hJN-vZ-W0Y"/>
+                                    <constraint firstAttribute="width" constant="30" id="hNt-Iu-TYJ"/>
+                                </constraints>
+                                <state key="normal" title="继续"/>
+                                <connections>
+                                    <action selector="resume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fYE-6e-TPL"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4C-QP-6ze">
+                                <rect key="frame" x="132" y="281" width="348" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LVh-ti-dWY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="207" id="8W8-yF-hkC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nt2-Rw-HQM" secondAttribute="trailing" constant="100" id="CFa-rV-c3c"/>
+                            <constraint firstItem="LVh-ti-dWY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="112" id="EYs-tW-Kmt"/>
+                            <constraint firstItem="hM4-7k-5gY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HWi-Jy-jmm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nt2-Rw-HQM" secondAttribute="bottom" constant="343" id="RnO-hb-pbk"/>
+                            <constraint firstItem="Nt2-Rw-HQM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="207" id="qlS-iI-86n"/>
+                            <constraint firstItem="hM4-7k-5gY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="207" id="rpN-fz-xz9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hM4-7k-5gY" secondAttribute="bottom" constant="343" id="ybo-Jg-njW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progress" destination="c4C-QP-6ze" id="pud-qz-cgZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="253"/>
+        </scene>
+    </scenes>
+</document>

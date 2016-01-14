@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35BAC4B11C2A770600680369 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BAC4B01C2A770600680369 /* main.m */; };
+		35BAC4B41C2A770600680369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BAC4B31C2A770600680369 /* AppDelegate.m */; };
+		35BAC4B71C2A770600680369 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BAC4B61C2A770600680369 /* ViewController.m */; };
+		35BAC4BA1C2A770600680369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BAC4B81C2A770600680369 /* Main.storyboard */; };
+		35BAC4BC1C2A770600680369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BAC4BB1C2A770600680369 /* Assets.xcassets */; };
+		35BAC4BF1C2A770600680369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BAC4BD1C2A770600680369 /* LaunchScreen.storyboard */; };
+		35BAC4CA1C2A770600680369 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BAC4C91C2A770600680369 /* ____Tests.m */; };
+		35BAC4D51C2A770600680369 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BAC4D41C2A770600680369 /* ____UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35BAC4C61C2A770600680369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35BAC4A41C2A770600680369 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35BAC4AB1C2A770600680369;
+			remoteInfo = "模拟登录";
+		};
+		35BAC4D11C2A770600680369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35BAC4A41C2A770600680369 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35BAC4AB1C2A770600680369;
+			remoteInfo = "模拟登录";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35BAC4AC1C2A770600680369 /* 模拟登录.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "模拟登录.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35BAC4B01C2A770600680369 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35BAC4B21C2A770600680369 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		35BAC4B31C2A770600680369 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		35BAC4B51C2A770600680369 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		35BAC4B61C2A770600680369 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		35BAC4B91C2A770600680369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35BAC4BB1C2A770600680369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35BAC4BE1C2A770600680369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		35BAC4C01C2A770600680369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35BAC4C51C2A770600680369 /* 模拟登录Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "模拟登录Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35BAC4C91C2A770600680369 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		35BAC4CB1C2A770600680369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35BAC4D01C2A770600680369 /* 模拟登录UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "模拟登录UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35BAC4D41C2A770600680369 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
+		35BAC4D61C2A770600680369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35BAC4A91C2A770600680369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35BAC4C21C2A770600680369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35BAC4CD1C2A770600680369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35BAC4A31C2A770600680369 = {
+			isa = PBXGroup;
+			children = (
+				35BAC4AE1C2A770600680369 /* 模拟登录 */,
+				35BAC4C81C2A770600680369 /* 模拟登录Tests */,
+				35BAC4D31C2A770600680369 /* 模拟登录UITests */,
+				35BAC4AD1C2A770600680369 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35BAC4AD1C2A770600680369 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35BAC4AC1C2A770600680369 /* 模拟登录.app */,
+				35BAC4C51C2A770600680369 /* 模拟登录Tests.xctest */,
+				35BAC4D01C2A770600680369 /* 模拟登录UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35BAC4AE1C2A770600680369 /* 模拟登录 */ = {
+			isa = PBXGroup;
+			children = (
+				35BAC4B21C2A770600680369 /* AppDelegate.h */,
+				35BAC4B31C2A770600680369 /* AppDelegate.m */,
+				35BAC4B51C2A770600680369 /* ViewController.h */,
+				35BAC4B61C2A770600680369 /* ViewController.m */,
+				35BAC4B81C2A770600680369 /* Main.storyboard */,
+				35BAC4BB1C2A770600680369 /* Assets.xcassets */,
+				35BAC4BD1C2A770600680369 /* LaunchScreen.storyboard */,
+				35BAC4C01C2A770600680369 /* Info.plist */,
+				35BAC4AF1C2A770600680369 /* Supporting Files */,
+			);
+			path = "模拟登录";
+			sourceTree = "<group>";
+		};
+		35BAC4AF1C2A770600680369 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35BAC4B01C2A770600680369 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35BAC4C81C2A770600680369 /* 模拟登录Tests */ = {
+			isa = PBXGroup;
+			children = (
+				35BAC4C91C2A770600680369 /* ____Tests.m */,
+				35BAC4CB1C2A770600680369 /* Info.plist */,
+			);
+			path = "模拟登录Tests";
+			sourceTree = "<group>";
+		};
+		35BAC4D31C2A770600680369 /* 模拟登录UITests */ = {
+			isa = PBXGroup;
+			children = (
+				35BAC4D41C2A770600680369 /* ____UITests.m */,
+				35BAC4D61C2A770600680369 /* Info.plist */,
+			);
+			path = "模拟登录UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35BAC4AB1C2A770600680369 /* 模拟登录 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35BAC4D91C2A770600680369 /* Build configuration list for PBXNativeTarget "模拟登录" */;
+			buildPhases = (
+				35BAC4A81C2A770600680369 /* Sources */,
+				35BAC4A91C2A770600680369 /* Frameworks */,
+				35BAC4AA1C2A770600680369 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "模拟登录";
+			productName = "模拟登录";
+			productReference = 35BAC4AC1C2A770600680369 /* 模拟登录.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35BAC4C41C2A770600680369 /* 模拟登录Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35BAC4DC1C2A770600680369 /* Build configuration list for PBXNativeTarget "模拟登录Tests" */;
+			buildPhases = (
+				35BAC4C11C2A770600680369 /* Sources */,
+				35BAC4C21C2A770600680369 /* Frameworks */,
+				35BAC4C31C2A770600680369 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35BAC4C71C2A770600680369 /* PBXTargetDependency */,
+			);
+			name = "模拟登录Tests";
+			productName = "模拟登录Tests";
+			productReference = 35BAC4C51C2A770600680369 /* 模拟登录Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		35BAC4CF1C2A770600680369 /* 模拟登录UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35BAC4DF1C2A770600680369 /* Build configuration list for PBXNativeTarget "模拟登录UITests" */;
+			buildPhases = (
+				35BAC4CC1C2A770600680369 /* Sources */,
+				35BAC4CD1C2A770600680369 /* Frameworks */,
+				35BAC4CE1C2A770600680369 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35BAC4D21C2A770600680369 /* PBXTargetDependency */,
+			);
+			name = "模拟登录UITests";
+			productName = "模拟登录UITests";
+			productReference = 35BAC4D01C2A770600680369 /* 模拟登录UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35BAC4A41C2A770600680369 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "何建新";
+				TargetAttributes = {
+					35BAC4AB1C2A770600680369 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = SXAMGGC2DK;
+					};
+					35BAC4C41C2A770600680369 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = SXAMGGC2DK;
+						TestTargetID = 35BAC4AB1C2A770600680369;
+					};
+					35BAC4CF1C2A770600680369 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = SXAMGGC2DK;
+						TestTargetID = 35BAC4AB1C2A770600680369;
+					};
+				};
+			};
+			buildConfigurationList = 35BAC4A71C2A770600680369 /* Build configuration list for PBXProject "模拟登录" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35BAC4A31C2A770600680369;
+			productRefGroup = 35BAC4AD1C2A770600680369 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35BAC4AB1C2A770600680369 /* 模拟登录 */,
+				35BAC4C41C2A770600680369 /* 模拟登录Tests */,
+				35BAC4CF1C2A770600680369 /* 模拟登录UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35BAC4AA1C2A770600680369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35BAC4BF1C2A770600680369 /* LaunchScreen.storyboard in Resources */,
+				35BAC4BC1C2A770600680369 /* Assets.xcassets in Resources */,
+				35BAC4BA1C2A770600680369 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35BAC4C31C2A770600680369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35BAC4CE1C2A770600680369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35BAC4A81C2A770600680369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35BAC4B71C2A770600680369 /* ViewController.m in Sources */,
+				35BAC4B41C2A770600680369 /* AppDelegate.m in Sources */,
+				35BAC4B11C2A770600680369 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35BAC4C11C2A770600680369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35BAC4CA1C2A770600680369 /* ____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35BAC4CC1C2A770600680369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35BAC4D51C2A770600680369 /* ____UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35BAC4C71C2A770600680369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35BAC4AB1C2A770600680369 /* 模拟登录 */;
+			targetProxy = 35BAC4C61C2A770600680369 /* PBXContainerItemProxy */;
+		};
+		35BAC4D21C2A770600680369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35BAC4AB1C2A770600680369 /* 模拟登录 */;
+			targetProxy = 35BAC4D11C2A770600680369 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35BAC4B81C2A770600680369 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35BAC4B91C2A770600680369 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		35BAC4BD1C2A770600680369 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35BAC4BE1C2A770600680369 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35BAC4D71C2A770600680369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		35BAC4D81C2A770600680369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35BAC4DA1C2A770600680369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "模拟登录/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		35BAC4DB1C2A770600680369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "模拟登录/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		35BAC4DD1C2A770600680369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "模拟登录Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/模拟登录.app/模拟登录";
+			};
+			name = Debug;
+		};
+		35BAC4DE1C2A770600680369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "模拟登录Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/模拟登录.app/模拟登录";
+			};
+			name = Release;
+		};
+		35BAC4E01C2A770600680369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "模拟登录UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "模拟登录";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		35BAC4E11C2A770600680369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "模拟登录UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "模拟登录";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35BAC4A71C2A770600680369 /* Build configuration list for PBXProject "模拟登录" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35BAC4D71C2A770600680369 /* Debug */,
+				35BAC4D81C2A770600680369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35BAC4D91C2A770600680369 /* Build configuration list for PBXNativeTarget "模拟登录" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35BAC4DA1C2A770600680369 /* Debug */,
+				35BAC4DB1C2A770600680369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		35BAC4DC1C2A770600680369 /* Build configuration list for PBXNativeTarget "模拟登录Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35BAC4DD1C2A770600680369 /* Debug */,
+				35BAC4DE1C2A770600680369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		35BAC4DF1C2A770600680369 /* Build configuration list for PBXNativeTarget "模拟登录UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35BAC4E01C2A770600680369 /* Debug */,
+				35BAC4E11C2A770600680369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35BAC4A41C2A770600680369 /* Project object */;
+}

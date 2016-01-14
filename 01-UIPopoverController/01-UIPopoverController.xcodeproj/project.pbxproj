@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3512ECB81C44EB49002FD1B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3512ECB71C44EB49002FD1B6 /* main.m */; };
+		3512ECBB1C44EB49002FD1B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3512ECBA1C44EB49002FD1B6 /* AppDelegate.m */; };
+		3512ECBE1C44EB49002FD1B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3512ECBD1C44EB49002FD1B6 /* ViewController.m */; };
+		3512ECC11C44EB49002FD1B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3512ECBF1C44EB49002FD1B6 /* Main.storyboard */; };
+		3512ECC31C44EB49002FD1B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3512ECC21C44EB49002FD1B6 /* Assets.xcassets */; };
+		3512ECC61C44EB49002FD1B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3512ECC41C44EB49002FD1B6 /* LaunchScreen.storyboard */; };
+		3512ECD11C44EB49002FD1B6 /* _1_UIPopoverControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3512ECD01C44EB49002FD1B6 /* _1_UIPopoverControllerTests.m */; };
+		3512ECDC1C44EB49002FD1B6 /* _1_UIPopoverControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3512ECDB1C44EB49002FD1B6 /* _1_UIPopoverControllerUITests.m */; };
+		3512ECEB1C44ECB3002FD1B6 /* CZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3512ECEA1C44ECB3002FD1B6 /* CZTableViewController.m */; };
+		3512ECEE1C44F18F002FD1B6 /* CZMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3512ECED1C44F18F002FD1B6 /* CZMenu.m */; };
+		3512ECF41C44F27A002FD1B6 /* colorWheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512ECEF1C44F27A002FD1B6 /* colorWheel.png */; };
+		3512ECF51C44F27A002FD1B6 /* Jonathan.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512ECF01C44F27A002FD1B6 /* Jonathan.png */; };
+		3512ECF61C44F27A002FD1B6 /* movie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512ECF11C44F27A002FD1B6 /* movie@2x.png */; };
+		3512ECF71C44F27A002FD1B6 /* music@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512ECF21C44F27A002FD1B6 /* music@2x.png */; };
+		3512ECF81C44F27A002FD1B6 /* video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3512ECF31C44F27A002FD1B6 /* video@2x.png */; };
+		3512ECFD1C44F811002FD1B6 /* CZOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3512ECFC1C44F811002FD1B6 /* CZOneViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3512ECCD1C44EB49002FD1B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3512ECAB1C44EB49002FD1B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3512ECB21C44EB49002FD1B6;
+			remoteInfo = "01-UIPopoverController";
+		};
+		3512ECD81C44EB49002FD1B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3512ECAB1C44EB49002FD1B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3512ECB21C44EB49002FD1B6;
+			remoteInfo = "01-UIPopoverController";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3512ECB31C44EB49002FD1B6 /* 01-UIPopoverController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-UIPopoverController.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3512ECB71C44EB49002FD1B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3512ECB91C44EB49002FD1B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3512ECBA1C44EB49002FD1B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3512ECBC1C44EB49002FD1B6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3512ECBD1C44EB49002FD1B6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3512ECC01C44EB49002FD1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3512ECC21C44EB49002FD1B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3512ECC51C44EB49002FD1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3512ECC71C44EB49002FD1B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3512ECCC1C44EB49002FD1B6 /* 01-UIPopoverControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-UIPopoverControllerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3512ECD01C44EB49002FD1B6 /* _1_UIPopoverControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1_UIPopoverControllerTests.m; sourceTree = "<group>"; };
+		3512ECD21C44EB49002FD1B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3512ECD71C44EB49002FD1B6 /* 01-UIPopoverControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-UIPopoverControllerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3512ECDB1C44EB49002FD1B6 /* _1_UIPopoverControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1_UIPopoverControllerUITests.m; sourceTree = "<group>"; };
+		3512ECDD1C44EB49002FD1B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3512ECE91C44ECB3002FD1B6 /* CZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTableViewController.h; sourceTree = "<group>"; };
+		3512ECEA1C44ECB3002FD1B6 /* CZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTableViewController.m; sourceTree = "<group>"; };
+		3512ECEC1C44F18F002FD1B6 /* CZMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZMenu.h; sourceTree = "<group>"; };
+		3512ECED1C44F18F002FD1B6 /* CZMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZMenu.m; sourceTree = "<group>"; };
+		3512ECEF1C44F27A002FD1B6 /* colorWheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorWheel.png; sourceTree = "<group>"; };
+		3512ECF01C44F27A002FD1B6 /* Jonathan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jonathan.png; sourceTree = "<group>"; };
+		3512ECF11C44F27A002FD1B6 /* movie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "movie@2x.png"; sourceTree = "<group>"; };
+		3512ECF21C44F27A002FD1B6 /* music@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music@2x.png"; sourceTree = "<group>"; };
+		3512ECF31C44F27A002FD1B6 /* video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@2x.png"; sourceTree = "<group>"; };
+		3512ECFB1C44F811002FD1B6 /* CZOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZOneViewController.h; sourceTree = "<group>"; };
+		3512ECFC1C44F811002FD1B6 /* CZOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZOneViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3512ECB01C44EB49002FD1B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3512ECC91C44EB49002FD1B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3512ECD41C44EB49002FD1B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3512ECAA1C44EB49002FD1B6 = {
+			isa = PBXGroup;
+			children = (
+				3512ECB51C44EB49002FD1B6 /* 01-UIPopoverController */,
+				3512ECCF1C44EB49002FD1B6 /* 01-UIPopoverControllerTests */,
+				3512ECDA1C44EB49002FD1B6 /* 01-UIPopoverControllerUITests */,
+				3512ECB41C44EB49002FD1B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3512ECB41C44EB49002FD1B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3512ECB31C44EB49002FD1B6 /* 01-UIPopoverController.app */,
+				3512ECCC1C44EB49002FD1B6 /* 01-UIPopoverControllerTests.xctest */,
+				3512ECD71C44EB49002FD1B6 /* 01-UIPopoverControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3512ECB51C44EB49002FD1B6 /* 01-UIPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				3512ECFA1C44F7F9002FD1B6 /* title */,
+				3512ECF91C44F7E8002FD1B6 /* menu */,
+				3512ECB91C44EB49002FD1B6 /* AppDelegate.h */,
+				3512ECBA1C44EB49002FD1B6 /* AppDelegate.m */,
+				3512ECBC1C44EB49002FD1B6 /* ViewController.h */,
+				3512ECBD1C44EB49002FD1B6 /* ViewController.m */,
+				3512ECBF1C44EB49002FD1B6 /* Main.storyboard */,
+				3512ECC21C44EB49002FD1B6 /* Assets.xcassets */,
+				3512ECEF1C44F27A002FD1B6 /* colorWheel.png */,
+				3512ECF01C44F27A002FD1B6 /* Jonathan.png */,
+				3512ECF11C44F27A002FD1B6 /* movie@2x.png */,
+				3512ECF21C44F27A002FD1B6 /* music@2x.png */,
+				3512ECF31C44F27A002FD1B6 /* video@2x.png */,
+				3512ECC41C44EB49002FD1B6 /* LaunchScreen.storyboard */,
+				3512ECC71C44EB49002FD1B6 /* Info.plist */,
+				3512ECB61C44EB49002FD1B6 /* Supporting Files */,
+			);
+			path = "01-UIPopoverController";
+			sourceTree = "<group>";
+		};
+		3512ECB61C44EB49002FD1B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3512ECB71C44EB49002FD1B6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3512ECCF1C44EB49002FD1B6 /* 01-UIPopoverControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3512ECD01C44EB49002FD1B6 /* _1_UIPopoverControllerTests.m */,
+				3512ECD21C44EB49002FD1B6 /* Info.plist */,
+			);
+			path = "01-UIPopoverControllerTests";
+			sourceTree = "<group>";
+		};
+		3512ECDA1C44EB49002FD1B6 /* 01-UIPopoverControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3512ECDB1C44EB49002FD1B6 /* _1_UIPopoverControllerUITests.m */,
+				3512ECDD1C44EB49002FD1B6 /* Info.plist */,
+			);
+			path = "01-UIPopoverControllerUITests";
+			sourceTree = "<group>";
+		};
+		3512ECF91C44F7E8002FD1B6 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				3512ECE91C44ECB3002FD1B6 /* CZTableViewController.h */,
+				3512ECEA1C44ECB3002FD1B6 /* CZTableViewController.m */,
+				3512ECEC1C44F18F002FD1B6 /* CZMenu.h */,
+				3512ECED1C44F18F002FD1B6 /* CZMenu.m */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
+		3512ECFA1C44F7F9002FD1B6 /* title */ = {
+			isa = PBXGroup;
+			children = (
+				3512ECFB1C44F811002FD1B6 /* CZOneViewController.h */,
+				3512ECFC1C44F811002FD1B6 /* CZOneViewController.m */,
+			);
+			name = title;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3512ECB21C44EB49002FD1B6 /* 01-UIPopoverController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3512ECE01C44EB49002FD1B6 /* Build configuration list for PBXNativeTarget "01-UIPopoverController" */;
+			buildPhases = (
+				3512ECAF1C44EB49002FD1B6 /* Sources */,
+				3512ECB01C44EB49002FD1B6 /* Frameworks */,
+				3512ECB11C44EB49002FD1B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "01-UIPopoverController";
+			productName = "01-UIPopoverController";
+			productReference = 3512ECB31C44EB49002FD1B6 /* 01-UIPopoverController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3512ECCB1C44EB49002FD1B6 /* 01-UIPopoverControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3512ECE31C44EB49002FD1B6 /* Build configuration list for PBXNativeTarget "01-UIPopoverControllerTests" */;
+			buildPhases = (
+				3512ECC81C44EB49002FD1B6 /* Sources */,
+				3512ECC91C44EB49002FD1B6 /* Frameworks */,
+				3512ECCA1C44EB49002FD1B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3512ECCE1C44EB49002FD1B6 /* PBXTargetDependency */,
+			);
+			name = "01-UIPopoverControllerTests";
+			productName = "01-UIPopoverControllerTests";
+			productReference = 3512ECCC1C44EB49002FD1B6 /* 01-UIPopoverControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3512ECD61C44EB49002FD1B6 /* 01-UIPopoverControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3512ECE61C44EB49002FD1B6 /* Build configuration list for PBXNativeTarget "01-UIPopoverControllerUITests" */;
+			buildPhases = (
+				3512ECD31C44EB49002FD1B6 /* Sources */,
+				3512ECD41C44EB49002FD1B6 /* Frameworks */,
+				3512ECD51C44EB49002FD1B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3512ECD91C44EB49002FD1B6 /* PBXTargetDependency */,
+			);
+			name = "01-UIPopoverControllerUITests";
+			productName = "01-UIPopoverControllerUITests";
+			productReference = 3512ECD71C44EB49002FD1B6 /* 01-UIPopoverControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3512ECAB1C44EB49002FD1B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "何建新";
+				TargetAttributes = {
+					3512ECB21C44EB49002FD1B6 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RD7J4DU62A;
+					};
+					3512ECCB1C44EB49002FD1B6 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RD7J4DU62A;
+						TestTargetID = 3512ECB21C44EB49002FD1B6;
+					};
+					3512ECD61C44EB49002FD1B6 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RD7J4DU62A;
+						TestTargetID = 3512ECB21C44EB49002FD1B6;
+					};
+				};
+			};
+			buildConfigurationList = 3512ECAE1C44EB49002FD1B6 /* Build configuration list for PBXProject "01-UIPopoverController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3512ECAA1C44EB49002FD1B6;
+			productRefGroup = 3512ECB41C44EB49002FD1B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3512ECB21C44EB49002FD1B6 /* 01-UIPopoverController */,
+				3512ECCB1C44EB49002FD1B6 /* 01-UIPopoverControllerTests */,
+				3512ECD61C44EB49002FD1B6 /* 01-UIPopoverControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3512ECB11C44EB49002FD1B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3512ECF81C44F27A002FD1B6 /* video@2x.png in Resources */,
+				3512ECC61C44EB49002FD1B6 /* LaunchScreen.storyboard in Resources */,
+				3512ECF71C44F27A002FD1B6 /* music@2x.png in Resources */,
+				3512ECF61C44F27A002FD1B6 /* movie@2x.png in Resources */,
+				3512ECF41C44F27A002FD1B6 /* colorWheel.png in Resources */,
+				3512ECC31C44EB49002FD1B6 /* Assets.xcassets in Resources */,
+				3512ECF51C44F27A002FD1B6 /* Jonathan.png in Resources */,
+				3512ECC11C44EB49002FD1B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3512ECCA1C44EB49002FD1B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3512ECD51C44EB49002FD1B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3512ECAF1C44EB49002FD1B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3512ECBE1C44EB49002FD1B6 /* ViewController.m in Sources */,
+				3512ECBB1C44EB49002FD1B6 /* AppDelegate.m in Sources */,
+				3512ECEE1C44F18F002FD1B6 /* CZMenu.m in Sources */,
+				3512ECEB1C44ECB3002FD1B6 /* CZTableViewController.m in Sources */,
+				3512ECFD1C44F811002FD1B6 /* CZOneViewController.m in Sources */,
+				3512ECB81C44EB49002FD1B6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3512ECC81C44EB49002FD1B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3512ECD11C44EB49002FD1B6 /* _1_UIPopoverControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3512ECD31C44EB49002FD1B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3512ECDC1C44EB49002FD1B6 /* _1_UIPopoverControllerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3512ECCE1C44EB49002FD1B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3512ECB21C44EB49002FD1B6 /* 01-UIPopoverController */;
+			targetProxy = 3512ECCD1C44EB49002FD1B6 /* PBXContainerItemProxy */;
+		};
+		3512ECD91C44EB49002FD1B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3512ECB21C44EB49002FD1B6 /* 01-UIPopoverController */;
+			targetProxy = 3512ECD81C44EB49002FD1B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3512ECBF1C44EB49002FD1B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3512ECC01C44EB49002FD1B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3512ECC41C44EB49002FD1B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3512ECC51C44EB49002FD1B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3512ECDE1C44EB49002FD1B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3512ECDF1C44EB49002FD1B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3512ECE11C44EB49002FD1B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "01-UIPopoverController/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-1-UIPopoverController";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3512ECE21C44EB49002FD1B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "01-UIPopoverController/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-1-UIPopoverController";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3512ECE41C44EB49002FD1B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "01-UIPopoverControllerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-1-UIPopoverControllerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/01-UIPopoverController.app/01-UIPopoverController";
+			};
+			name = Debug;
+		};
+		3512ECE51C44EB49002FD1B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "01-UIPopoverControllerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-1-UIPopoverControllerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/01-UIPopoverController.app/01-UIPopoverController";
+			};
+			name = Release;
+		};
+		3512ECE71C44EB49002FD1B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "01-UIPopoverControllerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-1-UIPopoverControllerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "01-UIPopoverController";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3512ECE81C44EB49002FD1B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "01-UIPopoverControllerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-1-UIPopoverControllerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "01-UIPopoverController";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3512ECAE1C44EB49002FD1B6 /* Build configuration list for PBXProject "01-UIPopoverController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3512ECDE1C44EB49002FD1B6 /* Debug */,
+				3512ECDF1C44EB49002FD1B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3512ECE01C44EB49002FD1B6 /* Build configuration list for PBXNativeTarget "01-UIPopoverController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3512ECE11C44EB49002FD1B6 /* Debug */,
+				3512ECE21C44EB49002FD1B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3512ECE31C44EB49002FD1B6 /* Build configuration list for PBXNativeTarget "01-UIPopoverControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3512ECE41C44EB49002FD1B6 /* Debug */,
+				3512ECE51C44EB49002FD1B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3512ECE61C44EB49002FD1B6 /* Build configuration list for PBXNativeTarget "01-UIPopoverControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3512ECE71C44EB49002FD1B6 /* Debug */,
+				3512ECE81C44EB49002FD1B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3512ECAB1C44EB49002FD1B6 /* Project object */;
+}
