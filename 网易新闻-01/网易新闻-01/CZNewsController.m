@@ -23,14 +23,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [CZNews newsList:^(NSArray *array) {
-        //获取数据后把数据赋值给属性,重写set方法获得数据刷新页面
+    
+}
+//加载数据
+-(void)setUrlStr:(NSString *)urlStr
+{
+    [CZNews newsListWithUrl:urlStr success:^(NSArray *array) {
         self.newslist = array;
     } error:^(NSError *err) {
-        NSLog(@"%@",err);
+        
     }];
 }
-
 
 
 #pragma mark - Table view data source

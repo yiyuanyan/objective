@@ -14,8 +14,10 @@
 @property(nonatomic, copy)NSString *digest;
 @property(nonatomic, copy)NSString *imgsrc;
 @property(nonatomic, copy)NSArray *imgextra;
+@property(nonatomic ,copy)NSNumber *imgType;
+
 
 +(instancetype)newsWithDic:(NSDictionary *)dic;
 //发送异步请求获取数据
-+(void)newsList:(void(^)(NSArray *array))success error:(void(^)(NSError *err))error;
++(void)newsListWithUrl:(NSString *)urlStr success:(void(^)(NSArray *array))success error:(void(^)(NSError *err))error;
 @end

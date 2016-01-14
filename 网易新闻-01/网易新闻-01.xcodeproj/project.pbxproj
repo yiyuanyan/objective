@@ -20,6 +20,11 @@
 		35445A651C45F6D4004E6081 /* CZLoopImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 35445A641C45F6D4004E6081 /* CZLoopImage.m */; };
 		35445A681C45FEBD004E6081 /* NSArray+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = 35445A671C45FEBD004E6081 /* NSArray+Ex.m */; };
 		35445A711C462A5A004E6081 /* CZLoopImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35445A701C462A5A004E6081 /* CZLoopImageController.m */; };
+		35A256231C477C52008C07A7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A256221C477C52008C07A7 /* Home.storyboard */; };
+		35A256251C477F93008C07A7 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 35A256241C477F93008C07A7 /* topic_news.json */; };
+		35A256291C478095008C07A7 /* CZChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A256281C478095008C07A7 /* CZChannel.m */; };
+		35A2562D1C478836008C07A7 /* CZHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A2562C1C478836008C07A7 /* CZHomeController.m */; };
+		35A256301C479836008C07A7 /* CZHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A2562F1C479836008C07A7 /* CZHomeCell.m */; };
 		35ABF3A91C462E850067C40A /* CZLoopImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ABF3A81C462E850067C40A /* CZLoopImageCell.m */; };
 		35ADF91F1C4742DB0016334E /* CZNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ADF91E1C4742DB0016334E /* CZNewsController.m */; };
 		35ADF9221C474C980016334E /* CZNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ADF9211C474C980016334E /* CZNewsCell.m */; };
@@ -70,6 +75,14 @@
 		35445A671C45FEBD004E6081 /* NSArray+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Ex.m"; sourceTree = "<group>"; };
 		35445A6F1C462A5A004E6081 /* CZLoopImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLoopImageController.h; sourceTree = "<group>"; };
 		35445A701C462A5A004E6081 /* CZLoopImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLoopImageController.m; sourceTree = "<group>"; };
+		35A256221C477C52008C07A7 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		35A256241C477F93008C07A7 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		35A256271C478095008C07A7 /* CZChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZChannel.h; sourceTree = "<group>"; };
+		35A256281C478095008C07A7 /* CZChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZChannel.m; sourceTree = "<group>"; };
+		35A2562B1C478836008C07A7 /* CZHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHomeController.h; sourceTree = "<group>"; };
+		35A2562C1C478836008C07A7 /* CZHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHomeController.m; sourceTree = "<group>"; };
+		35A2562E1C479836008C07A7 /* CZHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHomeCell.h; sourceTree = "<group>"; };
+		35A2562F1C479836008C07A7 /* CZHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHomeCell.m; sourceTree = "<group>"; };
 		35ABF3A71C462E850067C40A /* CZLoopImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLoopImageCell.h; sourceTree = "<group>"; };
 		35ABF3A81C462E850067C40A /* CZLoopImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLoopImageCell.m; sourceTree = "<group>"; };
 		35ADF91D1C4742DB0016334E /* CZNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNewsController.h; sourceTree = "<group>"; };
@@ -151,6 +164,7 @@
 				35445A301C45E9E5004E6081 /* ViewController.h */,
 				35445A311C45E9E5004E6081 /* ViewController.m */,
 				35445A331C45E9E5004E6081 /* News.storyboard */,
+				35A256221C477C52008C07A7 /* Home.storyboard */,
 				35445A361C45E9E5004E6081 /* Assets.xcassets */,
 				35445A381C45E9E5004E6081 /* LaunchScreen.storyboard */,
 				35445A3B1C45E9E5004E6081 /* Info.plist */,
@@ -162,6 +176,7 @@
 		35445A2A1C45E9E5004E6081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				35A256241C477F93008C07A7 /* topic_news.json */,
 				35445A2B1C45E9E5004E6081 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -188,6 +203,8 @@
 		35445A5D1C45EFD4004E6081 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				35A2562A1C478811008C07A7 /* Home */,
+				35A256261C47806D008C07A7 /* Channel */,
 				3537A84E1C4736D600AAE8CD /* News */,
 				35445A621C45F6B4004E6081 /* LoopImages */,
 				35445A5E1C45EFDB004E6081 /* Tool */,
@@ -217,6 +234,26 @@
 				35ABF3A81C462E850067C40A /* CZLoopImageCell.m */,
 			);
 			name = LoopImages;
+			sourceTree = "<group>";
+		};
+		35A256261C47806D008C07A7 /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				35A256271C478095008C07A7 /* CZChannel.h */,
+				35A256281C478095008C07A7 /* CZChannel.m */,
+			);
+			name = Channel;
+			sourceTree = "<group>";
+		};
+		35A2562A1C478811008C07A7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				35A2562B1C478836008C07A7 /* CZHomeController.h */,
+				35A2562C1C478836008C07A7 /* CZHomeController.m */,
+				35A2562E1C479836008C07A7 /* CZHomeCell.h */,
+				35A2562F1C479836008C07A7 /* CZHomeCell.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		381050C49E81ED4B6291880A /* Pods */ = {
@@ -348,6 +385,8 @@
 				35445A3A1C45E9E5004E6081 /* LaunchScreen.storyboard in Resources */,
 				35445A371C45E9E5004E6081 /* Assets.xcassets in Resources */,
 				35445A351C45E9E5004E6081 /* News.storyboard in Resources */,
+				35A256251C477F93008C07A7 /* topic_news.json in Resources */,
+				35A256231C477C52008C07A7 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,11 +463,14 @@
 				35445A711C462A5A004E6081 /* CZLoopImageController.m in Sources */,
 				35ADF91F1C4742DB0016334E /* CZNewsController.m in Sources */,
 				35445A321C45E9E5004E6081 /* ViewController.m in Sources */,
+				35A256291C478095008C07A7 /* CZChannel.m in Sources */,
 				35445A2F1C45E9E5004E6081 /* AppDelegate.m in Sources */,
 				35445A2C1C45E9E5004E6081 /* main.m in Sources */,
 				35445A681C45FEBD004E6081 /* NSArray+Ex.m in Sources */,
+				35A2562D1C478836008C07A7 /* CZHomeController.m in Sources */,
 				35445A651C45F6D4004E6081 /* CZLoopImage.m in Sources */,
 				3537A8511C4736F700AAE8CD /* CZNews.m in Sources */,
+				35A256301C479836008C07A7 /* CZHomeCell.m in Sources */,
 				35ABF3A91C462E850067C40A /* CZLoopImageCell.m in Sources */,
 				35445A611C45F02A004E6081 /* CZNetworkTool.m in Sources */,
 			);

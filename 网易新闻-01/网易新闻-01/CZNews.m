@@ -26,10 +26,10 @@
     return news;
 }
 //发送异步请求获取数据
-+(void)newsList:(void(^)(NSArray *array))success error:(void(^)(NSError *err))error
++(void)newsListWithUrl:(NSString *)urlStr success:(void(^)(NSArray *array))success error:(void(^)(NSError *err))error
 {
     [CZNetworkTool sharedTool].responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html", nil];
-    [[CZNetworkTool sharedTool] GET:@"article/headline/T1348647853363/0-140.html" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *dic) {
+    [[CZNetworkTool sharedTool] GET:urlStr parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *dic) {
         //获取字典的第一个键
         NSString *rootKey = dic.keyEnumerator.nextObject;
         NSArray *array = dic[rootKey];

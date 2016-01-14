@@ -41,6 +41,8 @@
 +(NSString *)getReuseId:(CZNews *)news{
     if (news.imgextra) {
         return @"news1";
+    }else if(news.imgType){
+        return @"news2";
     }
     return @"news";
 }
@@ -48,6 +50,8 @@
 +(CGFloat)getRowHeight:(CZNews *)news{
     if (news.imgextra) {
         return 130;
+    }else if(news.imgType){
+        return 160;
     }
     return 100;
 }

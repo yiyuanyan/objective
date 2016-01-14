@@ -1,5 +1,5 @@
 //
-//  CZNewsController.h
+//  CZHomeController.h
 //  网易新闻-01
 //
 //  Created by 何建新 on 16/1/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CZNewsController : UITableViewController
-@property(nonatomic, copy)NSString *urlStr;
+@interface CZHomeController : UIViewController
+
 @end
