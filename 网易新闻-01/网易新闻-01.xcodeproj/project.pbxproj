@@ -29,6 +29,7 @@
 		35ADF91F1C4742DB0016334E /* CZNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ADF91E1C4742DB0016334E /* CZNewsController.m */; };
 		35ADF9221C474C980016334E /* CZNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ADF9211C474C980016334E /* CZNewsCell.m */; };
 		616B436EEB490DD4A3F3C501 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE9F0700A29AD39E65FDA3F /* libPods.a */; };
+		BF7F49A81C47CD5E00EF145A /* CZChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F49A71C47CD5E00EF145A /* CZChannelView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		35ADF9201C474C980016334E /* CZNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNewsCell.h; sourceTree = "<group>"; };
 		35ADF9211C474C980016334E /* CZNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNewsCell.m; sourceTree = "<group>"; };
 		4F867F652CD668A6B559D902 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BF7F49A61C47CD5E00EF145A /* CZChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZChannelView.h; sourceTree = "<group>"; };
+		BF7F49A71C47CD5E00EF145A /* CZChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZChannelView.m; sourceTree = "<group>"; };
 		ECE9F0700A29AD39E65FDA3F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1F1EE521AE98439FEC0FF1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +244,8 @@
 			children = (
 				35A256271C478095008C07A7 /* CZChannel.h */,
 				35A256281C478095008C07A7 /* CZChannel.m */,
+				BF7F49A61C47CD5E00EF145A /* CZChannelView.h */,
+				BF7F49A71C47CD5E00EF145A /* CZChannelView.m */,
 			);
 			name = Channel;
 			sourceTree = "<group>";
@@ -465,6 +470,7 @@
 				35445A321C45E9E5004E6081 /* ViewController.m in Sources */,
 				35A256291C478095008C07A7 /* CZChannel.m in Sources */,
 				35445A2F1C45E9E5004E6081 /* AppDelegate.m in Sources */,
+				BF7F49A81C47CD5E00EF145A /* CZChannelView.m in Sources */,
 				35445A2C1C45E9E5004E6081 /* main.m in Sources */,
 				35445A681C45FEBD004E6081 /* NSArray+Ex.m in Sources */,
 				35A2562D1C478836008C07A7 /* CZHomeController.m in Sources */,
@@ -612,7 +618,9 @@
 			baseConfigurationReference = FC1F1EE521AE98439FEC0FF1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yiyuanhanly@126.com (49LC457723)";
 				INFOPLIST_FILE = "网易新闻-01/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-----01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -624,7 +632,9 @@
 			baseConfigurationReference = 4F867F652CD668A6B559D902 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yiyuanhanly@126.com (49LC457723)";
 				INFOPLIST_FILE = "网易新闻-01/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.eicp.yiyuanyan.-----01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
