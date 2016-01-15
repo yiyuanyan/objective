@@ -9,11 +9,13 @@
 #import "CZHomeController.h"
 #import "CZChannel.h"
 #import "CZHomeCell.h"
+#import "CZChannelView.h"
 @interface CZHomeController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic, strong) NSArray *channels;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property(nonatomic, assign)NSInteger currentIndex;
 @end
 
 @implementation CZHomeController
@@ -56,7 +58,7 @@
     
     //遍历频道列表,生成label
     for (CZChannel *channel in self.channels) {
-        UILabel *lbl = [[UILabel alloc]init];
+        CZChannelView *lbl = [CZChannelView channelViewWithTName:channel.tname];
         [self.scrollView addSubview:lbl];
         lbl.text = channel.tname;
         [lbl sizeToFit];
@@ -67,6 +69,9 @@
     self.scrollView.contentSize = CGSizeMake(x, 0);
     //去掉滚动条
     self.scrollView.showsHorizontalScrollIndicator = NO;
+    
+    CZChannelView *first = self.scrollView.subviews[self.currentIndex];
+    first.scale = 1;
 }
 //返回有多少个item
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -80,5 +85,30 @@
     cell.urlStr = channel.urlStr;
     return cell;
 }
-
+//正在滚动
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //
+    CZChannelView *currentLabel = self.scrollView.subviews[self.currentIndex];
+    CZChannelView *nextLabel = nil;
+    NSArray *array = [self.collectionView indexPathsForVisibleItems];
+    for (NSIndexPath *indexPath in array) {
+        if (indexPath.item != self.currentIndex) {
+            nextLabel = self.scrollView.subviews[indexPath.item];
+            break;
+        }
+    }
+    if (nextLabel == nil) {
+        return;
+    }
+    float scale = ABS(scrollView.contentOffset.x / scrollView.bounds.size.width - self.currentIndex);
+    nextLabel.scale = scale;
+    currentLabel.scale = 1-scale;
+    
+}
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    self.currentIndex = scrollView.contentOffset.x / scrollView.bounds.size.width;
+    
+}
 @end
