@@ -9,7 +9,8 @@
 #import "IWViewController.h"
 #import "IWTabBar.h"
 #import "IWHomeViewCtrl.h"
-
+#import "IWNavigationController.h"
+#import "IWDiscoverViewCtrl.h"
 @interface IWViewController ()<IWTabBarDelegate>
 
 @end
@@ -28,7 +29,7 @@
     UITableViewController *messageCtrl = [[UITableViewController alloc]init];
     [self addChildViewCtrl:messageCtrl imageName:@"tabbar_message_center" title:@"消息"];
     
-    UITableViewController *discoverCtrl = [[UITableViewController alloc]init];
+    IWDiscoverViewCtrl *discoverCtrl = [[IWDiscoverViewCtrl alloc]init];
     [self addChildViewCtrl:discoverCtrl imageName:@"tabbar_discover" title:@"发现"];
     
     UITableViewController *profileCtrl = [[UITableViewController alloc]init];
@@ -48,13 +49,15 @@
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     //文字属性字典
     dic[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    dic[NSFontAttributeName] = [UIFont systemFontOfSize:20];
     //文字属性字典添加到设置文字属性中
     [ctrl.tabBarItem setTitleTextAttributes:dic forState:UIControlStateSelected];
     //tabBarItem的图片
     ctrl.tabBarItem.image = [UIImage imageNamed:imageName];
     //tabBarItem的选中的图片
     ctrl.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UINavigationController *navCtrl = [[UINavigationController alloc]initWithRootViewController:ctrl];
+    
+    IWNavigationController *navCtrl = [[IWNavigationController alloc]initWithRootViewController:ctrl];
     [self addChildViewController:navCtrl];
 }
 -(void)tabBar:(IWTabBar *)tabbar plusBtnDidClicked:(UIButton *)btn

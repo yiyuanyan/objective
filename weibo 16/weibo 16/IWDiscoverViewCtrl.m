@@ -1,61 +1,26 @@
 //
-//  IWHomeViewCtrl.m
+//  IWDiscoverViewCtrl.m
 //  weibo 16
 //
-//  Created by 何建新 on 16/1/19.
+//  Created by 何建新 on 16/1/20.
 //  Copyright © 2016年 何建新. All rights reserved.
 //
 
-#import "IWHomeViewCtrl.h"
-#import "IWHomeTitleButton.h"
-#import "IWTemp2ViewCtrl.h"
-
-@interface IWHomeViewCtrl ()
+#import "IWDiscoverViewCtrl.h"
+#import "IWSearchView.h"
+@interface IWDiscoverViewCtrl ()
 
 @end
 
-@implementation IWHomeViewCtrl
+@implementation IWDiscoverViewCtrl
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+    IWSearchView *search = [IWSearchView searchView];
+    search.width = SCREENW;
+    self.navigationItem.titleView = search;
 }
-//设置导航栏的文字和图片
--(void)setupNav{
-    //这只顶部导航栏titleView
-    IWHomeTitleButton *titleBtn = [[IWHomeTitleButton alloc] init];
-    [titleBtn setTitle:@"我叫首页" forState:UIControlStateNormal];
-    [titleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    //设置图片
-    [titleBtn setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-    
-    [titleBtn sizeToFit];
-    self.navigationItem.titleView = titleBtn;
-    
-    
-    
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"navigationbar_friendsearch" target:self action:@selector(friendsearch)];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImageName:@"navigationbar_pop" target:self action:@selector(pop)];
-}
-//顶部左侧按钮
--(void)friendsearch{
-    NSLog(@"%s",__func__);
-    //初始化自定义view
-    IWTemp2ViewCtrl *temp2 = [[IWTemp2ViewCtrl alloc]init];
-    //push页面
-    [self.navigationController pushViewController:temp2 animated:YES];
-}
-//顶部右侧按钮
--(void)pop{
-    NSLog(@"%s",__func__);
-}
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-//    IWHomeTitleButton *titleBtn = (IWHomeTitleButton *)self.navigationItem.titleView;
-//    [titleBtn setTitle:@"我叫" forState:UIControlStateNormal];
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

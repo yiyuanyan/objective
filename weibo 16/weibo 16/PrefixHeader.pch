@@ -10,5 +10,12 @@
 #define PrefixHeader_pch
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+Extension.h"
+#import "UIView+Inspectable.h"
 
+//颜色的宏
+#define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+//屏幕宽度高度
+#define SCREENW [UIScreen mainScreen].bounds.size.width
+#define SCREENH [UIScreen mainScreen].bounds.size.height
 #endif /* PrefixHeader_pch */

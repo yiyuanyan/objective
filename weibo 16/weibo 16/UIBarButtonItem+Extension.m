@@ -22,4 +22,25 @@
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
++(instancetype)itemWithImageName:(NSString *)imageName target:(id)target action:(SEL)action title:(NSString *)title{
+    //初始化一个自定义view(UIButton)
+    UIButton *button = [[UIButton alloc] init];
+    //高亮状态
+    [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_highlighted",imageName]] forState:UIControlStateHighlighted];
+    //普通状态
+    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    
+    //设置按钮文字
+    //设置button文字颜色
+    UIColor *color = RGB(68,68,68);
+    
+    [button setTitleColor:color forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateNormal];
+    
+    [button sizeToFit];
+    //按钮的大小就是图片的大小
+    //button.size = button.currentImage.size;
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
+}
 @end

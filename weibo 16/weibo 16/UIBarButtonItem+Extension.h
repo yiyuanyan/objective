@@ -10,4 +10,6 @@
 
 @interface UIBarButtonItem (Extension)
 +(instancetype)itemWithImageName:(NSString *)imageName target:(id)target action:(SEL)action;
+//返回一个barButtonItem(根据图片名字--自定义一个button座位customView)
++(instancetype)itemWithImageName:(NSString *)imageName target:(id)target action:(SEL)action title:(NSString *)title;
 @end
