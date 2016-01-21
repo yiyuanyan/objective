@@ -35,7 +35,7 @@
 //    self.searchField.layer.cornerRadius = 5;
 //    self.searchField.layer.masksToBounds = YES;
     self.searchField.layer.borderColor = nil;
-    self.searchField.layer.borderWidth = 1;
+    //self.searchField.layer.borderWidth = 1;
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {

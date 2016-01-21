@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "IWViewController.h"
+#import "IWNewFeatureCtrl.h"
 @interface AppDelegate ()
 
 @end
@@ -20,8 +21,9 @@
     //创建一个window,大小全屏
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     //2.设置根控制器
-    IWViewController *tabbar = [[IWViewController alloc]init];
-    self.window.rootViewController = tabbar;
+    //IWViewController *tabbar = [[IWViewController alloc]init];
+    UIViewController *ctrl = [[IWNewFeatureCtrl alloc]init];
+    self.window.rootViewController = ctrl;
     //成为主window并显示
     [self.window makeKeyAndVisible];
     return YES;
