@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "IWViewController.h"
 #import "IWNewFeatureCtrl.h"
+#import "IWOAuthViewCtrl.h"
 @interface AppDelegate ()
 
 @end
