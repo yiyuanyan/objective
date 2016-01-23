@@ -18,4 +18,5 @@
 //屏幕宽度高度
 #define SCREENW [UIScreen mainScreen].bounds.size.width
 #define SCREENH [UIScreen mainScreen].bounds.size.height
+#define kShortVersionStr @"CFBundleShortVersionString"
 #endif /* PrefixHeader_pch */

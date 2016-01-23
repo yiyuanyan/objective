@@ -7,7 +7,7 @@
 //
 
 #import "IWNewFeatureCtrl.h"
-
+#import "IWViewController.h"
 @interface IWNewFeatureCtrl ()<UIScrollViewDelegate>
 @property(nonatomic, weak)UIPageControl *pageConrol;
 @end
@@ -74,6 +74,7 @@
     enterBtn.size = enterBtn.currentBackgroundImage.size;
     enterBtn.centerX = imageView.width * 0.5;
     enterBtn.y = imageView.height - 150;
+    [enterBtn addTarget:self action:@selector(enterBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [imageView addSubview:enterBtn];
     //添加分享按钮
     UIButton *shareBtn = [[UIButton alloc] init];
@@ -90,7 +91,12 @@
     [shareBtn addTarget:self action:@selector(shareBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [imageView addSubview:shareBtn];
 }
-//scrollViwe的监听滚动的代理方法
+-(void)enterBtnClick:(UIButton *)btn{
+    //进入首页
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    window.rootViewController = [[IWViewController alloc]init];
+}
+//scrollViwe的监听滚动的代理方法                  
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     //计算出当前偏移页数，小数
