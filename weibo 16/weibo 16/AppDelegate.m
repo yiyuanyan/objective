@@ -21,10 +21,13 @@
     // Override point for customization after application launch.
     //创建一个window,大小全屏
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    //2.设置根控制器
-    //IWViewController *tabbar = [[IWViewController alloc]init];
-    UIViewController *ctrl = [[IWNewFeatureCtrl alloc]init];
-    self.window.rootViewController = ctrl;
+//    //2.设置根控制器
+//    //IWViewController *tabbar = [[IWViewController alloc]init];
+//    UIViewController *ctrl = [[IWNewFeatureCtrl alloc]init];
+//    self.window.rootViewController = ctrl;
+    
+    IWOAuthViewCtrl *oauthView = [[IWOAuthViewCtrl alloc] init];
+    self.window.rootViewController = oauthView;
     //成为主window并显示
     [self.window makeKeyAndVisible];
     return YES;
