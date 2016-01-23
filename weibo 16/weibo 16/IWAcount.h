@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IWAcount : NSObject
+@interface IWAcount : NSObject <NSCoding>
 @property(nonatomic, copy) NSString *access_token;
 @property(nonatomic, assign) NSInteger expires_in;
 @property(nonatomic, copy)NSString *remind_in;

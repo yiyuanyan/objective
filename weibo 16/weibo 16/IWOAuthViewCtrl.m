@@ -28,7 +28,6 @@
     //设置webView要加载的页面
     //请求的地址
     NSString *urlStr = [NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=%@&redirect_uri=%@",Client_id,Redicrect_uri];
-    NSLog(@"%@",urlStr);
     //1.把urlstr转成NSURL
     NSURL *url = [NSURL URLWithString:urlStr];
     //2.把NSURL转成Request
@@ -74,15 +73,19 @@
      添加上content-type:的类型
      */
     [manager POST:urlStr parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
         //返回的是字典。转换为模型
         NSDictionary *dic = responseObject;
         //创建模型文件，添加模型属性
         IWAcount *acount = [[IWAcount alloc] init];
         //将返回的数据赋值给模型类。这样模型内的所有属性都已经有值
         [acount setValuesForKeysWithDictionary:responseObject];
-        //保存登陆信息
-        
+        //保存登陆信息,获取用户document目录路径，NSSearchPathForDirectoriesInDomains返回的是数组。所以要使用lastObject获取路径字符串
+        NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        //拼接文件名称
+        filePath = [filePath stringByAppendingString:@"account.archiver"];
+        //保存信息到文件
+        [NSKeyedArchiver archiveRootObject:acount toFile:filePath];
+        NSLog(@"%@",filePath);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求错误%@",error);
     }];
