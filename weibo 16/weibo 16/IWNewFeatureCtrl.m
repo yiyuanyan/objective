@@ -8,6 +8,9 @@
 
 #import "IWNewFeatureCtrl.h"
 #import "IWViewController.h"
+#import "IWAcount.h"
+#import "IWOAuthViewCtrl.h"
+#import "UIWindow+Extension.h"
 @interface IWNewFeatureCtrl ()<UIScrollViewDelegate>
 @property(nonatomic, weak)UIPageControl *pageConrol;
 @end
@@ -94,7 +97,8 @@
 -(void)enterBtnClick:(UIButton *)btn{
     //进入首页
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    window.rootViewController = [[IWViewController alloc]init];
+    //判断用户是否登陆过
+    [window switchRootViewCtrl];
 }
 //scrollViwe的监听滚动的代理方法                  
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView

@@ -9,6 +9,8 @@
 #import "IWOAuthViewCtrl.h"
 #import "AFNetworking.h"
 #import "IWAcount.h"
+#import "IWViewController.h"
+#import "IWAccountTool.h"
 #define Client_id @"4036192405"  //APPKEY
 #define Client_secret @"ec7a1f57bd720bebfa5335510afc5796"
 #define Redicrect_uri @"http://www.baidu.com/"  //授权回调页面
@@ -76,16 +78,23 @@
         //返回的是字典。转换为模型
         NSDictionary *dic = responseObject;
         //创建模型文件，添加模型属性
-        IWAcount *acount = [[IWAcount alloc] init];
+        IWAcount *account = [[IWAcount alloc] init];
+        
+        
+        
+        
         //将返回的数据赋值给模型类。这样模型内的所有属性都已经有值
-        [acount setValuesForKeysWithDictionary:responseObject];
-        //保存登陆信息,获取用户document目录路径，NSSearchPathForDirectoriesInDomains返回的是数组。所以要使用lastObject获取路径字符串
-        NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        //拼接文件名称
-        filePath = [filePath stringByAppendingString:@"account.archiver"];
-        //保存信息到文件
-        [NSKeyedArchiver archiveRootObject:acount toFile:filePath];
-        NSLog(@"%@",filePath);
+        [account setValuesForKeysWithDictionary:responseObject];
+        //保存登陆信息
+        [IWAccountTool saveAccount:account];
+
+        
+        //登陆成功后需要跳转到tabbarCtrl
+        IWViewController *ctrl = [[IWViewController alloc]init];
+        //获取主窗口
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        window.rootViewController = ctrl;
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求错误%@",error);
     }];

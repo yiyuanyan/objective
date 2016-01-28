@@ -11,6 +11,7 @@
 #import "IWHomeViewCtrl.h"
 #import "IWNavigationController.h"
 #import "IWDiscoverViewCtrl.h"
+#import "IWTabBarItem.h"
 @interface IWViewController ()<IWTabBarDelegate>
 
 @end
@@ -40,11 +41,13 @@
     //self.tabBar = tabbar;
 }
 -(void)addChildViewCtrl:(UIViewController *)ctrl imageName:(NSString *)imageName title:(NSString *)title{
+    ctrl.tabBarItem = [[IWTabBarItem alloc] init];
     //tabBarItem的文字
 //    ctrl.navigationController.title = title;
 //    ctrl.tabBarItem.title = title;
     //与上两句功能同效果
     ctrl.title = title;
+    
     //tabBarItem的文字颜色
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     //文字属性字典

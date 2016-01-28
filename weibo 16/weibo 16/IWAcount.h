@@ -13,4 +13,7 @@
 @property(nonatomic, assign) NSInteger expires_in;
 @property(nonatomic, copy)NSString *remind_in;
 @property(nonatomic, copy) NSString *uid;
+
+@property(nonatomic, strong)NSDate *create_at;
+
 @end

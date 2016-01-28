@@ -19,6 +19,7 @@
     IWSearchView *search = [IWSearchView searchView];
     search.width = SCREENW;
     self.navigationItem.titleView = search;
+    self.tabBarItem.badgeValue = @"哈哈";
 }
 
 - (void)didReceiveMemoryWarning {
