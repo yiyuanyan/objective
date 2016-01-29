@@ -7,7 +7,11 @@
 //
 
 #import "IWStatus.h"
+#import "MJExtension.h"
+#import "IWPhoto.h"
 
 @implementation IWStatus
-
++ (NSDictionary *)objectClassInArray{
+    return @{@"pic_urls" : [IWPhoto class]};
+}
 @end

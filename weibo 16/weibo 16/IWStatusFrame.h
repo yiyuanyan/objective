@@ -14,7 +14,9 @@
 #define CONTENT_LABEL_SIZE 12
 
 #define CREATE_TIME_SIZE 10
+#define MARGIN 10
 @interface IWStatusFrame : NSObject
+@property(nonatomic, assign) CGRect originalViewF;
 @property(nonatomic, assign)CGRect headImageF;
 @property(nonatomic, assign) CGRect nameLabelF;
 @property(nonatomic, assign) CGRect contentLabelF;
@@ -26,5 +28,11 @@
 @property(nonatomic, assign) CGRect photoViewF;
 //底部工具条
 @property(nonatomic, assign) CGRect statusToolBarF;
+
+//转发微博整体view
+@property(nonatomic, assign) CGRect retweetViewF;
+//转发微博的内容
+@property(nonatomic, assign) CGRect retweetContentLabelF;
+@property(nonatomic, assign) CGRect retweetPhotoF;
 
 @end

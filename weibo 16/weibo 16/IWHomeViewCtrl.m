@@ -40,6 +40,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //隐藏CELL的分割线
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    self.tableView.backgroundColor = RGB(240, 240, 240);
     [self.tableView registerClass:[IWStatusCell class] forCellReuseIdentifier:identifier];
 
     

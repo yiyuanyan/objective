@@ -21,4 +21,11 @@
 @property(nonatomic, copy)NSString *source;
 
 @property(nonatomic, copy)NSString *thumbnail_pic;
+@property(nonatomic, strong)NSArray *pic_urls;
+@property(nonatomic, assign) NSInteger reposts_count;
+@property(nonatomic, assign) NSInteger comments_count;
+@property(nonatomic, assign) NSInteger attitudes_count;
+
+@property(nonatomic, strong) IWStatus *retweeted_status;
+
 @end

@@ -1,5 +1,5 @@
 //
-//  IWStatusToolBar.h
+//  IWStatusPhotos.h
 //  weibo 16
 //
 //  Created by 何建新 on 16/1/28.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-@class IWStatus;
 
-
-@interface IWStatusToolBar : UIView
-@property(nonatomic, strong)IWStatus *status;
+@interface IWStatusPhotos : UIView
+@property(nonatomic, strong)NSArray *pic_url;
++(CGSize)sizeWithCount:(NSInteger)count;
 @end
