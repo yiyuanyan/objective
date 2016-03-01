@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "MBProgressHUD+MJ.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdField;
@@ -54,9 +54,26 @@
     contactVc.title = [NSString stringWithFormat:@"%@的联系人列表",self.nameField.text];
 }
 - (IBAction)loginAction {
+    //判断用户名
+    if (![self.nameField.text isEqualToString:@"hejianxin"]) {
+        //提示信息
+        [MBProgressHUD showError:@"账号不存在"];
+        return;
+    }
+    if (![self.pwdField.text isEqualToString:@"123456"]) {
+        [MBProgressHUD showError:@"密码错误"];
+        return;
+    }
+    [MBProgressHUD showMessage:@"努力加载中..."];
+    //延时执行代码，模拟网络请求
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //移除提示信息
+        [MBProgressHUD hideHUD];
+        [self performSegueWithIdentifier:@"LoginToContact" sender:nil];
+    });
     //跳转到与本试图连线的下一个视图ID为LoginToContact的视图页面
     //sender参数是prepareForSegue:sender方法的sender.传值
-    [self performSegueWithIdentifier:@"LoginToContact" sender:nil];
+    
 }
 
 @end

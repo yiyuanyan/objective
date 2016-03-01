@@ -9,11 +9,20 @@
 #import "ContactTableViewController.h"
 
 @interface ContactTableViewController ()
+- (IBAction)backAction:(UIBarButtonItem *)sender;
 
+
+@property(nonatomic, strong) NSMutableArray *contactArr;
 @end
 
 @implementation ContactTableViewController
-
+//懒加载
+- (NSMutableArray *)contactArr{
+    if (!_contactArr) {
+        _contactArr = [NSMutableArray array];
+    }
+    return _contactArr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -33,23 +42,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.contactArr.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mycell"];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -95,4 +104,17 @@
 }
 */
 
+- (IBAction)backAction:(UIBarButtonItem *)sender {
+    //初始化提示信息并设置信息和title
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否注销?" message:@"真的要注销吗?" preferredStyle:UIAlertControllerStyleActionSheet];
+    //给提示信息添加一个取消按钮，取消按钮没有动作
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    //给提示信息添加一个确定按钮，确定按钮动作为popViewControllerAnimated，为返回上一个视图并是否有动画
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        //返回上一个视图，没有动画效果
+        [self.navigationController popViewControllerAnimated:NO];
+    }]];
+    //提示信息添加到视图中
+    [self presentViewController:alert animated:NO completion:nil];
+}
 @end
