@@ -20,6 +20,11 @@
 		35076C7B1C857E3600D99D50 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35076C7A1C857E3600D99D50 /* ContactTableViewController.m */; };
 		35076C7E1C857E5200D99D50 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35076C7D1C857E5200D99D50 /* AddViewController.m */; };
 		35076C811C857E6200D99D50 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35076C801C857E6200D99D50 /* EditViewController.m */; };
+		3564456C1C86935E009453E0 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356445651C86935E009453E0 /* AddViewController.m */; };
+		3564456D1C86935E009453E0 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356445671C86935E009453E0 /* ContactTableViewController.m */; };
+		3564456E1C86935E009453E0 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356445691C86935E009453E0 /* EditViewController.m */; };
+		3564456F1C86935E009453E0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564456B1C86935E009453E0 /* LoginViewController.m */; };
+		356445731C8696B1009453E0 /* JKContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356445721C8696B1009453E0 /* JKContactModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,16 @@
 		35076C7D1C857E5200D99D50 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		35076C7F1C857E6200D99D50 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		35076C801C857E6200D99D50 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		356445641C86935E009453E0 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		356445651C86935E009453E0 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		356445661C86935E009453E0 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
+		356445671C86935E009453E0 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
+		356445681C86935E009453E0 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		356445691C86935E009453E0 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		3564456A1C86935E009453E0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3564456B1C86935E009453E0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		356445711C8696B1009453E0 /* JKContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKContactModel.h; sourceTree = "<group>"; };
+		356445721C8696B1009453E0 /* JKContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKContactModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +142,19 @@
 		35076C411C857DCB00D99D50 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				356445701C86968A009453E0 /* Model */,
 				350572921C85C841004A3987 /* MBProgressHUD */,
 				35076C751C857DEA00D99D50 /* Controller */,
 				35076C451C857DCB00D99D50 /* AppDelegate.h */,
 				35076C461C857DCB00D99D50 /* AppDelegate.m */,
+				356445641C86935E009453E0 /* AddViewController.h */,
+				356445651C86935E009453E0 /* AddViewController.m */,
+				356445661C86935E009453E0 /* ContactTableViewController.h */,
+				356445671C86935E009453E0 /* ContactTableViewController.m */,
+				356445681C86935E009453E0 /* EditViewController.h */,
+				356445691C86935E009453E0 /* EditViewController.m */,
+				3564456A1C86935E009453E0 /* LoginViewController.h */,
+				3564456B1C86935E009453E0 /* LoginViewController.m */,
 				35076C4B1C857DCB00D99D50 /* Main.storyboard */,
 				35076C4E1C857DCB00D99D50 /* Assets.xcassets */,
 				35076C501C857DCB00D99D50 /* LaunchScreen.storyboard */,
@@ -179,6 +203,15 @@
 				35076C801C857E6200D99D50 /* EditViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		356445701C86968A009453E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				356445711C8696B1009453E0 /* JKContactModel.h */,
+				356445721C8696B1009453E0 /* JKContactModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,14 +347,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3564456D1C86935E009453E0 /* ContactTableViewController.m in Sources */,
 				35076C7B1C857E3600D99D50 /* ContactTableViewController.m in Sources */,
 				35076C781C857E1900D99D50 /* LoginViewController.m in Sources */,
+				356445731C8696B1009453E0 /* JKContactModel.m in Sources */,
 				35076C7E1C857E5200D99D50 /* AddViewController.m in Sources */,
 				35076C811C857E6200D99D50 /* EditViewController.m in Sources */,
 				350572971C85C9CF004A3987 /* MBProgressHUD+MJ.m in Sources */,
 				35076C471C857DCB00D99D50 /* AppDelegate.m in Sources */,
 				35076C441C857DCB00D99D50 /* main.m in Sources */,
+				3564456F1C86935E009453E0 /* LoginViewController.m in Sources */,
+				3564456E1C86935E009453E0 /* EditViewController.m in Sources */,
 				350572951C85C857004A3987 /* MBProgressHUD.m in Sources */,
+				3564456C1C86935E009453E0 /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,9 @@
 //
 
 #import "ContactTableViewController.h"
-
-@interface ContactTableViewController ()
+#import "JKContactModel.h"
+#import "AddViewController.h"
+@interface ContactTableViewController ()<AddViewControllerDelegate>
 - (IBAction)backAction:(UIBarButtonItem *)sender;
 
 
@@ -53,12 +54,27 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mycell"];
-    
+    //通过AddViewController和JKContactModel的代理和属性接收参数
     // Configure the cell...
+    //创建一个模型对象
+    JKContactModel *contactModel = [[JKContactModel alloc] init];
+    //接收模型对象中属性的值
+    cell.textLabel.text = contactModel.name;
+    cell.detailTextLabel.text = contactModel.phone;
+    //设定cell的右边的箭头样式
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     
     return cell;
 }
-
+#pragma mark - AddViewController delagate
+//实现代理方法
+-(void)addContact:(AddViewController *)addVc didAddContact:(JKContactModel *)contact{
+    //1.添加数据模型
+    [self.contactArr addObject:contact];
+    //2.接收到数据就刷新一下视图
+    [self.tableView reloadData];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -94,15 +110,15 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
+#pragma mark - Navigation
+//设置代理对象为自身
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    AddViewController *addVc = segue.destinationViewController;
+    addVc.delegate = self;
 }
-*/
+
 
 - (IBAction)backAction:(UIBarButtonItem *)sender {
     //初始化提示信息并设置信息和title
