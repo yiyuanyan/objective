@@ -9,6 +9,11 @@
 #import "AddViewController.h"
 
 @interface AddViewController ()
+- (IBAction)backAction:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneField;
+@property (weak, nonatomic) IBOutlet UIButton *addBtn;
+- (IBAction)AddAction;
 
 @end
 
@@ -34,4 +39,8 @@
 }
 */
 
+- (IBAction)backAction:(UIBarButtonItem *)sender {
+}
+- (IBAction)AddAction {
+}
 @end

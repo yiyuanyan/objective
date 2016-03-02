@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350572951C85C857004A3987 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 350572941C85C857004A3987 /* MBProgressHUD.m */; };
+		350572971C85C9CF004A3987 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 350572961C85C9CF004A3987 /* MBProgressHUD+MJ.m */; };
 		35076C441C857DCB00D99D50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35076C431C857DCB00D99D50 /* main.m */; };
 		35076C471C857DCB00D99D50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35076C461C857DCB00D99D50 /* AppDelegate.m */; };
 		35076C4D1C857DCB00D99D50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35076C4B1C857DCB00D99D50 /* Main.storyboard */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		350572931C85C857004A3987 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		350572941C85C857004A3987 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		350572961C85C9CF004A3987 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		350572981C85C9F5004A3987 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		35076C3F1C857DCB00D99D50 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35076C431C857DCB00D99D50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35076C451C857DCB00D99D50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,6 +93,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		350572921C85C841004A3987 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				350572981C85C9F5004A3987 /* MBProgressHUD+MJ.h */,
+				350572961C85C9CF004A3987 /* MBProgressHUD+MJ.m */,
+				350572931C85C857004A3987 /* MBProgressHUD.h */,
+				350572941C85C857004A3987 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		35076C361C857DCB00D99D50 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +127,7 @@
 		35076C411C857DCB00D99D50 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				350572921C85C841004A3987 /* MBProgressHUD */,
 				35076C751C857DEA00D99D50 /* Controller */,
 				35076C451C857DCB00D99D50 /* AppDelegate.h */,
 				35076C461C857DCB00D99D50 /* AppDelegate.m */,
@@ -300,8 +318,10 @@
 				35076C781C857E1900D99D50 /* LoginViewController.m in Sources */,
 				35076C7E1C857E5200D99D50 /* AddViewController.m in Sources */,
 				35076C811C857E6200D99D50 /* EditViewController.m in Sources */,
+				350572971C85C9CF004A3987 /* MBProgressHUD+MJ.m in Sources */,
 				35076C471C857DCB00D99D50 /* AppDelegate.m in Sources */,
 				35076C441C857DCB00D99D50 /* main.m in Sources */,
+				350572951C85C857004A3987 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +545,7 @@
 				35076C6E1C857DCB00D99D50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35076C6F1C857DCB00D99D50 /* Build configuration list for PBXNativeTarget "AddressBookTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +554,7 @@
 				35076C711C857DCB00D99D50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35076C721C857DCB00D99D50 /* Build configuration list for PBXNativeTarget "AddressBookUITests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +563,7 @@
 				35076C741C857DCB00D99D50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
