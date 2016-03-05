@@ -11,17 +11,21 @@
 
 #import "CategoryTableViewController.h"
 #import "getNetworkQuest.h"
+#import "alertMessageViewController.h"
 @interface CategoryTableViewController ()
 - (IBAction)backAction:(UIBarButtonItem *)sender;
-@property(nonatomic, copy) NSMutableArray *categoryArray;
+//栏目数组
+@property(nonatomic, copy) NSDictionary *categoryDic;
+@property(nonatomic, copy) NSArray *catArray;
 @end
 
 @implementation CategoryTableViewController
--(NSArray *)categoryArray{
-    if (!_categoryArray) {
-        _categoryArray = [NSMutableArray array];
+-(NSArray *)catArray
+{
+    if (!_catArray) {
+        _catArray = [NSArray array];
     }
-    return _categoryArray;
+    return _catArray;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,6 +35,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self getCategorys];
+    [self clearExtraLine:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,19 +53,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.categoryDic.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mycell"];
     
     // Configure the cell...
-    
+    NSDictionary *dic = self.catArray[indexPath.row];
+    cell.textLabel.text = dic[@"ename"];
+    //NSLog(@"%@",self.catArray[indexPath.row]);
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     return cell;
 }
-*/
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -117,7 +128,37 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 //获取网络请求返回的JSON转换为ARRAY
--(void)getJsonToArray{
+-(void)getCategorys{
+    NSString *urlStr = @"http://test.benniaoyasi.cn/api.php";
+    NSString *mobile = [self userInfo];
+    NSString *param = [NSString stringWithFormat:@"m=api&c=category&a=listcategory&appid=1&pid=1&mobile=%@&version=4.4.7",mobile];
+    getNetworkQuest *quest = [[getNetworkQuest alloc] init];
+    [quest sendGetQuest2:urlStr param:param];
+    NSData *data = quest.data;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    //NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    if ([dic[@"ecode"] isEqualToString:@"0"]) {
+        self.categoryDic = dic[@"edata"];
+        self.catArray = [dic objectForKey:@"edata"];
+        NSLog(@"%@",self.catArray[0]);
+    }else{
+        alertMessageViewController *alert = [alertMessageViewController alertMessage:@"错误信息" message:@"返回错误"];
+        [alert presentViewController:self animated:YES completion:nil];
+    }
     
+}
+
+//读取用户配置信息
+-(NSString *)userInfo{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *mobile = [defaults valueForKey:@"username"];
+    return mobile;
+}
+//去掉tableView不显示内容的cell
+-(void)clearExtraLine:(UITableView *)tableView{
+    //创建一个view
+    UIView *view =[[UIView alloc] init];
+    view.backgroundColor = [UIColor clearColor];
+    [self.tableView setTableFooterView:view];
 }
 @end
