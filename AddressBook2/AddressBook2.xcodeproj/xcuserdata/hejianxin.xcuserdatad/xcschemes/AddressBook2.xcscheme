@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35CDA7431C86B00E0082D1E9"
-               BuildableName = "AddressBook.app"
-               BlueprintName = "AddressBook"
-               ReferencedContainer = "container:AddressBook.xcodeproj">
+               BlueprintIdentifier = "3547443F1C86B12200B1785C"
+               BuildableName = "AddressBook2.app"
+               BlueprintName = "AddressBook2"
+               ReferencedContainer = "container:AddressBook2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35CDA75C1C86B00E0082D1E9"
-               BuildableName = "AddressBookTests.xctest"
-               BlueprintName = "AddressBookTests"
-               ReferencedContainer = "container:AddressBook.xcodeproj">
+               BlueprintIdentifier = "354744581C86B12200B1785C"
+               BuildableName = "AddressBook2Tests.xctest"
+               BlueprintName = "AddressBook2Tests"
+               ReferencedContainer = "container:AddressBook2.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35CDA7671C86B00E0082D1E9"
-               BuildableName = "AddressBookUITests.xctest"
-               BlueprintName = "AddressBookUITests"
-               ReferencedContainer = "container:AddressBook.xcodeproj">
+               BlueprintIdentifier = "354744631C86B12200B1785C"
+               BuildableName = "AddressBook2UITests.xctest"
+               BlueprintName = "AddressBook2UITests"
+               ReferencedContainer = "container:AddressBook2.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "35CDA7431C86B00E0082D1E9"
-            BuildableName = "AddressBook.app"
-            BlueprintName = "AddressBook"
-            ReferencedContainer = "container:AddressBook.xcodeproj">
+            BlueprintIdentifier = "3547443F1C86B12200B1785C"
+            BuildableName = "AddressBook2.app"
+            BlueprintName = "AddressBook2"
+            ReferencedContainer = "container:AddressBook2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "35CDA7431C86B00E0082D1E9"
-            BuildableName = "AddressBook.app"
-            BlueprintName = "AddressBook"
-            ReferencedContainer = "container:AddressBook.xcodeproj">
+            BlueprintIdentifier = "3547443F1C86B12200B1785C"
+            BuildableName = "AddressBook2.app"
+            BlueprintName = "AddressBook2"
+            ReferencedContainer = "container:AddressBook2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "35CDA7431C86B00E0082D1E9"
-            BuildableName = "AddressBook.app"
-            BlueprintName = "AddressBook"
-            ReferencedContainer = "container:AddressBook.xcodeproj">
+            BlueprintIdentifier = "3547443F1C86B12200B1785C"
+            BuildableName = "AddressBook2.app"
+            BlueprintName = "AddressBook2"
+            ReferencedContainer = "container:AddressBook2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

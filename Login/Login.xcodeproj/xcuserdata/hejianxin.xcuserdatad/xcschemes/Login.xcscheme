@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35CDA7431C86B00E0082D1E9"
-               BuildableName = "AddressBook.app"
-               BlueprintName = "AddressBook"
-               ReferencedContainer = "container:AddressBook.xcodeproj">
+               BlueprintIdentifier = "350693581C8918D700FD1C51"
+               BuildableName = "Login.app"
+               BlueprintName = "Login"
+               ReferencedContainer = "container:Login.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35CDA75C1C86B00E0082D1E9"
-               BuildableName = "AddressBookTests.xctest"
-               BlueprintName = "AddressBookTests"
-               ReferencedContainer = "container:AddressBook.xcodeproj">
+               BlueprintIdentifier = "350693711C8918D700FD1C51"
+               BuildableName = "LoginTests.xctest"
+               BlueprintName = "LoginTests"
+               ReferencedContainer = "container:Login.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35CDA7671C86B00E0082D1E9"
-               BuildableName = "AddressBookUITests.xctest"
-               BlueprintName = "AddressBookUITests"
-               ReferencedContainer = "container:AddressBook.xcodeproj">
+               BlueprintIdentifier = "3506937C1C8918D700FD1C51"
+               BuildableName = "LoginUITests.xctest"
+               BlueprintName = "LoginUITests"
+               ReferencedContainer = "container:Login.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "35CDA7431C86B00E0082D1E9"
-            BuildableName = "AddressBook.app"
-            BlueprintName = "AddressBook"
-            ReferencedContainer = "container:AddressBook.xcodeproj">
+            BlueprintIdentifier = "350693581C8918D700FD1C51"
+            BuildableName = "Login.app"
+            BlueprintName = "Login"
+            ReferencedContainer = "container:Login.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "35CDA7431C86B00E0082D1E9"
-            BuildableName = "AddressBook.app"
-            BlueprintName = "AddressBook"
-            ReferencedContainer = "container:AddressBook.xcodeproj">
+            BlueprintIdentifier = "350693581C8918D700FD1C51"
+            BuildableName = "Login.app"
+            BlueprintName = "Login"
+            ReferencedContainer = "container:Login.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "35CDA7431C86B00E0082D1E9"
-            BuildableName = "AddressBook.app"
-            BlueprintName = "AddressBook"
-            ReferencedContainer = "container:AddressBook.xcodeproj">
+            BlueprintIdentifier = "350693581C8918D700FD1C51"
+            BuildableName = "Login.app"
+            BlueprintName = "Login"
+            ReferencedContainer = "container:Login.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

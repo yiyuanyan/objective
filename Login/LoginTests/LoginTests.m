@@ -1,18 +1,18 @@
 //
-//  AddressBookTests.m
-//  AddressBookTests
+//  LoginTests.m
+//  LoginTests
 //
-//  Created by 何建新 on 16/3/2.
+//  Created by 何建新 on 16/3/4.
 //  Copyright © 2016年 何建新. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface AddressBookTests : XCTestCase
+@interface LoginTests : XCTestCase
 
 @end
 
-@implementation AddressBookTests
+@implementation LoginTests
 
 - (void)setUp {
     [super setUp];

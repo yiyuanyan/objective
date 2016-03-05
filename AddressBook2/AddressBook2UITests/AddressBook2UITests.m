@@ -1,6 +1,6 @@
 //
-//  AddressBookUITests.m
-//  AddressBookUITests
+//  AddressBook2UITests.m
+//  AddressBook2UITests
 //
 //  Created by 何建新 on 16/3/2.
 //  Copyright © 2016年 何建新. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface AddressBookUITests : XCTestCase
+@interface AddressBook2UITests : XCTestCase
 
 @end
 
-@implementation AddressBookUITests
+@implementation AddressBook2UITests
 
 - (void)setUp {
     [super setUp];

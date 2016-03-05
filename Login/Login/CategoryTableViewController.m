@@ -1,27 +1,27 @@
 //
-//  ContactTableViewController.m
-//  AddressBook
+//  CategoryTableViewController.m
+//  Login
 //
-//  Created by 何建新 on 16/3/1.
+//  Created by 何建新 on 16/3/4.
 //  Copyright © 2016年 何建新. All rights reserved.
 //
+/*
+ http://test.benniaoyasi.cn/api.php?m=api&c=category&a=listcategory&appid=1&pid=1&mobile=18600562546&version=4.4.7&devtype=ios&uuid=21DCEFDF-5B85-4FF9-9A5D-5C3AD103D083
+ */
 
-#import "ContactTableViewController.h"
-
-@interface ContactTableViewController ()
+#import "CategoryTableViewController.h"
+#import "getNetworkQuest.h"
+@interface CategoryTableViewController ()
 - (IBAction)backAction:(UIBarButtonItem *)sender;
-
-
-@property(nonatomic, strong) NSMutableArray *contactArr;
+@property(nonatomic, copy) NSMutableArray *categoryArray;
 @end
 
-@implementation ContactTableViewController
-//懒加载
-- (NSMutableArray *)contactArr{
-    if (!_contactArr) {
-        _contactArr = [NSMutableArray array];
+@implementation CategoryTableViewController
+-(NSArray *)categoryArray{
+    if (!_categoryArray) {
+        _categoryArray = [NSMutableArray array];
     }
-    return _contactArr;
+    return _categoryArray;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,18 +47,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return self.contactArr.count;
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mycell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -103,18 +103,21 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark - 自定义方法
 - (IBAction)backAction:(UIBarButtonItem *)sender {
-    //初始化提示信息并设置信息和title
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否注销?" message:@"真的要注销吗?" preferredStyle:UIAlertControllerStyleActionSheet];
-    //给提示信息添加一个取消按钮，取消按钮没有动作
-    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
-    //给提示信息添加一个确定按钮，确定按钮动作为popViewControllerAnimated，为返回上一个视图并是否有动画
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        //返回上一个视图，没有动画效果
-        [self.navigationController popViewControllerAnimated:NO];
-    }]];
-    //提示信息添加到视图中
-    [self presentViewController:alert animated:NO completion:nil];
+    //弹出提示信息
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示信息" message:@"真的要注销吗" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancelBtn = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *destuctiveBtn = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        //返回上一级
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }];
+    [alert addAction:destuctiveBtn];
+    [alert addAction:cancelBtn];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+//获取网络请求返回的JSON转换为ARRAY
+-(void)getJsonToArray{
+    
 }
 @end

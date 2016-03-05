@@ -16,7 +16,8 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText = text;
     // 设置图片
-    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];
+    UIImageView *imgNav = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];
+    hud.customView = imgNav;
     // 再设置模式
     hud.mode = MBProgressHUDModeCustomView;
     
@@ -24,7 +25,7 @@
     hud.removeFromSuperViewOnHide = YES;
     
     // 1秒之后再消失
-    [hud hide:YES afterDelay:1.0];
+    [hud hide:YES afterDelay:0.7];
 }
 
 #pragma mark 显示错误信息

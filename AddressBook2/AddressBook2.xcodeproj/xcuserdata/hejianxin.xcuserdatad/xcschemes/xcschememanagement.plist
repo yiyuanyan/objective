@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AddressBook.xcscheme</key>
+		<key>AddressBook2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>35CDA7431C86B00E0082D1E9</key>
+		<key>3547443F1C86B12200B1785C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35CDA75C1C86B00E0082D1E9</key>
+		<key>354744581C86B12200B1785C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35CDA7671C86B00E0082D1E9</key>
+		<key>354744631C86B12200B1785C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
