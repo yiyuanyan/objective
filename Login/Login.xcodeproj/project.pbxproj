@@ -18,6 +18,12 @@
 		350693971C891F0100FD1C51 /* alertMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350693961C891F0100FD1C51 /* alertMessageViewController.m */; };
 		3506939F1C89339700FD1C51 /* getNetworkQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3506939E1C89339700FD1C51 /* getNetworkQuest.m */; };
 		350693A31C895FD800FD1C51 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350693A21C895FD800FD1C51 /* CategoryTableViewController.m */; };
+		3516BBC71C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3516BBC61C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m */; };
+		3516BBCB1C915B31000D1BF6 /* getUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3516BBCA1C915B31000D1BF6 /* getUserInfo.m */; };
+		352EB0081C8E7992007798F8 /* PartOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 352EB0071C8E7992007798F8 /* PartOneTableViewCell.m */; };
+		353DB08C1C9F8E1E0098A01A /* contentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353DB08B1C9F8E1E0098A01A /* contentView.m */; };
+		3544DAA91C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3544DAA81C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.m */; };
+		3591B1671C9BB3B900DF7540 /* PartOneContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591B1661C9BB3B900DF7540 /* PartOneContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,18 @@
 		3506939E1C89339700FD1C51 /* getNetworkQuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getNetworkQuest.m; sourceTree = "<group>"; };
 		350693A11C895FD800FD1C51 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
 		350693A21C895FD800FD1C51 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		3516BBC51C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartOneSecondColumnTableViewController.h; sourceTree = "<group>"; };
+		3516BBC61C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartOneSecondColumnTableViewController.m; sourceTree = "<group>"; };
+		3516BBC91C915B31000D1BF6 /* getUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getUserInfo.h; sourceTree = "<group>"; };
+		3516BBCA1C915B31000D1BF6 /* getUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getUserInfo.m; sourceTree = "<group>"; };
+		352EB0061C8E7992007798F8 /* PartOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartOneTableViewCell.h; sourceTree = "<group>"; };
+		352EB0071C8E7992007798F8 /* PartOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartOneTableViewCell.m; sourceTree = "<group>"; };
+		353DB08A1C9F8E1E0098A01A /* contentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contentView.h; sourceTree = "<group>"; };
+		353DB08B1C9F8E1E0098A01A /* contentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contentView.m; sourceTree = "<group>"; };
+		3544DAA71C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartOneThirdColumnTableViewController.h; sourceTree = "<group>"; };
+		3544DAA81C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartOneThirdColumnTableViewController.m; sourceTree = "<group>"; };
+		3591B1651C9BB3B900DF7540 /* PartOneContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartOneContentViewController.h; sourceTree = "<group>"; };
+		3591B1661C9BB3B900DF7540 /* PartOneContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartOneContentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +128,7 @@
 		3506935B1C8918D700FD1C51 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				358F00681C9A57CB00ED27D3 /* Content */,
 				350693A01C895FC300FD1C51 /* Category */,
 				3506938F1C891AA200FD1C51 /* User */,
 				350693941C891ED200FD1C51 /* Public */,
@@ -170,6 +189,7 @@
 		350693941C891ED200FD1C51 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				3516BBC81C915A86000D1BF6 /* User */,
 				3506939C1C8932E200FD1C51 /* Message */,
 				3506939B1C8932D800FD1C51 /* Network */,
 			);
@@ -197,10 +217,52 @@
 		350693A01C895FC300FD1C51 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				352EB0051C8E7962007798F8 /* View */,
 				350693A11C895FD800FD1C51 /* CategoryTableViewController.h */,
 				350693A21C895FD800FD1C51 /* CategoryTableViewController.m */,
+				3516BBC51C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.h */,
+				3516BBC61C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m */,
+				3544DAA71C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.h */,
+				3544DAA81C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		3516BBC81C915A86000D1BF6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3516BBC91C915B31000D1BF6 /* getUserInfo.h */,
+				3516BBCA1C915B31000D1BF6 /* getUserInfo.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		352EB0051C8E7962007798F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				352EB0061C8E7992007798F8 /* PartOneTableViewCell.h */,
+				352EB0071C8E7992007798F8 /* PartOneTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		353DB0891C9F8DFF0098A01A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				353DB08A1C9F8E1E0098A01A /* contentView.h */,
+				353DB08B1C9F8E1E0098A01A /* contentView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		358F00681C9A57CB00ED27D3 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				353DB0891C9F8DFF0098A01A /* View */,
+				3591B1651C9BB3B900DF7540 /* PartOneContentViewController.h */,
+				3591B1661C9BB3B900DF7540 /* PartOneContentViewController.m */,
+			);
+			name = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,11 +399,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3506939F1C89339700FD1C51 /* getNetworkQuest.m in Sources */,
+				3516BBCB1C915B31000D1BF6 /* getUserInfo.m in Sources */,
+				3591B1671C9BB3B900DF7540 /* PartOneContentViewController.m in Sources */,
 				350693A31C895FD800FD1C51 /* CategoryTableViewController.m in Sources */,
 				350693931C891ACD00FD1C51 /* LoginViewController.m in Sources */,
+				352EB0081C8E7992007798F8 /* PartOneTableViewCell.m in Sources */,
+				353DB08C1C9F8E1E0098A01A /* contentView.m in Sources */,
 				350693611C8918D700FD1C51 /* AppDelegate.m in Sources */,
+				3516BBC71C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m in Sources */,
 				3506935E1C8918D700FD1C51 /* main.m in Sources */,
 				350693971C891F0100FD1C51 /* alertMessageViewController.m in Sources */,
+				3544DAA91C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +635,7 @@
 				350693881C8918D700FD1C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		350693891C8918D700FD1C51 /* Build configuration list for PBXNativeTarget "LoginTests" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +644,7 @@
 				3506938B1C8918D700FD1C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3506938C1C8918D700FD1C51 /* Build configuration list for PBXNativeTarget "LoginUITests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +653,7 @@
 				3506938E1C8918D700FD1C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
