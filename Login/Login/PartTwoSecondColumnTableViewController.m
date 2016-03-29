@@ -10,7 +10,7 @@
 #import "getNetworkQuest.h"
 #import "getUserInfo.h"
 #import "PartOneTableViewCell.h"
-#import "PartTwoContentViewController.h"
+#import "PartTwoContentTableViewController.h"
 @interface PartTwoSecondColumnTableViewController ()
 @property(nonatomic, copy)NSArray *cateData;
 @end
@@ -66,8 +66,6 @@
     if (cell == nil) {
         cell = [[PartOneTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell"];
     }
-    NSLog(@"%@",self.cateData);
-    NSLog(@"%d",self.cateData.count);
     cell.textLabel.text = self.cateData[indexPath.row][@"question"];
     NSString *str = self.cateData[indexPath.row][@"question"];
     UIFont *strFont = cell.textLabel.font;
@@ -90,8 +88,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%@",self.cateData[indexPath.row]);
-    PartTwoContentViewController *partTwo = [[PartTwoContentViewController alloc] init];
-    partTwo.cateData = self.cateData;
+    PartTwoContentTableViewController *partTwo = [[PartTwoContentTableViewController alloc] init];
+    partTwo.cateDic = self.cateData[indexPath.row];
+    partTwo.mobile = self.mobile;
+    partTwo.title = self.cateData[indexPath.row][@"question"];
     [self.navigationController pushViewController:partTwo animated:YES];
 }
 /*
