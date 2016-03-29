@@ -14,6 +14,7 @@
 #import "alertMessageViewController.h"
 #import "PartOneTableViewCell.h"
 #import "PartOneSecondColumnTableViewController.h"
+#import "PartTwoSecondColumnTableViewController.h"
 @interface CategoryTableViewController ()
 - (IBAction)backAction:(UIBarButtonItem *)sender;
 //栏目数组
@@ -24,6 +25,7 @@
 @property(nonatomic, strong)UIButton *part1;
 @property(nonatomic, strong)UIButton *part23;
 @property(nonatomic, strong)UIView *partBottomView;
+@property(nonatomic, assign) NSInteger partType;  //part1=1  part2_3 = 23
 @end
 
 @implementation CategoryTableViewController
@@ -36,7 +38,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.partType = 1;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -107,14 +109,24 @@
     [UIView animateWithDuration:0.3 animations:^{
         self.footView.alpha=0;
     }];
-    PartOneSecondColumnTableViewController *second = [[PartOneSecondColumnTableViewController alloc]init];
-    NSDictionary *dic = self.catArray[indexPath.row];
-    //NSLog(@"%@",dic);
-    second.navigationItem.title = dic[@"ename"];
+    if(self.partType == 1){
+        PartOneSecondColumnTableViewController *second = [[PartOneSecondColumnTableViewController alloc]init];
+        NSDictionary *dic = self.catArray[indexPath.row];
+        //NSLog(@"%@",dic);
+        second.navigationItem.title = dic[@"ename"];
     
-    second.leval = dic[@"evalue"];
+        second.leval = dic[@"evalue"];
     //second.navigationItem.title = self.categoryDic[indexPath.row];
-    [self.navigationController pushViewController:second animated:YES];
+        [self.navigationController pushViewController:second animated:YES];
+    }else if(self.partType == 23){
+        PartTwoSecondColumnTableViewController *second = [[PartTwoSecondColumnTableViewController alloc] init];
+        NSDictionary *dic = self.catArray[indexPath.row];
+        NSLog(@"%@",dic);
+        second.navigationItem.title = dic[@"ename"];
+        second.evalue = dic[@"evalue"];
+        second.cateDic = dic;
+        [self.navigationController pushViewController:second animated:YES];
+    }
 }
 /*
 // Override to support conditional editing of the table view.
@@ -248,11 +260,13 @@
     NSString *mobile = [self userInfo];
     NSString *param = [NSString stringWithFormat:@"m=api&c=category&a=listcategory&appid=1&pid=1&mobile=%@&version=4.4.7",mobile];
     [self getPar1Cgatgorys:urlStr param:param];
+    self.partType = 1;
     [self.tableView reloadData];
 }
 -(void)part23Click{
     /*
      http://test.benniaoyasi.cn/api.php?m=api&c=category&a=listcategory&appid=1&pid=41&version=4.4.9&devtype=ios&uuid=81CF49BF-F7F0-4E29-9884-6B343F9A415C
+     http://test.benniaoyasi.cn/api.php?c=content&a=listcontent_part2_3&mobile=18600562546&version=4.4.9&devtype=ios&uuid=81CF49BF-F7F0-4E29-9884-6B343F9A415C&leval=People&appid=1&pageindex=0&pagenum=10
      */
     NSString *urlStr = @"http://test.benniaoyasi.cn/api.php";
     NSString *mobile = [self userInfo];
@@ -263,6 +277,7 @@
     [UIView animateWithDuration:0.5 animations:^{
         [self.partBottomView setFrame:CGRectMake(self.part23.frame.origin.x, self.partBottomView.frame.origin.y, self.partBottomView.frame.size.width, self.partBottomView.frame.size.height)];
     }];
+    self.partType = 23;
     [self.tableView reloadData];
     
 }
