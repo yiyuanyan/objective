@@ -11,6 +11,11 @@
 @interface PartTwoContentTableViewController ()
 @property(nonatomic, copy)NSDictionary *contentInfo;
 @property(nonatomic, assign) NSInteger num;
+@property(nonatomic, assign) NSInteger s;
+@property(nonatomic, assign) NSInteger r;
+@property(nonatomic, assign) int param;
+@property(nonatomic, copy)UITextView *textView;
+@property(nonatomic, assign) BOOL isHidden;
 @end
 /*
  http://test.benniaoyasi.cn/api.php?m=api&c=content&a=contentinfo&appid=1&mobile=18600562546&version=4.4.9&devtype=ios&uuid=81CF49BF-F7F0-4E29-9884-6B343F9A415C&id=518
@@ -74,48 +79,145 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell"];
+    }else{
+        while ([cell.contentView.subviews lastObject] != nil) {
+            [(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];
+        }
     }
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:14];
     cell.textLabel.numberOfLines = 0;
+    NSLog(@"%f",cell.frame.size.width);
     NSString *cellText = nil;
+    NSString *cellChText = nil;
     if (indexPath.section == 0) {
         cellText = self.contentInfo[@"title"];
         UIFont *strFont = cell.textLabel.font;
-        CGSize strSize = [cellText sizeWithAttributes:@{NSFontAttributeName:strFont}];
-        UITextView *contentText = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.width, strSize.height+35)];
+        CGSize strSize = [cellText boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:strFont} context:nil].size;
+        UITextView *contentText = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, strSize.height)];
         contentText.text = cellText;
         contentText.scrollEnabled = NO;
-        contentText.backgroundColor = [UIColor blueColor];
+        contentText.editable = NO;
+        //不可选择
+        contentText.userInteractionEnabled = NO;
         UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(0, contentText.frame.size.height, contentText.frame.size.width, 40)];
-        btnView.backgroundColor = [UIColor redColor];
+        
+        UIButton *playBtn = [[UIButton alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-10-33, 5, 33, 33)];
+        UIButton *luyinBtn = [[UIButton alloc] initWithFrame:CGRectMake(playBtn.frame.origin.x-10-33, 5, 33, 33)];
+        [playBtn setImage:[UIImage imageNamed:@"play_press.png"] forState:UIControlStateNormal];
+        [luyinBtn setImage:[UIImage imageNamed:@"luyin_press.png"] forState:UIControlStateNormal];
+        [btnView addSubview:playBtn];
+        [btnView addSubview:luyinBtn];
+        
         [cell.contentView addSubview:contentText];
+        
         [cell.contentView addSubview:btnView];
         NSLog(@"%f",contentText.frame.size.height+btnView.frame.size.height);
     }else if(indexPath.section == 1){
-        cellText = self.contentInfo[@"part2List"][indexPath.row];
-        NSLog(@"%@",cellText);
+        cellText = self.contentInfo[@"part2List"][indexPath.row][@"p2_english"];
+        UIFont *strFont = [UIFont fontWithName:@"Arial" size:14];
+        CGSize strSize = [cellText boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:strFont} context:nil].size;
+        //创建一个文本编辑器
+        UITextView *contentText = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, strSize.height-15)];
+        //允许用户交互
+        contentText.userInteractionEnabled = NO;
+        //创建一个手势并设置监听方法
+       /* UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showChinaese:)];
+
+        //contentText.tag = i;
+        UIView *tagView = [tapGesture view];
+        tagView.tag = (int)indexPath.section;
+        NSLog(@"%d",tagView.tag);
+        //给创建的view添加手势识别
+        [contentText addGestureRecognizer:tapGesture];*/
+        contentText.text = cellText;
+        //不可滚动
+        contentText.scrollEnabled = NO;
+        //不可编辑
+        contentText.editable = NO;
+        //不可选择
+        //contentText.userInteractionEnabled = NO;
+        cellChText = self.contentInfo[@"part2List"][indexPath.row][@"p2_chines"];
+        CGSize strChSize = [cellChText boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:strFont} context:nil].size;
+        UITextView *chineseText = [[UITextView alloc] initWithFrame:CGRectMake(0, contentText.frame.size.height+5, contentText.frame.size.width, strChSize.height)];
+        if(self.s == indexPath.section && self.r == indexPath.row){
+            if (chineseText.hidden == YES) {
+                self.isHidden = NO;
+                chineseText.hidden = NO;
+            }else{
+                self.isHidden = YES;
+                chineseText.hidden = YES;
+            }
+        }
+        chineseText.backgroundColor = [UIColor redColor];
+        chineseText.text = cellChText;
+        chineseText.scrollEnabled = NO;
+        chineseText.editable = NO;
+        
+        
+        
+        UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(0, contentText.frame.size.height+chineseText.frame.size.height, contentText.frame.size.width, 40)];
+        
+        UIButton *playBtn = [[UIButton alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-10-33, 5, 33, 33)];
+        UIButton *luyinBtn = [[UIButton alloc] initWithFrame:CGRectMake(playBtn.frame.origin.x-10-33, 5, 33, 33)];
+        [playBtn setImage:[UIImage imageNamed:@"play_press.png"] forState:UIControlStateNormal];
+        [playBtn addTarget:self action:@selector(showChinaese:) forControlEvents:UIControlEventTouchUpInside];
+        [luyinBtn setImage:[UIImage imageNamed:@"luyin_press.png"] forState:UIControlStateNormal];
+        [btnView addSubview:playBtn];
+        [btnView addSubview:luyinBtn];
+        [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        
+        
+        
+        [cell.contentView addSubview:chineseText];
+        [cell.contentView addSubview:contentText];
+        [cell.contentView addSubview:btnView];
     }
 
     return cell;
+}
+-(void)showChinaese:(UITapGestureRecognizer *) tapGesture{
+    UITapGestureRecognizer *tap = (UITapGestureRecognizer *)tapGesture;
+    //NSLog(@"%d",[tap view].tag);
+    NSLog(@"点击了播放按钮");
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.s = indexPath.section;
+    self.r = indexPath.row;
+    if (self.isHidden == YES) {
+        self.isHidden = NO;
+    }else{
+        self.isHidden = YES;
+    }
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     float enHeight = 0.0;
     float cnHeight = 0.0;
     if(indexPath.section == 0){
-        enHeight = [self getStringSize:self.contentInfo[@"title"]]+35+40;
+        enHeight = [self getStringSize:self.contentInfo[@"title"]];
         cnHeight = 0.0;
+    }else if(indexPath.section == 1){
+        enHeight = [self getStringSize:self.contentInfo[@"part2List"][indexPath.row][@"p2_english"]];
+        if(self.isHidden == YES && indexPath.row == self.r && indexPath.section == self.r){
+            cnHeight = 0.0;
+        }else if(self.isHidden == NO && indexPath.row == self.r && indexPath.section == self.r){
+            cnHeight = [self getStringSize:self.contentInfo[@"part2List"][indexPath.row][@"p2_chines"]];
+        }
     }
     
     
-    return enHeight+cnHeight;
+    return enHeight+cnHeight+44;
 }
 -(float)getStringSize:(NSString *)string{
     UIFont *strFont = [UIFont fontWithName:@"Arial" size:14];
-    CGSize strSize = [string sizeWithAttributes:@{NSFontAttributeName:strFont}];
+   // CGSize strSize = [string sizeWithAttributes:@{NSFontAttributeName:strFont}];
+    CGSize strSize = [string boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:strFont} context:nil].size;
     return strSize.height;
 }
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     NSString *headerTitle = nil;
     if (section == 2) {
@@ -125,7 +227,26 @@
     }else{
         headerTitle = @"问题";
     }
-    return headerTitle;
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
+    headerView.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 1, 100, 42)];
+    //titleLabel.backgroundColor = [UIColor redColor];
+    titleLabel.text = headerTitle;
+    
+    
+    UIView *borderTop = [[UIView alloc] initWithFrame:CGRectMake(0, 0, headerView.frame.size.width, 1)];
+    borderTop.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1];
+    UIView *borderBottom = [[UIView alloc] initWithFrame:CGRectMake(0, headerView.frame.size.height-1, headerView.frame.size.width, 1)];
+    borderBottom.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1];
+    [headerView addSubview:titleLabel];
+    [headerView addSubview:borderTop];
+    [headerView addSubview:borderBottom];
+    return headerView;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44.0;
 }
 
 /*
