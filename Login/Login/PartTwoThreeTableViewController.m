@@ -9,15 +9,19 @@
 #import "PartTwoThreeTableViewController.h"
 #import "PartTwoContentTableViewCell.h"
 #import "getNetworkQuest.h"
+#import "getUserInfo.h"
 @interface PartTwoThreeTableViewController ()
 @property(nonatomic, copy)NSDictionary *contentInfo;
 @property(nonatomic, assign) NSInteger num;
+@property(nonatomic, assign)CGFloat part2CellHeight;
 @end
 
 @implementation PartTwoThreeTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    getUserInfo *userInfo = [[getUserInfo alloc]init];
+    self.mobile = [userInfo getUser];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     self.navigationItem.leftBarButtonItem = item;
     NSString *url = @"http://test.benniaoyasi.cn/api.php";
@@ -69,13 +73,26 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    PartTwoContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartTwoCell"];
+//    if (cell == nil) {
+//        cell = [[PartTwoContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell"];
+//        
+//    }
+    
     PartTwoContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartTwoCell"];
     if (cell == nil) {
         cell = [[PartTwoContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell"];
-        
+    }else{
+        while ([cell.contentView.subviews lastObject] != nil) {
+            [[cell.contentView.subviews lastObject] removeFromSuperview];
+            //[[cell.contentView.subviews] removeFromSuperview];
+        }
     }
-    cell.part2Dic = self.contentInfo[@"part2List"][indexPath.row];
     
+    
+    cell.indexPath = indexPath;
+    cell.part2Dic = self.contentInfo[@"part2List"][indexPath.row];
+    self.part2CellHeight = [cell getPart2CellHeight];
     
     
     
@@ -114,7 +131,15 @@
 {
     return 44.0;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 1){
+        return self.part2CellHeight;
+    }else{
+        return 10;
+    }
+    
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

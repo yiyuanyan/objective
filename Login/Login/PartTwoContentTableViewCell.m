@@ -10,6 +10,7 @@
 @interface PartTwoContentTableViewCell()
 @property(nonatomic, copy)NSString * enStr;
 @property(nonatomic, copy)NSString *chStr;
+@property(nonatomic, assign)CGFloat part2CellHeight;
 @end
 @implementation PartTwoContentTableViewCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -29,16 +30,50 @@
 -(void)setPart2Dic:(NSMutableDictionary *)part2Dic{
     _part2Dic = part2Dic;
     NSLog(@"%@",self.part2Dic);
-    CGFloat enHeight = [self getStringSize:self.part2Dic[@"p2_english"]];
-    UITextView *enTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width-20, enHeight)];
-    enTextView.text = self.part2Dic[@"p2_english"];
-    enTextView.backgroundColor = [UIColor redColor];
-    [self.contentView addSubview:enTextView];
+    if(self.indexPath.section == 1){
+        CGFloat enHeight = [self getStringSize:self.part2Dic[@"p2_english"]];
+        UITextView *enTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, enHeight)];
+        enTextView.text = self.part2Dic[@"p2_english"];
+
+        enTextView.userInteractionEnabled = NO;
+        enTextView.scrollEnabled = NO;
+        
+        /* 播放&录音按钮 */
+        UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(0, enTextView.frame.size.height, [UIScreen mainScreen].bounds.size.width, 33)];
+        
+        UIButton *playBtn = [[UIButton alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-10-33, 0, 33, 33)];
+        UIButton *luyinBtn = [[UIButton alloc] initWithFrame:CGRectMake(playBtn.frame.origin.x-10-33, 0, 33, 33)];
+        luyinBtn.backgroundColor = [UIColor redColor];
+        [playBtn setImage:[UIImage imageNamed:@"play_press.png"] forState:UIControlStateNormal];
+        [playBtn setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateHighlighted];
+        [luyinBtn setImage:[UIImage imageNamed:@"luyin_press.png"] forState:UIControlStateNormal];
+        [luyinBtn setImage:[UIImage imageNamed:@"luyin.png"] forState:UIControlStateHighlighted];
+        [btnView addSubview:playBtn];
+        [btnView addSubview:luyinBtn];
+        /* 中文答案view */
+        CGFloat chHeight = [self getStringSize:self.part2Dic[@"p2_chines"]];
+        UITextView *chTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, enTextView.frame.size.height+33, [UIScreen mainScreen].bounds.size.width, chHeight)];
+        chTextView.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
+        chTextView.text = self.part2Dic[@"p2_chines"];
+        chTextView.userInteractionEnabled = NO;
+        chTextView.scrollEnabled = NO;
+
+        
+        [self.contentView addSubview:enTextView];
+        [self.contentView addSubview:btnView];
+        [self.contentView addSubview:chTextView];
+        self.part2CellHeight =  enTextView.frame.size.height+chTextView.frame.size.height+btnView.frame.size.height;
+    }
+    
+}
+-(CGFloat)getPart2CellHeight{
+    return self.part2CellHeight;
 }
 -(void)enLabel:(NSString *)enString{
     CGFloat enStringHeight = [self getStringSize:enString];
-    UITextView *enTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width-20, enStringHeight)];
+    UITextView *enTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, enStringHeight)];
     enTextView.text = enString;
+    
     enTextView.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:enTextView];
 }

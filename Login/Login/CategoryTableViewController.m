@@ -112,7 +112,7 @@
     if(self.partType == 1){
         PartOneSecondColumnTableViewController *second = [[PartOneSecondColumnTableViewController alloc]init];
         NSDictionary *dic = self.catArray[indexPath.row];
-        //NSLog(@"%@",dic);
+
         second.navigationItem.title = dic[@"ename"];
     
         second.leval = dic[@"evalue"];
@@ -121,7 +121,6 @@
     }else if(self.partType == 23){
         PartTwoSecondColumnTableViewController *second = [[PartTwoSecondColumnTableViewController alloc] init];
         NSDictionary *dic = self.catArray[indexPath.row];
-        NSLog(@"%@",dic);
         second.navigationItem.title = dic[@"ename"];
         second.evalue = dic[@"evalue"];
         second.cateDic = dic;

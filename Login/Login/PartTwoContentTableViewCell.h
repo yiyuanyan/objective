@@ -11,9 +11,11 @@
 @interface PartTwoContentTableViewCell : UITableViewCell
 @property(nonatomic, copy)NSMutableDictionary *part2Dic;
 @property(nonatomic, copy)NSMutableDictionary *part3Dic;
-
+@property(nonatomic, copy)NSIndexPath *indexPath;
 @property(nonatomic, strong)NSString *playUrl;
 @property(nonatomic, strong)NSString *luyinUrl;
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 -(void)enLabel:(NSString *)enString;
+
+-(CGFloat)getPart2CellHeight;
 @end
