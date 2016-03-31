@@ -20,17 +20,27 @@
     
     return self;
 }
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+
 }
 -(void)setPart2Dic:(NSMutableDictionary *)part2Dic{
     _part2Dic = part2Dic;
-    self.enStr = self.part2Dic[@"p2_english"];
-    self.chStr = self.part2Dic[@"p2_chines"];
+    NSLog(@"%@",self.part2Dic);
+    CGFloat enHeight = [self getStringSize:self.part2Dic[@"p2_english"]];
+    UITextView *enTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width-20, enHeight)];
+    enTextView.text = self.part2Dic[@"p2_english"];
+    enTextView.backgroundColor = [UIColor redColor];
+    [self.contentView addSubview:enTextView];
 }
 -(void)enLabel:(NSString *)enString{
-    NSLog(@"%@",enString);
+    CGFloat enStringHeight = [self getStringSize:enString];
+    UITextView *enTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width-20, enStringHeight)];
+    enTextView.text = enString;
+    enTextView.backgroundColor = [UIColor redColor];
+    [self.contentView addSubview:enTextView];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

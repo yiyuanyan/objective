@@ -57,7 +57,7 @@
 
     NSInteger count = 0;
     if (section == 2) {
-        count = [self.contentInfo[@"part3List"] count];
+        count = [self.contentInfo[@"part2List"] count];
     }else if(section == 1){
         count = [self.contentInfo[@"part2List"] count];
     }else{
@@ -72,9 +72,13 @@
     PartTwoContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartTwoCell"];
     if (cell == nil) {
         cell = [[PartTwoContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell"];
+        
     }
-    //cell.part2Dic = self.contentInfo[@"part2List"][indexPath.row];
-    [cell enLabel:self.contentInfo[@"part2List"][indexPath.row][@"p2_english"]];
+    cell.part2Dic = self.contentInfo[@"part2List"][indexPath.row];
+    
+    
+    
+    
     // Configure the cell...
     //NSLog(@"%@",self.contentInfo[@"part2List"][indexPath.row]);
     return cell;
@@ -154,5 +158,7 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(void)goBack{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
