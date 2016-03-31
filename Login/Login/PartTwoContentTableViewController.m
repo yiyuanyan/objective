@@ -16,6 +16,7 @@
 @property(nonatomic, assign) int param;
 @property(nonatomic, copy)UITextView *textView;
 @property(nonatomic, assign) BOOL isHidden;
+@property(nonatomic, assign) float chh;
 @end
 /*
  http://test.benniaoyasi.cn/api.php?m=api&c=content&a=contentinfo&appid=1&mobile=18600562546&version=4.4.9&devtype=ios&uuid=81CF49BF-F7F0-4E29-9884-6B343F9A415C&id=518
@@ -138,24 +139,28 @@
         //contentText.userInteractionEnabled = NO;
         cellChText = self.contentInfo[@"part2List"][indexPath.row][@"p2_chines"];
         CGSize strChSize = [cellChText boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:strFont} context:nil].size;
-        UITextView *chineseText = [[UITextView alloc] initWithFrame:CGRectMake(0, contentText.frame.size.height+5, contentText.frame.size.width, strChSize.height)];
+        UITextView *chineseText = [[UITextView alloc] initWithFrame:CGRectMake(0, contentText.frame.size.height+45, contentText.frame.size.width, strChSize.height)];
+        //chineseText.hidden = YES;
+        CGFloat btnH = 0.0;
+        chineseText.hidden = YES;
         if(self.s == indexPath.section && self.r == indexPath.row){
-            if (chineseText.hidden == YES) {
-                self.isHidden = NO;
-                chineseText.hidden = NO;
-            }else{
-                self.isHidden = YES;
+            if (self.chh == 0.0) {
                 chineseText.hidden = YES;
+                self.chh = chineseText.frame.size.height;
+            }else{
+                chineseText.hidden = NO;
+                self.chh = 0.0;
+                btnH = strChSize.height;
             }
         }
         chineseText.backgroundColor = [UIColor redColor];
         chineseText.text = cellChText;
         chineseText.scrollEnabled = NO;
         chineseText.editable = NO;
+        NSString *tag = [NSString stringWithFormat:@"%ld%ld",(long)[indexPath section],(long)[indexPath row]];
+        chineseText.tag = (int)tag;
         
-        
-        
-        UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(0, contentText.frame.size.height+chineseText.frame.size.height, contentText.frame.size.width, 40)];
+        UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(0, contentText.frame.size.height, contentText.frame.size.width, 40)];
         
         UIButton *playBtn = [[UIButton alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-10-33, 5, 33, 33)];
         UIButton *luyinBtn = [[UIButton alloc] initWithFrame:CGRectMake(playBtn.frame.origin.x-10-33, 5, 33, 33)];
@@ -164,7 +169,7 @@
         [luyinBtn setImage:[UIImage imageNamed:@"luyin_press.png"] forState:UIControlStateNormal];
         [btnView addSubview:playBtn];
         [btnView addSubview:luyinBtn];
-        [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        
         
         
         
@@ -184,12 +189,9 @@
 {
     self.s = indexPath.section;
     self.r = indexPath.row;
-    if (self.isHidden == YES) {
-        self.isHidden = NO;
-    }else{
-        self.isHidden = YES;
-    }
+    
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+    
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -200,13 +202,22 @@
         cnHeight = 0.0;
     }else if(indexPath.section == 1){
         enHeight = [self getStringSize:self.contentInfo[@"part2List"][indexPath.row][@"p2_english"]];
-        if(self.isHidden == YES && indexPath.row == self.r && indexPath.section == self.r){
-            cnHeight = 0.0;
-        }else if(self.isHidden == NO && indexPath.row == self.r && indexPath.section == self.r){
-            cnHeight = [self getStringSize:self.contentInfo[@"part2List"][indexPath.row][@"p2_chines"]];
+        if(indexPath.row == self.r){
+            NSLog(@"%f++--++--",self.chh);
+            if (self.chh == 0.0) {
+                cnHeight = [self getStringSize:self.contentInfo[@"part2List"][indexPath.row][@"p2_chines"]];
+                self.chh = cnHeight;
+                NSLog(@"显示啦------%f",cnHeight);
+            }else{
+                cnHeight = 0.0;
+                self.chh = cnHeight;
+                NSLog(@"隐藏了。应该是0.0-------%f",cnHeight);
+            }
+
+        }else{
+            
         }
     }
-    
     
     return enHeight+cnHeight+44;
 }

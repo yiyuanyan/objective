@@ -10,7 +10,7 @@
 #import "getNetworkQuest.h"
 #import "getUserInfo.h"
 #import "PartOneTableViewCell.h"
-#import "PartTwoContentTableViewController.h"
+#import "PartTwoThreeTableViewController.h"
 @interface PartTwoSecondColumnTableViewController ()
 @property(nonatomic, copy)NSArray *cateData;
 @end
@@ -88,7 +88,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%@",self.cateData[indexPath.row]);
-    PartTwoContentTableViewController *partTwo = [[PartTwoContentTableViewController alloc] init];
+    PartTwoThreeTableViewController *partTwo = [[PartTwoThreeTableViewController alloc] init];
     partTwo.cateDic = self.cateData[indexPath.row];
     partTwo.mobile = self.mobile;
     partTwo.title = self.cateData[indexPath.row][@"question"];
