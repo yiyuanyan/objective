@@ -14,6 +14,7 @@
 @property(nonatomic, copy)NSDictionary *contentInfo;
 @property(nonatomic, assign) NSInteger num;
 @property(nonatomic, assign)CGFloat part2CellHeight;
+@property(nonatomic, assign)CGFloat titleHeight;
 @end
 
 @implementation PartTwoThreeTableViewController
@@ -37,6 +38,7 @@
         }
     }
     self.contentInfo = contentDic;
+    NSLog(@"%@",self.contentInfo);
     //NSLog(@"%@",self.contentInfo);
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -93,7 +95,8 @@
     cell.indexPath = indexPath;
     cell.part2Dic = self.contentInfo[@"part2List"][indexPath.row];
     self.part2CellHeight = [cell getPart2CellHeight];
-    
+    cell.title = self.contentInfo[@"title"];
+    self.titleHeight = [cell getTitleHeight]+10;
     
     
     // Configure the cell...
@@ -135,6 +138,8 @@
 {
     if(indexPath.section == 1){
         return self.part2CellHeight;
+    }else if(indexPath.section == 0){
+        return self.titleHeight;
     }else{
         return 10;
     }
