@@ -7,7 +7,7 @@
 //
 
 #import "PartTwoThreeTableViewController.h"
-#import "PartTwoContentTableViewCell.h"
+#import "PartTwoThreeTableViewCell.h"
 #import "getNetworkQuest.h"
 #import "getUserInfo.h"
 @interface PartTwoThreeTableViewController ()
@@ -75,15 +75,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    PartTwoContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartTwoCell"];
-//    if (cell == nil) {
-//        cell = [[PartTwoContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell"];
-//        
-//    }
+
     
-    PartTwoContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartTwoCell"];
+    PartTwoThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartTwoCell"];
     if (cell == nil) {
-        cell = [[PartTwoContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell"];
+        
+        cell = [[PartTwoThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell" contentDic:self.contentInfo indexPath:indexPath];
     }else{
         while ([cell.contentView.subviews lastObject] != nil) {
             [[cell.contentView.subviews lastObject] removeFromSuperview];
@@ -91,12 +88,7 @@
         }
     }
     
-    
-    cell.indexPath = indexPath;
-    cell.part2Dic = self.contentInfo[@"part2List"][indexPath.row];
-    self.part2CellHeight = [cell getPart2CellHeight];
-    cell.title = self.contentInfo[@"title"];
-    self.titleHeight = [cell getTitleHeight]+10;
+
     
     
     // Configure the cell...
@@ -139,11 +131,16 @@
     if(indexPath.section == 1){
         return self.part2CellHeight;
     }else if(indexPath.section == 0){
-        return self.titleHeight;
+        return 50;
     }else{
         return 10;
     }
     
+}
+-(CGFloat)getStringSize:(NSString *)string{
+    UIFont *strFont = [UIFont fontWithName:@"Arial" size:14];
+    CGSize strSize = [string boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:strFont} context:nil].size;
+    return strSize.height;
 }
 /*
 // Override to support conditional editing of the table view.
