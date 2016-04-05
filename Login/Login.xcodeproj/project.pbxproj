@@ -18,15 +18,14 @@
 		350693971C891F0100FD1C51 /* alertMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350693961C891F0100FD1C51 /* alertMessageViewController.m */; };
 		3506939F1C89339700FD1C51 /* getNetworkQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3506939E1C89339700FD1C51 /* getNetworkQuest.m */; };
 		350693A31C895FD800FD1C51 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350693A21C895FD800FD1C51 /* CategoryTableViewController.m */; };
+		351533401CB389E400EE1770 /* PartTwoThreeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3515333F1CB389E400EE1770 /* PartTwoThreeTableViewController.m */; };
 		3516BBC71C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3516BBC61C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m */; };
 		3516BBCB1C915B31000D1BF6 /* getUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3516BBCA1C915B31000D1BF6 /* getUserInfo.m */; };
 		352EB0081C8E7992007798F8 /* PartOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 352EB0071C8E7992007798F8 /* PartOneTableViewCell.m */; };
 		352EEA751CAA17690088E5F8 /* PartTwoContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352EEA741CAA17690088E5F8 /* PartTwoContentTableViewController.m */; };
 		3532E42F1CA9054D004B1EB1 /* PartTwoSecondColumnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3532E42E1CA9054D004B1EB1 /* PartTwoSecondColumnTableViewController.m */; };
-		35390C991CB141B5003A0C6F /* PartTwoThreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35390C981CB141B5003A0C6F /* PartTwoThreeTableViewCell.m */; };
 		353DB08C1C9F8E1E0098A01A /* contentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353DB08B1C9F8E1E0098A01A /* contentView.m */; };
 		3544DAA91C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3544DAA81C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.m */; };
-		3557C2A71CACE87F00094CE7 /* PartTwoThreeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3557C2A61CACE87F00094CE7 /* PartTwoThreeTableViewController.m */; };
 		3557C2AA1CACE8DC00094CE7 /* PartTwoContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3557C2A91CACE8DC00094CE7 /* PartTwoContentTableViewCell.m */; };
 		3591B1671C9BB3B900DF7540 /* PartOneContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591B1661C9BB3B900DF7540 /* PartOneContentViewController.m */; };
 /* End PBXBuildFile section */
@@ -71,6 +70,8 @@
 		3506939E1C89339700FD1C51 /* getNetworkQuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getNetworkQuest.m; sourceTree = "<group>"; };
 		350693A11C895FD800FD1C51 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
 		350693A21C895FD800FD1C51 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		3515333E1CB389E400EE1770 /* PartTwoThreeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoThreeTableViewController.h; sourceTree = "<group>"; };
+		3515333F1CB389E400EE1770 /* PartTwoThreeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoThreeTableViewController.m; sourceTree = "<group>"; };
 		3516BBC51C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartOneSecondColumnTableViewController.h; sourceTree = "<group>"; };
 		3516BBC61C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartOneSecondColumnTableViewController.m; sourceTree = "<group>"; };
 		3516BBC91C915B31000D1BF6 /* getUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getUserInfo.h; sourceTree = "<group>"; };
@@ -81,14 +82,10 @@
 		352EEA741CAA17690088E5F8 /* PartTwoContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoContentTableViewController.m; sourceTree = "<group>"; };
 		3532E42D1CA9054D004B1EB1 /* PartTwoSecondColumnTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoSecondColumnTableViewController.h; sourceTree = "<group>"; };
 		3532E42E1CA9054D004B1EB1 /* PartTwoSecondColumnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoSecondColumnTableViewController.m; sourceTree = "<group>"; };
-		35390C971CB141B5003A0C6F /* PartTwoThreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoThreeTableViewCell.h; sourceTree = "<group>"; };
-		35390C981CB141B5003A0C6F /* PartTwoThreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoThreeTableViewCell.m; sourceTree = "<group>"; };
 		353DB08A1C9F8E1E0098A01A /* contentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contentView.h; sourceTree = "<group>"; };
 		353DB08B1C9F8E1E0098A01A /* contentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contentView.m; sourceTree = "<group>"; };
 		3544DAA71C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartOneThirdColumnTableViewController.h; sourceTree = "<group>"; };
 		3544DAA81C98F5B8001C4FC9 /* PartOneThirdColumnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartOneThirdColumnTableViewController.m; sourceTree = "<group>"; };
-		3557C2A51CACE87F00094CE7 /* PartTwoThreeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoThreeTableViewController.h; sourceTree = "<group>"; };
-		3557C2A61CACE87F00094CE7 /* PartTwoThreeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoThreeTableViewController.m; sourceTree = "<group>"; };
 		3557C2A81CACE8DC00094CE7 /* PartTwoContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoContentTableViewCell.h; sourceTree = "<group>"; };
 		3557C2A91CACE8DC00094CE7 /* PartTwoContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoContentTableViewCell.m; sourceTree = "<group>"; };
 		3591B1651C9BB3B900DF7540 /* PartOneContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartOneContentViewController.h; sourceTree = "<group>"; };
@@ -286,8 +283,6 @@
 				353DB08B1C9F8E1E0098A01A /* contentView.m */,
 				3557C2A81CACE8DC00094CE7 /* PartTwoContentTableViewCell.h */,
 				3557C2A91CACE8DC00094CE7 /* PartTwoContentTableViewCell.m */,
-				35390C971CB141B5003A0C6F /* PartTwoThreeTableViewCell.h */,
-				35390C981CB141B5003A0C6F /* PartTwoThreeTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -300,8 +295,8 @@
 				3591B1661C9BB3B900DF7540 /* PartOneContentViewController.m */,
 				352EEA731CAA17690088E5F8 /* PartTwoContentTableViewController.h */,
 				352EEA741CAA17690088E5F8 /* PartTwoContentTableViewController.m */,
-				3557C2A51CACE87F00094CE7 /* PartTwoThreeTableViewController.h */,
-				3557C2A61CACE87F00094CE7 /* PartTwoThreeTableViewController.m */,
+				3515333E1CB389E400EE1770 /* PartTwoThreeTableViewController.h */,
+				3515333F1CB389E400EE1770 /* PartTwoThreeTableViewController.m */,
 			);
 			name = Content;
 			sourceTree = "<group>";
@@ -440,14 +435,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3506939F1C89339700FD1C51 /* getNetworkQuest.m in Sources */,
-				3557C2A71CACE87F00094CE7 /* PartTwoThreeTableViewController.m in Sources */,
 				352EEA751CAA17690088E5F8 /* PartTwoContentTableViewController.m in Sources */,
 				3516BBCB1C915B31000D1BF6 /* getUserInfo.m in Sources */,
 				3591B1671C9BB3B900DF7540 /* PartOneContentViewController.m in Sources */,
+				351533401CB389E400EE1770 /* PartTwoThreeTableViewController.m in Sources */,
 				350693A31C895FD800FD1C51 /* CategoryTableViewController.m in Sources */,
 				350693931C891ACD00FD1C51 /* LoginViewController.m in Sources */,
 				3557C2AA1CACE8DC00094CE7 /* PartTwoContentTableViewCell.m in Sources */,
-				35390C991CB141B5003A0C6F /* PartTwoThreeTableViewCell.m in Sources */,
 				3532E42F1CA9054D004B1EB1 /* PartTwoSecondColumnTableViewController.m in Sources */,
 				352EB0081C8E7992007798F8 /* PartOneTableViewCell.m in Sources */,
 				353DB08C1C9F8E1E0098A01A /* contentView.m in Sources */,
