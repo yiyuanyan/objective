@@ -7,7 +7,7 @@
 //
 
 #import "PartTwoThreeTableViewController.h"
-#import "PartTwoContentTableViewCell.h"
+#import "PartTwoThreeTableViewCell.h"
 #import "getNetworkQuest.h"
 #import "getUserInfo.h"
 @interface PartTwoThreeTableViewController ()
@@ -158,11 +158,16 @@
     if(indexPath.section == 1){
         return self.part2CellHeight;
     }else if(indexPath.section == 0){
-        return self.titleHeight;
+        return 50;
     }else{
         return 10;
     }
     
+}
+-(CGFloat)getStringSize:(NSString *)string{
+    UIFont *strFont = [UIFont fontWithName:@"Arial" size:14];
+    CGSize strSize = [string boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:strFont} context:nil].size;
+    return strSize.height;
 }
 /*
 // Override to support conditional editing of the table view.
