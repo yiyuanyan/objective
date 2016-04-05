@@ -15,6 +15,9 @@
 @property(nonatomic, assign) NSInteger num;
 @property(nonatomic, assign)CGFloat part2CellHeight;
 @property(nonatomic, assign)CGFloat titleHeight;
+@property(nonatomic, copy)NSIndexPath *createIndexPath;
+@property(nonatomic, copy)NSIndexPath *clickIndexPath;
+
 @end
 
 @implementation PartTwoThreeTableViewController
@@ -80,18 +83,29 @@
 //        cell = [[PartTwoContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell"];
 //        
 //    }
+    self.createIndexPath = indexPath;
+//    PartTwoContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartTwoCell"];
+//    if (cell == nil) {
+//        cell = [[PartTwoContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell"];
+//    }else{
+//        while ([cell.contentView.subviews lastObject] != nil) {
+//            [[cell.contentView.subviews lastObject] removeFromSuperview];
+//            //[[cell.contentView.subviews] removeFromSuperview];
+//        }
+//    }
     
-    PartTwoContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartTwoCell"];
+    PartTwoContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     if (cell == nil) {
-        cell = [[PartTwoContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell"];
+        cell = [[PartTwoContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell"];
     }else{
         while ([cell.contentView.subviews lastObject] != nil) {
-            [[cell.contentView.subviews lastObject] removeFromSuperview];
-            //[[cell.contentView.subviews] removeFromSuperview];
+            [(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];
         }
     }
     
-    
+    if((indexPath.section == self.clickIndexPath.section) && (indexPath.row == self.clickIndexPath.row) && indexPath.section != 0){
+        NSLog(@"点击的CELL和创建的CELL是同一个");
+    }
     cell.indexPath = indexPath;
     cell.part2Dic = self.contentInfo[@"part2List"][indexPath.row];
     self.part2CellHeight = [cell getPart2CellHeight];
@@ -102,6 +116,11 @@
     // Configure the cell...
     //NSLog(@"%@",self.contentInfo[@"part2List"][indexPath.row]);
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.clickIndexPath = indexPath;
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
