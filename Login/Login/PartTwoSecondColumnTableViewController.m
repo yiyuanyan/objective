@@ -87,7 +87,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@",self.cateData[indexPath.row]);
     PartTwoThreeTableViewController *partTwo = [[PartTwoThreeTableViewController alloc] init];
     partTwo.cateDic = self.cateData[indexPath.row];
     partTwo.mobile = self.mobile;
