@@ -10,16 +10,23 @@
 #import "getUserInfo.h"
 #import "getNetworkQuest.h"
 #import "TMContent.h"
-#import "playBlockButton.h"
+#import "PartTwoThreeTableViewCell.h"
+
 #import <AVFoundation/AVFoundation.h>
+static void *kStatusKVOKey = &kStatusKVOKey;
+static void *kDurationKVOKey = &kDurationKVOKey;
+static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 #define kScreenWidth CGRectGetWidth([[UIScreen mainScreen] bounds])
-typedef void (^ButtonBlock)(NSIndexPath *indexPath);
-@interface PartTwoThreeTableViewController ()
+
+@interface PartTwoThreeTableViewController ()<AVAudioPlayerDelegate,AVAudioRecorderDelegate>
 @property(nonatomic, copy) NSDictionary *conDic;
 @property(nonatomic, copy)NSMutableArray *part2List;
 @property(nonatomic, copy)NSMutableArray *part3List;
+//接收partTwoThreeTableViewCell中的按钮View
+@property(nonatomic, strong)UIView *btnView;
+@property(nonatomic, strong)NSIndexPath *luyinAnimationIndexPath;
 @property(nonatomic, strong)AVAudioPlayer *player;
-@property(nonatomic, copy)ButtonBlock buttonBlock;
+@property(nonatomic, strong)AVAudioRecorder *recorder;
 @end
 
 @implementation PartTwoThreeTableViewController
@@ -32,6 +39,7 @@ typedef void (^ButtonBlock)(NSIndexPath *indexPath);
     self.navigationItem.leftBarButtonItem = item;
     NSString *url = @"http://test.benniaoyasi.cn/api.php";
     NSString *param = [NSString stringWithFormat:@"m=api&c=content&a=contentinfo&appid=1&mobile=%@&version=4.4.9&devtype=ios&uuid=81CF49BF-F7F0-4E29-9884-6B343F9A415C&id=%@",self.mobile,self.cateDic[@"id"]];
+    
     getNetworkQuest *quest = [[getNetworkQuest alloc]init];
     [quest sendGetQuest2:url param:param];
     NSData *data = quest.data;
@@ -44,15 +52,16 @@ typedef void (^ButtonBlock)(NSIndexPath *indexPath);
     }
     
     self.conDic = contentDic;
-    // NSLog(@"%@",self.conDic[@"part2List"]);
+    NSLog(@"%@",self.conDic[@"part2List"]);
     _part2List = [NSMutableArray array];
     for (NSDictionary *d in self.conDic[@"part2List"]) {
         TMContent *TM = [[TMContent alloc] init];
         TM.english = d[@"p2_english"];
         TM.chines = d[@"p2_chines"];
         TM.audio = d[@"p2_audio"];
+        TM.cellId = [NSString stringWithFormat:@"part2List%@-%@",d[@"yid"],d[@"id"]];
         [_part2List addObject:TM];
-        //NSLog(@"%@",TM.p2_english);
+        
     }
     _part3List = [NSMutableArray array];
     for (NSDictionary *d in self.conDic[@"part3List"]) {
@@ -60,8 +69,9 @@ typedef void (^ButtonBlock)(NSIndexPath *indexPath);
         TM.english = d[@"p2_english"];
         TM.chines = d[@"p2_chines"];
         TM.audio = d[@"p2_audio"];
+        TM.cellId = [NSString stringWithFormat:@"part3List%@-%@",d[@"yid"],d[@"id"]];
         [_part3List addObject:TM];
-        //NSLog(@"%@",TM.p2_english);
+        
     }
 }
 
@@ -90,113 +100,167 @@ typedef void (^ButtonBlock)(NSIndexPath *indexPath);
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
+    TMContent *TM = nil;
+    if(indexPath.section == 1){
+        TM = self.part2List[indexPath.row];
+    }else if(indexPath.section == 2){
+        TM = self.part3List[indexPath.row];
+    }
+    PartTwoThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
+        cell = [[PartTwoThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
     }else{
         while([cell.contentView.subviews lastObject] != nil){
             [(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];
         }
     }
     if(indexPath.section == 0){
-        UIView *cellView = [self cellView:self.conDic[@"title"] chString:nil indexPath:indexPath];
-        [cell.contentView addSubview:cellView];
+        [cell createTitleCell:self.conDic[@"title"] TM:TM indexPath:indexPath];
+    }else if(indexPath.section == 1){
+        [cell createPart2ListCell:TM indexPath:indexPath];
+    }else if(indexPath.section == 2){
+        [cell createPart2ListCell:TM indexPath:indexPath];
     }
-    if(indexPath.section == 1){
-        TMContent *TM = self.part2List[indexPath.row];
-        UIView *cellView = [self cellView:TM.english chString:TM.chines indexPath:indexPath];
-        [cell.contentView addSubview:cellView];
-    }
-    if(indexPath.section == 2){
-        TMContent *TM = self.part3List[indexPath.row];
-        UIView *cellView = [self cellView:TM.english chString:TM.chines indexPath:indexPath];
-        [cell.contentView addSubview:cellView];
-    }
-    // Configure the cell...
-    
-    //取消cell的点击效果
+    cell.clickButton = ^(NSIndexPath* indexPath){
+        [self clickBtn:indexPath];
+    };
+    cell.luyinButton = ^(NSString *cellId){
+        [self luyinBtn:cellId];
+    };
+    cell.luyinAnimation = ^(UIView *btnView, NSIndexPath *indexPath){
+        [self luyinAni:btnView indexPath:indexPath];
+    };
+    cell.luyinPlayBtn = ^(NSString *luyinFilePath,NSIndexPath *indexPath){
+        [self luyinPlay:luyinFilePath indexPath:indexPath];
+        
+    };
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
-//创建cell内的各个view
--(UIView *)cellView:(NSString *)enString chString:(NSString *)chString indexPath:(NSIndexPath *)indexPath{
+//录音播放
+-(void)luyinPlay:(NSString *)luyinFilePath indexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%@",luyinFilePath);
+    [self.player stop];
+    NSURL *url = [NSURL URLWithString:luyinFilePath];
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    //进行缓存
+    [self.player prepareToPlay];
+    //指定代理为自身
+    self.player.delegate = self;
+    //指定播放音量
+    self.player.volume = 8;
+    //开始播放
+    [self.player play];
     
-    //英文字体高度
-    CGFloat enStringHeight = [self getStringHeight:enString];
-    //中文字体高度
-    CGFloat chStringHeight = [self getStringHeight:chString];
-    //英文Label
-    UILabel *enLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, kScreenWidth-10, enStringHeight+10)];
-    enLabel.font = [UIFont systemFontOfSize:14];
-    enLabel.numberOfLines = 0;
-    enLabel.text = enString;
     
-    //录音播放按钮view&btn
-    UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(0, enLabel.frame.size.height, kScreenWidth, 44)];
-    
-    UIButton *playBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-43, 5, 33, 33)];
-    [playBtn setImage:[UIImage imageNamed:@"play_press"] forState:UIControlStateNormal];
-    [playBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateHighlighted];
-//    [playBtn addTarget:self action:@selector(playMp3:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *luyinBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-86, 5, 33, 33)];
-    [luyinBtn setImage:[UIImage imageNamed:@"luyin_press"] forState:UIControlStateNormal];
-    [luyinBtn setImage:[UIImage imageNamed:@"luyin"] forState:UIControlStateHighlighted];
-    [btnView addSubview:playBtn];
-    [btnView addSubview:luyinBtn];
-    UIView *chView = [[UIView alloc] init];
-    //中文View&Label
-    if(indexPath.section != 0 && chString != nil){
-        TMContent *TM = nil;
-        if(indexPath.section == 1){
-            TM = self.part2List[indexPath.row];
-        }else{
-            TM = self.part3List[indexPath.row];
-        }
-        
-        UILabel *chLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, kScreenWidth-10, chStringHeight)];
-        chLabel.font = [UIFont systemFontOfSize:14];
-        chLabel.numberOfLines = 0;
-        chLabel.text = chString;
-        chLabel.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
-    //UIView *chView = [[UIView alloc] initWithFrame:CGRectMake(0, enLabel.frame.size.height+btnView.frame.size.height, kScreenWidth, chLabel.frame.size.height+10)];
-        [chView setFrame:CGRectMake(0, enLabel.frame.size.height+btnView.frame.size.height, kScreenWidth, chLabel.frame.size.height+10)];
-        chView.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
-        chView.hidden = !TM.state;
-        [chView addSubview:chLabel];
-    }
-    //大View，包含所有元素
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, enLabel.frame.size.height+btnView.frame.size.height+chView.frame.size.height)];
-    [bgView addSubview:enLabel];
-    [bgView addSubview:btnView];
-    [bgView addSubview:chView];
-    return bgView;
 }
--(void)playMp3:(id)sender{
-    if(self.buttonBlock){
-        
+-(void)luyinAni:(UIView *)btnView indexPath:(NSIndexPath *)indexPath{
+    self.btnView = btnView;
+    self.luyinAnimationIndexPath = indexPath;
+    NSMutableArray *arrayM = [NSMutableArray array];
+    for(int i=1; i < 16; i++){
+        [arrayM addObject:[UIImage imageNamed:[NSString stringWithFormat:@"recording%d",i]]];
     }
+    UIView *animationView = [[UIView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-103, 5, 33, 33)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 33, 33)];
+    [imageView setAnimationImages:arrayM];
+    [imageView setAnimationRepeatCount:0];
+    [imageView setAnimationDuration:arrayM.count*0.03];
+    [imageView startAnimating];
+    //给animationView添加点击事件
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(stopluyin:)];
+    [animationView addGestureRecognizer:tapGesture];
+    [animationView addSubview:imageView];
+    [tapGesture setNumberOfTapsRequired:1];
+    [btnView addSubview:animationView];
+}
+//停止录音
+-(void)stopluyin:(UITapGestureRecognizer *)gesture{
+    //录音停止
+    [self.recorder stop];
+    [[self.btnView.subviews lastObject] removeFromSuperview];
+    //将cell的indexPath数组化
+    NSArray *indexArray = [NSArray arrayWithObject:self.luyinAnimationIndexPath];
+    //刷新指定indexPath的cell
+    [self.tableView reloadRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationFade];
+}
+//开始录音
+-(void)luyinBtn:(NSString *)cellId{
+    [self.player stop];
+    //文件名称
+    NSString *fileName = [NSString stringWithFormat:@"%@.caf",cellId];
+    //整体路径
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:fileName];
+    
+    NSURL *url = [NSURL fileURLWithPath:path];
+    //设置录音参数
+    NSMutableDictionary *setting = [NSMutableDictionary dictionary];
+    setting[AVFormatIDKey] = @(kAudioFormatAppleIMA4);
+    setting[AVSampleRateKey] = @(8000.0);
+    setting[AVNumberOfChannelsKey] = @(1);
+    setting[AVLinearPCMBitDepthKey] = @(8);
+    //创建录音对象
+    self.recorder = [[AVAudioRecorder alloc] initWithURL:url settings:setting error:nil];
+    //允许监听
+    self.recorder.meteringEnabled = YES;
+    //开始录音
+    [self.recorder record];
+}
+
+-(void)clickBtn:(NSIndexPath *)indexPath{
+    //NSLog(@"终于能点击按钮啦。%ld,%ld",(long)indexPath.section,(long)indexPath.row);
+    TMContent *TM = nil;
+    if(indexPath.section == 1){
+        TM = self.part2List[indexPath.row];
+    }else if(indexPath.section == 2){
+        TM = self.part3List[indexPath.row];
+    }
+    [self playMp3:TM.audio];
+}
+//播放音频
+-(void)playMp3:(NSString *)url{
+    [self.player stop];
+    //将字符串URL化
+    NSURL *pathUrl = [NSURL URLWithString:url];
+    //将URLDATA
+    NSData *audioData = [NSData dataWithContentsOfURL:pathUrl];
+    //注：AVAudioPlayer必须进行全局属性声明
+    self.player = [[AVAudioPlayer alloc] initWithData:audioData error:nil];
+    //进行缓存
+    [self.player prepareToPlay];
+    //指定代理为自身
+    self.player.delegate = self;
+    //指定播放音量
+    self.player.volume = 8;
+    //开始播放
+    [self.player play];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    TMContent *TM = nil;
+    CGFloat enHeight = 0.0;
+    CGFloat chHeight = 0.0;
     if(indexPath.section == 0){
-        return [self getStringHeight:self.conDic[@"title"]]+54;
+        CGFloat titleHeight = [self getStringHeight:self.conDic[@"title"]]+50;
+        return titleHeight;
     }else if(indexPath.section == 1){
-        TMContent *TM = self.part2List[indexPath.row];
-        if(!TM.state){
-            return [self getStringHeight:TM.english]+54;
-        }else{
-            return [self getStringHeight:TM.english]+54+[self getStringHeight:TM.chines]+10;
-        }
-        
-    }else{
-        TMContent *TM = self.part3List[indexPath.row];
-        if(!TM.state){
-            return [self getStringHeight:TM.english]+54;
-        }else{
-            return [self getStringHeight:TM.english]+54+[self getStringHeight:TM.chines]+10;
-        }
+        TM = self.part2List[indexPath.row];
+        enHeight = [self getStringHeight:self.conDic[@"part2List"][indexPath.row][@"p2_english"]]+5;
+        chHeight = [self getStringHeight:self.conDic[@"part2List"][indexPath.row][@"p2_chines"]]+5;
+    }else if(indexPath.section == 2){
+        TM = self.part3List[indexPath.row];
+        enHeight = [self getStringHeight:self.conDic[@"part3List"][indexPath.row][@"p2_english"]]+5;
+        chHeight = [self getStringHeight:self.conDic[@"part3List"][indexPath.row][@"p2_chines"]]+5;
     }
+    //NSLog(@"%@",self.conDic[@"part2List"][indexPath.row]);
+    
+    
+    if (TM.state) {
+        return enHeight+chHeight+50;
+    }else{
+        return enHeight+45;
+    }
+    return 100;
     
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -211,7 +275,7 @@ typedef void (^ButtonBlock)(NSIndexPath *indexPath);
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1) {
+    if(indexPath.section == 1){
         TMContent *TM = self.part2List[indexPath.row];
         TM.state = !TM.state;
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -219,8 +283,6 @@ typedef void (^ButtonBlock)(NSIndexPath *indexPath);
         TMContent *TM = self.part3List[indexPath.row];
         TM.state = !TM.state;
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }else{
-    
     }
 }
 //根据字符串返回高度

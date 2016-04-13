@@ -12,5 +12,6 @@
 @property(nonatomic, strong)NSString *audio;
 @property(nonatomic, strong)NSString *english;
 @property(nonatomic, strong)NSString *chines;
+@property(nonatomic, strong)NSString *cellId;
 @property(nonatomic, assign)BOOL state;
 @end

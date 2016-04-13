@@ -20,6 +20,8 @@
 		350693A31C895FD800FD1C51 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350693A21C895FD800FD1C51 /* CategoryTableViewController.m */; };
 		3516BBC71C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3516BBC61C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m */; };
 		3516BBCB1C915B31000D1BF6 /* getUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3516BBCA1C915B31000D1BF6 /* getUserInfo.m */; };
+		35208C901CB7483C00AE77E5 /* PartTwoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35208C8F1CB7483C00AE77E5 /* PartTwoTableViewController.m */; };
+		35208C931CB7485100AE77E5 /* PartTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35208C921CB7485100AE77E5 /* PartTwoTableViewCell.m */; };
 		352EB0081C8E7992007798F8 /* PartOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 352EB0071C8E7992007798F8 /* PartOneTableViewCell.m */; };
 		352EEA751CAA17690088E5F8 /* PartTwoContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352EEA741CAA17690088E5F8 /* PartTwoContentTableViewController.m */; };
 		3532E42F1CA9054D004B1EB1 /* PartTwoSecondColumnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3532E42E1CA9054D004B1EB1 /* PartTwoSecondColumnTableViewController.m */; };
@@ -30,6 +32,7 @@
 		355683AF1CB50CAD00F7C350 /* PartTwoThreeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355683AE1CB50CAD00F7C350 /* PartTwoThreeTableViewController.m */; };
 		3557C2AA1CACE8DC00094CE7 /* PartTwoContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3557C2A91CACE8DC00094CE7 /* PartTwoContentTableViewCell.m */; };
 		3591B1671C9BB3B900DF7540 /* PartOneContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591B1661C9BB3B900DF7540 /* PartOneContentViewController.m */; };
+		35BE85511CBB33B30078F142 /* PartTwoThreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BE85501CBB33B30078F142 /* PartTwoThreeTableViewCell.m */; };
 		35C789311CB38F4C00FEA421 /* TMContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C789301CB38F4C00FEA421 /* TMContent.m */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,10 @@
 		3516BBC61C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartOneSecondColumnTableViewController.m; sourceTree = "<group>"; };
 		3516BBC91C915B31000D1BF6 /* getUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getUserInfo.h; sourceTree = "<group>"; };
 		3516BBCA1C915B31000D1BF6 /* getUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getUserInfo.m; sourceTree = "<group>"; };
+		35208C8E1CB7483C00AE77E5 /* PartTwoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoTableViewController.h; sourceTree = "<group>"; };
+		35208C8F1CB7483C00AE77E5 /* PartTwoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoTableViewController.m; sourceTree = "<group>"; };
+		35208C911CB7485100AE77E5 /* PartTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoTableViewCell.h; sourceTree = "<group>"; };
+		35208C921CB7485100AE77E5 /* PartTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoTableViewCell.m; sourceTree = "<group>"; };
 		352EB0061C8E7992007798F8 /* PartOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartOneTableViewCell.h; sourceTree = "<group>"; };
 		352EB0071C8E7992007798F8 /* PartOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartOneTableViewCell.m; sourceTree = "<group>"; };
 		352EEA731CAA17690088E5F8 /* PartTwoContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoContentTableViewController.h; sourceTree = "<group>"; };
@@ -96,6 +103,8 @@
 		3557C2A91CACE8DC00094CE7 /* PartTwoContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoContentTableViewCell.m; sourceTree = "<group>"; };
 		3591B1651C9BB3B900DF7540 /* PartOneContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartOneContentViewController.h; sourceTree = "<group>"; };
 		3591B1661C9BB3B900DF7540 /* PartOneContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartOneContentViewController.m; sourceTree = "<group>"; };
+		35BE854F1CBB33B30078F142 /* PartTwoThreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartTwoThreeTableViewCell.h; sourceTree = "<group>"; };
+		35BE85501CBB33B30078F142 /* PartTwoThreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartTwoThreeTableViewCell.m; sourceTree = "<group>"; };
 		35C7892F1CB38F4C00FEA421 /* TMContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMContent.h; sourceTree = "<group>"; };
 		35C789301CB38F4C00FEA421 /* TMContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMContent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -297,6 +306,10 @@
 				35C789301CB38F4C00FEA421 /* TMContent.m */,
 				3549FD771CB6431E004641CF /* playBlockButton.h */,
 				3549FD781CB6431E004641CF /* playBlockButton.m */,
+				35208C911CB7485100AE77E5 /* PartTwoTableViewCell.h */,
+				35208C921CB7485100AE77E5 /* PartTwoTableViewCell.m */,
+				35BE854F1CBB33B30078F142 /* PartTwoThreeTableViewCell.h */,
+				35BE85501CBB33B30078F142 /* PartTwoThreeTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -311,6 +324,8 @@
 				352EEA741CAA17690088E5F8 /* PartTwoContentTableViewController.m */,
 				355683AD1CB50CAD00F7C350 /* PartTwoThreeTableViewController.h */,
 				355683AE1CB50CAD00F7C350 /* PartTwoThreeTableViewController.m */,
+				35208C8E1CB7483C00AE77E5 /* PartTwoTableViewController.h */,
+				35208C8F1CB7483C00AE77E5 /* PartTwoTableViewController.m */,
 			);
 			name = Content;
 			sourceTree = "<group>";
@@ -453,13 +468,16 @@
 				352EEA751CAA17690088E5F8 /* PartTwoContentTableViewController.m in Sources */,
 				3516BBCB1C915B31000D1BF6 /* getUserInfo.m in Sources */,
 				3591B1671C9BB3B900DF7540 /* PartOneContentViewController.m in Sources */,
+				35208C901CB7483C00AE77E5 /* PartTwoTableViewController.m in Sources */,
 				3549FD791CB6431E004641CF /* playBlockButton.m in Sources */,
 				350693A31C895FD800FD1C51 /* CategoryTableViewController.m in Sources */,
 				350693931C891ACD00FD1C51 /* LoginViewController.m in Sources */,
 				3557C2AA1CACE8DC00094CE7 /* PartTwoContentTableViewCell.m in Sources */,
 				3532E42F1CA9054D004B1EB1 /* PartTwoSecondColumnTableViewController.m in Sources */,
 				352EB0081C8E7992007798F8 /* PartOneTableViewCell.m in Sources */,
+				35BE85511CBB33B30078F142 /* PartTwoThreeTableViewCell.m in Sources */,
 				353DB08C1C9F8E1E0098A01A /* contentView.m in Sources */,
+				35208C931CB7485100AE77E5 /* PartTwoTableViewCell.m in Sources */,
 				350693611C8918D700FD1C51 /* AppDelegate.m in Sources */,
 				355683AF1CB50CAD00F7C350 /* PartTwoThreeTableViewController.m in Sources */,
 				3516BBC71C914BC0000D1BF6 /* PartOneSecondColumnTableViewController.m in Sources */,
@@ -604,11 +622,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Login/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hejianxin.Login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hejianxin.Login2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -616,11 +637,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Login/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hejianxin.Login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hejianxin.Login2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
