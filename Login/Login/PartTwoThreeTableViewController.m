@@ -29,6 +29,7 @@
     self.navigationItem.leftBarButtonItem = item;
     NSString *url = @"http://test.benniaoyasi.cn/api.php";
     NSString *param = [NSString stringWithFormat:@"m=api&c=content&a=contentinfo&appid=1&mobile=%@&version=4.4.9&devtype=ios&uuid=81CF49BF-F7F0-4E29-9884-6B343F9A415C&id=%@",self.mobile,self.cateDic[@"id"]];
+    
     getNetworkQuest *quest = [[getNetworkQuest alloc]init];
     [quest sendGetQuest2:url param:param];
     NSData *data = quest.data;
@@ -47,8 +48,28 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.conDic = contentDic;
+    NSLog(@"%@",self.conDic[@"part2List"]);
+    _part2List = [NSMutableArray array];
+    for (NSDictionary *d in self.conDic[@"part2List"]) {
+        TMContent *TM = [[TMContent alloc] init];
+        TM.english = d[@"p2_english"];
+        TM.chines = d[@"p2_chines"];
+        TM.audio = d[@"p2_audio"];
+        TM.cellId = [NSString stringWithFormat:@"part2List%@-%@",d[@"yid"],d[@"id"]];
+        [_part2List addObject:TM];
+        
+    }
+    _part3List = [NSMutableArray array];
+    for (NSDictionary *d in self.conDic[@"part3List"]) {
+        TMContent *TM = [[TMContent alloc] init];
+        TM.english = d[@"p2_english"];
+        TM.chines = d[@"p2_chines"];
+        TM.audio = d[@"p2_audio"];
+        TM.cellId = [NSString stringWithFormat:@"part3List%@-%@",d[@"yid"],d[@"id"]];
+        [_part3List addObject:TM];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -136,23 +157,23 @@
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 1){
+        TMContent *TM = self.part2List[indexPath.row];
+        TM.state = !TM.state;
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }else if(indexPath.section == 2){
+        TMContent *TM = self.part3List[indexPath.row];
+        TM.state = !TM.state;
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//根据字符串返回高度
+-(CGFloat)getStringHeight:(NSString *)string{
+    NSDictionary *attr = @{NSFontAttributeName:[UIFont systemFontOfSize:14]};
+    CGRect strRect = [string boundingRectWithSize:CGSizeMake(kScreenWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
+    return CGRectGetHeight(strRect);
 }
 */
 

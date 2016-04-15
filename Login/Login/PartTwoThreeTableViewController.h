@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PartTwoThreeTableViewController : UITableViewController
-@property(nonatomic, copy)NSDictionary *cateDic;
-@property(nonatomic, copy)NSString *mobile;
+@property(nonatomic, assign)NSDictionary *cateDic;
+@property(nonatomic, assign)NSString *mobile;
 @end

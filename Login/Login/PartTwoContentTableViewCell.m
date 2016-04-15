@@ -67,7 +67,7 @@
         enTextView.userInteractionEnabled = NO;
         enTextView.scrollEnabled = NO;
         
-        /* 播放&录音按钮 */
+        /* 播放&录音按钮
         UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(0, enTextView.frame.size.height, [UIScreen mainScreen].bounds.size.width, 33)];
         
         UIButton *playBtn = [[UIButton alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-10-33, 0, 33, 33)];
@@ -79,7 +79,7 @@
         [luyinBtn setImage:[UIImage imageNamed:@"luyin.png"] forState:UIControlStateHighlighted];
         [btnView addSubview:playBtn];
         [btnView addSubview:luyinBtn];
-        /* 中文答案view */
+        /* 中文答案view
         CGFloat chHeight = [self getStringSize:self.part2Dic[@"p2_chines"]];
         UITextView *chTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, enTextView.frame.size.height+38, [UIScreen mainScreen].bounds.size.width, chHeight)];
         chTextView.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
@@ -88,10 +88,11 @@
         chTextView.scrollEnabled = NO;
 
         
-        [self.contentView addSubview:enTextView];
+        
         [self.contentView addSubview:btnView];
-        [self.contentView addSubview:chTextView];
-        self.part2CellHeight =  enTextView.frame.size.height+chTextView.frame.size.height+btnView.frame.size.height+5;
+        [self.contentView addSubview:chTextView];*/
+        [self.contentView addSubview:enTextView];
+        self.part2CellHeight =  enTextView.frame.size.height+5;
     }
     
 }

@@ -2,12 +2,17 @@
 //  PartTwoThreeTableViewCell.m
 //  Login
 //
-//  Created by 何建新 on 16/4/3.
+//  Created by 何建新 on 16/4/11.
 //  Copyright © 2016年 何建新. All rights reserved.
 //
 
 #import "PartTwoThreeTableViewCell.h"
+#import "TMContent.h"
 
+#define kScreenWidth CGRectGetWidth([[UIScreen mainScreen] bounds])
+@interface PartTwoThreeTableViewCell()
+@property(nonatomic, strong)UIView *btnView;
+@end
 @implementation PartTwoThreeTableViewCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier contentDic:(NSDictionary *)contentDic indexPath:(NSIndexPath*)indexPath{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -17,12 +22,41 @@
             
         }
     }
+    //中文答案Label
+    CGFloat chHeight = [self stringHeight:TM.chines];
+    UILabel *chLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, kScreenWidth-10, chHeight+5)];
+    chLabel.font = [UIFont systemFontOfSize:14];
+    chLabel.text = TM.chines;
+    chLabel.numberOfLines = 0;
+    chLabel.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
+    chLabel.hidden = !TM.state;
+    UIView *chView = [[UIView alloc] initWithFrame:CGRectMake(0, self.btnView.frame.origin.y+45, kScreenWidth, chLabel.frame.size.height+5)];
+    chView.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
     
-
-    return self;
+    
+    chView.hidden = !TM.state;
+    [chView addSubview:chLabel];
+    //if(!TM.state){
+        [self.contentView addSubview:chView];
+    //}
+    [self.contentView addSubview:enLabel];
+    [self.contentView addSubview:self.btnView];
     
 }
+//录音播放方法
+-(void)luyinPlay:(UIButton *)sender{
+    self.luyinPlayBtn (self.luyinFilePath,self.luyinIndexPath);
+}
+-(void)clickBtn:(UIButton *)sender{
 
+    self.clickButton (self.index);
+    
+}
+//录音
+-(void)luyinBtn:(UIButton *)sender{
+    self.luyinButton (self.cellId);
+    self.luyinAnimation (self.btnView,self.luyinAnimationIndexPath);
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
