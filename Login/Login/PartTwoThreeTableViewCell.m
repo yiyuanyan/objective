@@ -14,72 +14,13 @@
 @property(nonatomic, strong)UIView *btnView;
 @end
 @implementation PartTwoThreeTableViewCell
-//创建问题Cell
--(void)createTitleCell:(NSString *)titleString TM:(TMContent *)TM indexPath:(NSIndexPath *)indexPath{
-
-    //获取文字高度
-    CGFloat strHeight = [self stringHeight:titleString];
-    //文字Label
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, kScreenWidth-10, strHeight+5)];
-    titleLabel.text = titleString;
-    titleLabel.numberOfLines = 0;
-    titleLabel.font = [UIFont systemFontOfSize:14];
-    //播放和录音按钮
-    UIButton *playBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-53, 5, 33, 33)];
-    [playBtn setImage:[UIImage imageNamed:@"play_press"] forState:UIControlStateNormal];
-    [playBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateHighlighted];
-    UIButton *luyinBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-103, 5, 33, 33)];
-    [luyinBtn setImage:[UIImage imageNamed:@"luyin_press"] forState:UIControlStateNormal];
-    [luyinBtn setImage:[UIImage imageNamed:@"luyin"] forState:UIControlStateHighlighted];
-    
-    self.btnView = [[UIView alloc] initWithFrame:CGRectMake(0, titleLabel.frame.size.height, kScreenWidth, 44)];
-    self.btnView.backgroundColor = [UIColor redColor];
-    [self.btnView addSubview:playBtn];
-    [self.btnView addSubview:luyinBtn];
-    
-    [self.contentView addSubview:titleLabel];
-    [self.contentView addSubview:self.btnView];
-    
-}
-//创建Part2List的Cell
--(void)createPart2ListCell:(TMContent *)TM indexPath:(NSIndexPath*)indexPath{
-    self.index = indexPath;
-    self.cellId = TM.cellId;
-    self.luyinAnimationIndexPath = indexPath;
-    //英文答案Label
-    CGFloat enHeight = [self stringHeight:TM.english];
-    UILabel *enLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, kScreenWidth-10, enHeight+5)];
-    enLabel.font = [UIFont systemFontOfSize:14];
-    enLabel.text = TM.english;
-    enLabel.numberOfLines = 0;
-    //播放和录音按钮
-    UIButton *playBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-53, 5, 33, 33)];
-    [playBtn setImage:[UIImage imageNamed:@"play_press"] forState:UIControlStateNormal];
-    [playBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateHighlighted];
-    UIButton *luyinBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-103, 5, 33, 33)];
-    [playBtn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [luyinBtn setImage:[UIImage imageNamed:@"luyin_press"] forState:UIControlStateNormal];
-    [luyinBtn setImage:[UIImage imageNamed:@"luyin"] forState:UIControlStateHighlighted];
-    [luyinBtn addTarget:self action:@selector(luyinBtn:) forControlEvents:UIControlEventTouchUpInside];
-    //播放录音按钮
-    //查找录音文件是否存在
-    NSString *fileName = [NSString stringWithFormat:@"%@.caf",self.cellId];
-    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:fileName];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    BOOL file = [fileManager fileExistsAtPath:path];
-    self.btnView = [[UIView alloc] initWithFrame:CGRectMake(0, enLabel.frame.size.height, kScreenWidth, 44)];
-    [self.btnView addSubview:playBtn];
-    [self.btnView addSubview:luyinBtn];
-    //录音文件存在则创建并加载进btnView中
-    if(file){
-        UIButton *luyinPlayBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-153, 5, 33, 33)];
-        [luyinPlayBtn setImage:[UIImage imageNamed:@"listen_press"] forState:UIControlStateNormal];
-        [luyinPlayBtn setImage:[UIImage imageNamed:@"listen"] forState:UIControlStateHighlighted];
-        self.luyinFilePath = path;
-        self.luyinIndexPath = indexPath;
-        [luyinPlayBtn addTarget:self action:@selector(luyinPlay:) forControlEvents:UIControlEventTouchUpInside];
-        [self.btnView addSubview:luyinPlayBtn];
-        
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier contentDic:(NSDictionary *)contentDic indexPath:(NSIndexPath*)indexPath{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        if(indexPath.section == 0){
+            [self createQuest:contentDic[@"title"]];
+            
+        }
     }
     //中文答案Label
     CGFloat chHeight = [self stringHeight:TM.chines];
@@ -126,12 +67,26 @@
 
     // Configure the view for the selected state
 }
-//计算文字高度
--(CGFloat)stringHeight:(NSString *)string{
-    UIFont *font = [UIFont systemFontOfSize:14];
-    NSDictionary *attr = @{NSFontAttributeName:font};
-    CGRect strRect = [string boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
-    return CGRectGetHeight(strRect);
+-(void)createQuest:(NSString *)string{
+    CGFloat height = [self getStringSize:string];
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];
+    textView.text = string;
+    textView.userInteractionEnabled = NO;
+    textView.scrollEnabled = NO;
+    UITextView *testView = [[UITextView alloc] initWithFrame:CGRectMake(0, height, [UIScreen mainScreen].bounds.size.width, height)];
+    testView.userInteractionEnabled = NO;
+    testView.text = string;
+    testView.scrollEnabled = NO;
     
+    
+    [self.contentView addSubview:textView];
+    if(self.hindex == 0){
+        [self.contentView addSubview:testView];
+    }
+}
+-(CGFloat)getStringSize:(NSString *)string{
+    UIFont *strFont = [UIFont fontWithName:@"Arial" size:14];
+    CGSize strSize = [string boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:strFont} context:nil].size;
+    return strSize.height;
 }
 @end

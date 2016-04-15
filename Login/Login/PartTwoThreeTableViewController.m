@@ -2,39 +2,29 @@
 //  PartTwoThreeTableViewController.m
 //  Login
 //
-//  Created by 何建新 on 16/4/6.
+//  Created by 何建新 on 16/4/4.
 //  Copyright © 2016年 何建新. All rights reserved.
 //
 
 #import "PartTwoThreeTableViewController.h"
-#import "getUserInfo.h"
 #import "getNetworkQuest.h"
-#import "TMContent.h"
+#import "getUserInfo.h"
 #import "PartTwoThreeTableViewCell.h"
-
-#import <AVFoundation/AVFoundation.h>
-static void *kStatusKVOKey = &kStatusKVOKey;
-static void *kDurationKVOKey = &kDurationKVOKey;
-static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
-#define kScreenWidth CGRectGetWidth([[UIScreen mainScreen] bounds])
-
-@interface PartTwoThreeTableViewController ()<AVAudioPlayerDelegate,AVAudioRecorderDelegate>
-@property(nonatomic, copy) NSDictionary *conDic;
-@property(nonatomic, copy)NSMutableArray *part2List;
-@property(nonatomic, copy)NSMutableArray *part3List;
-//接收partTwoThreeTableViewCell中的按钮View
-@property(nonatomic, strong)UIView *btnView;
-@property(nonatomic, strong)NSIndexPath *luyinAnimationIndexPath;
-@property(nonatomic, strong)AVAudioPlayer *player;
-@property(nonatomic, strong)AVAudioRecorder *recorder;
+@interface PartTwoThreeTableViewController ()
+@property(nonatomic, copy)NSDictionary *contentDic;
+@property(nonatomic, strong) NSString *quest;
+@property(nonatomic, copy) NSDictionary *p2;
+@property(nonatomic, copy) NSDictionary *p3;
+@property(nonatomic, assign)BOOL hindex;
 @end
 
 @implementation PartTwoThreeTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    getUserInfo *user = [[getUserInfo alloc]init];
-    self.mobile = [user getUser];
+    //self.hindex = 0;
+    getUserInfo *mobile = [[getUserInfo alloc]init];
+    self.mobile = [mobile getUser];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     self.navigationItem.leftBarButtonItem = item;
     NSString *url = @"http://test.benniaoyasi.cn/api.php";
@@ -50,6 +40,13 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
             [contentDic addEntriesFromDictionary:d];
         }
     }
+    self.contentDic = contentDic;
+    self.quest = contentDic[@"title"];
+    self.p2 = contentDic[@"part2List"];
+    self.p3 = contentDic[@"part3List"];
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
     self.conDic = contentDic;
     NSLog(@"%@",self.conDic[@"part2List"]);
@@ -88,190 +85,77 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(section == 0){
+    if (section == 0) {
         return 1;
     }else if(section == 1){
-        return self.part2List.count;
+        return self.p2.count;
     }else{
-        return self.part3List.count;
+        return self.p3.count;
     }
-
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TMContent *TM = nil;
-    if(indexPath.section == 1){
-        TM = self.part2List[indexPath.row];
-    }else if(indexPath.section == 2){
-        TM = self.part3List[indexPath.row];
-    }
-    PartTwoThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
+    PartTwoThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     if(cell == nil){
-        cell = [[PartTwoThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
-    }else{
-        while([cell.contentView.subviews lastObject] != nil){
-            [(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];
-        }
+        //cell = [[PartTwoThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell"];
+        //if(indexPath.section == 0){
+        cell = [[PartTwoThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell" contentDic:self.contentDic indexPath:indexPath];
+        //}
+        NSLog(@"%d",self.hindex);
+        cell.hindex = self.hindex;
     }
-    if(indexPath.section == 0){
-        [cell createTitleCell:self.conDic[@"title"] TM:TM indexPath:indexPath];
-    }else if(indexPath.section == 1){
-        [cell createPart2ListCell:TM indexPath:indexPath];
-    }else if(indexPath.section == 2){
-        [cell createPart2ListCell:TM indexPath:indexPath];
-    }
-    cell.clickButton = ^(NSIndexPath* indexPath){
-        [self clickBtn:indexPath];
-    };
-    cell.luyinButton = ^(NSString *cellId){
-        [self luyinBtn:cellId];
-    };
-    cell.luyinAnimation = ^(UIView *btnView, NSIndexPath *indexPath){
-        [self luyinAni:btnView indexPath:indexPath];
-    };
-    cell.luyinPlayBtn = ^(NSString *luyinFilePath,NSIndexPath *indexPath){
-        [self luyinPlay:luyinFilePath indexPath:indexPath];
-        
-    };
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    // Configure the cell...
+    
     return cell;
 }
-//录音播放
--(void)luyinPlay:(NSString *)luyinFilePath indexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%@",luyinFilePath);
-    [self.player stop];
-    NSURL *url = [NSURL URLWithString:luyinFilePath];
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    //进行缓存
-    [self.player prepareToPlay];
-    //指定代理为自身
-    self.player.delegate = self;
-    //指定播放音量
-    self.player.volume = 8;
-    //开始播放
-    [self.player play];
-    
-    
-}
--(void)luyinAni:(UIView *)btnView indexPath:(NSIndexPath *)indexPath{
-    self.btnView = btnView;
-    self.luyinAnimationIndexPath = indexPath;
-    NSMutableArray *arrayM = [NSMutableArray array];
-    for(int i=1; i < 16; i++){
-        [arrayM addObject:[UIImage imageNamed:[NSString stringWithFormat:@"recording%d",i]]];
-    }
-    UIView *animationView = [[UIView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-103, 5, 33, 33)];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 33, 33)];
-    [imageView setAnimationImages:arrayM];
-    [imageView setAnimationRepeatCount:0];
-    [imageView setAnimationDuration:arrayM.count*0.03];
-    [imageView startAnimating];
-    //给animationView添加点击事件
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(stopluyin:)];
-    [animationView addGestureRecognizer:tapGesture];
-    [animationView addSubview:imageView];
-    [tapGesture setNumberOfTapsRequired:1];
-    [btnView addSubview:animationView];
-}
-//停止录音
--(void)stopluyin:(UITapGestureRecognizer *)gesture{
-    //录音停止
-    [self.recorder stop];
-    [[self.btnView.subviews lastObject] removeFromSuperview];
-    //将cell的indexPath数组化
-    NSArray *indexArray = [NSArray arrayWithObject:self.luyinAnimationIndexPath];
-    //刷新指定indexPath的cell
-    [self.tableView reloadRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationFade];
-}
-//开始录音
--(void)luyinBtn:(NSString *)cellId{
-    [self.player stop];
-    //文件名称
-    NSString *fileName = [NSString stringWithFormat:@"%@.caf",cellId];
-    //整体路径
-    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:fileName];
-    
-    NSURL *url = [NSURL fileURLWithPath:path];
-    //设置录音参数
-    NSMutableDictionary *setting = [NSMutableDictionary dictionary];
-    setting[AVFormatIDKey] = @(kAudioFormatAppleIMA4);
-    setting[AVSampleRateKey] = @(8000.0);
-    setting[AVNumberOfChannelsKey] = @(1);
-    setting[AVLinearPCMBitDepthKey] = @(8);
-    //创建录音对象
-    self.recorder = [[AVAudioRecorder alloc] initWithURL:url settings:setting error:nil];
-    //允许监听
-    self.recorder.meteringEnabled = YES;
-    //开始录音
-    [self.recorder record];
-}
 
--(void)clickBtn:(NSIndexPath *)indexPath{
-    //NSLog(@"终于能点击按钮啦。%ld,%ld",(long)indexPath.section,(long)indexPath.row);
-    TMContent *TM = nil;
-    if(indexPath.section == 1){
-        TM = self.part2List[indexPath.row];
-    }else if(indexPath.section == 2){
-        TM = self.part3List[indexPath.row];
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return @"问题";
+    }else if(section == 1){
+        return @"Part2List";
+    }else{
+        return @"Part3List";
     }
-    [self playMp3:TM.audio];
 }
-//播放音频
--(void)playMp3:(NSString *)url{
-    [self.player stop];
-    //将字符串URL化
-    NSURL *pathUrl = [NSURL URLWithString:url];
-    //将URLDATA
-    NSData *audioData = [NSData dataWithContentsOfURL:pathUrl];
-    //注：AVAudioPlayer必须进行全局属性声明
-    self.player = [[AVAudioPlayer alloc] initWithData:audioData error:nil];
-    //进行缓存
-    [self.player prepareToPlay];
-    //指定代理为自身
-    self.player.delegate = self;
-    //指定播放音量
-    self.player.volume = 8;
-    //开始播放
-    [self.player play];
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(self.hindex == 0){
+        self.hindex = 1;
+    }else{
+        self.hindex = 0;
+    }
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TMContent *TM = nil;
-    CGFloat enHeight = 0.0;
-    CGFloat chHeight = 0.0;
-    if(indexPath.section == 0){
-        CGFloat titleHeight = [self getStringHeight:self.conDic[@"title"]]+50;
-        return titleHeight;
-    }else if(indexPath.section == 1){
-        TM = self.part2List[indexPath.row];
-        enHeight = [self getStringHeight:self.conDic[@"part2List"][indexPath.row][@"p2_english"]]+5;
-        chHeight = [self getStringHeight:self.conDic[@"part2List"][indexPath.row][@"p2_chines"]]+5;
-    }else if(indexPath.section == 2){
-        TM = self.part3List[indexPath.row];
-        enHeight = [self getStringHeight:self.conDic[@"part3List"][indexPath.row][@"p2_english"]]+5;
-        chHeight = [self getStringHeight:self.conDic[@"part3List"][indexPath.row][@"p2_chines"]]+5;
-    }
-    //NSLog(@"%@",self.conDic[@"part2List"][indexPath.row]);
-    
-    
-    if (TM.state) {
-        return enHeight+chHeight+50;
-    }else{
-        return enHeight+45;
-    }
-    return 100;
-    
+    return 200;
 }
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if(section == 0){
-        return @"问题";
-    }else if(section == 1){
-        return @"part2List";
-    }else{
-        return @"part3List";
-    }
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -291,8 +175,6 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     CGRect strRect = [string boundingRectWithSize:CGSizeMake(kScreenWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
     return CGRectGetHeight(strRect);
 }
--(void)goBack{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+*/
 
 @end
