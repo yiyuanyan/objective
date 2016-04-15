@@ -13,8 +13,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         if(indexPath.section == 0){
-            NSLog(@"%@",contentDic);
             [self createQuest:contentDic[@"title"]];
+            
         }
     }
     
@@ -37,8 +37,18 @@
     CGFloat height = [self getStringSize:string];
     UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];
     textView.text = string;
+    textView.userInteractionEnabled = NO;
+    textView.scrollEnabled = NO;
+    UITextView *testView = [[UITextView alloc] initWithFrame:CGRectMake(0, height, [UIScreen mainScreen].bounds.size.width, height)];
+    testView.userInteractionEnabled = NO;
+    testView.text = string;
+    testView.scrollEnabled = NO;
+    
     
     [self.contentView addSubview:textView];
+    if(self.hindex == 0){
+        [self.contentView addSubview:testView];
+    }
 }
 -(CGFloat)getStringSize:(NSString *)string{
     UIFont *strFont = [UIFont fontWithName:@"Arial" size:14];

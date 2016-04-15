@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PartTwoThreeTableViewCell : UITableViewCell
+@property(nonatomic, assign)BOOL hindex;
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier contentDic:(NSDictionary *)contentDic indexPath:(NSIndexPath *)inexPath;
 @end

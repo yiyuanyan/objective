@@ -2,27 +2,29 @@
 //  PartTwoThreeTableViewController.m
 //  Login
 //
-//  Created by 何建新 on 16/3/31.
+//  Created by 何建新 on 16/4/4.
 //  Copyright © 2016年 何建新. All rights reserved.
 //
 
 #import "PartTwoThreeTableViewController.h"
-#import "PartTwoThreeTableViewCell.h"
 #import "getNetworkQuest.h"
 #import "getUserInfo.h"
+#import "PartTwoThreeTableViewCell.h"
 @interface PartTwoThreeTableViewController ()
-@property(nonatomic, copy)NSDictionary *contentInfo;
-@property(nonatomic, assign) NSInteger num;
-@property(nonatomic, assign)CGFloat part2CellHeight;
-@property(nonatomic, assign)CGFloat titleHeight;
+@property(nonatomic, copy)NSDictionary *contentDic;
+@property(nonatomic, strong) NSString *quest;
+@property(nonatomic, copy) NSDictionary *p2;
+@property(nonatomic, copy) NSDictionary *p3;
+@property(nonatomic, assign)BOOL hindex;
 @end
 
 @implementation PartTwoThreeTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    getUserInfo *userInfo = [[getUserInfo alloc]init];
-    self.mobile = [userInfo getUser];
+    //self.hindex = 0;
+    getUserInfo *mobile = [[getUserInfo alloc]init];
+    self.mobile = [mobile getUser];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     self.navigationItem.leftBarButtonItem = item;
     NSString *url = @"http://test.benniaoyasi.cn/api.php";
@@ -37,9 +39,11 @@
             [contentDic addEntriesFromDictionary:d];
         }
     }
-    self.contentInfo = contentDic;
-    NSLog(@"%@",self.contentInfo);
-    //NSLog(@"%@",self.contentInfo);
+    self.contentDic = contentDic;
+    self.quest = contentDic[@"title"];
+    self.p2 = contentDic[@"part2List"];
+    self.p3 = contentDic[@"part3List"];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -60,87 +64,53 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    NSInteger count = 0;
-    if (section == 2) {
-        count = [self.contentInfo[@"part2List"] count];
+    if (section == 0) {
+        return 1;
     }else if(section == 1){
-        count = [self.contentInfo[@"part2List"] count];
+        return self.p2.count;
     }else{
-        count = 1;
+        return self.p3.count;
     }
-    self.num = section;
-    return count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    
-    PartTwoThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PartTwoCell"];
-    if (cell == nil) {
-        
-        cell = [[PartTwoThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PartTwoCell" contentDic:self.contentInfo indexPath:indexPath];
-    }else{
-        while ([cell.contentView.subviews lastObject] != nil) {
-            [[cell.contentView.subviews lastObject] removeFromSuperview];
-            //[[cell.contentView.subviews] removeFromSuperview];
-        }
+    PartTwoThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    if(cell == nil){
+        //cell = [[PartTwoThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell"];
+        //if(indexPath.section == 0){
+        cell = [[PartTwoThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell" contentDic:self.contentDic indexPath:indexPath];
+        //}
+        NSLog(@"%d",self.hindex);
+        cell.hindex = self.hindex;
     }
-    
-
-    
     
     // Configure the cell...
-    //NSLog(@"%@",self.contentInfo[@"part2List"][indexPath.row]);
+    
     return cell;
 }
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    NSString *headerTitle = nil;
-    if (section == 2) {
-        headerTitle = @"Part3List";
-    }else if(section == 1){
-        headerTitle = @"Part2List";
-    }else{
-        headerTitle = @"问题";
-    }
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
-    headerView.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 1, 100, 42)];
-    //titleLabel.backgroundColor = [UIColor redColor];
-    titleLabel.text = headerTitle;
-    
-    
-    UIView *borderTop = [[UIView alloc] initWithFrame:CGRectMake(0, 0, headerView.frame.size.width, 1)];
-    borderTop.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1];
-    UIView *borderBottom = [[UIView alloc] initWithFrame:CGRectMake(0, headerView.frame.size.height-1, headerView.frame.size.width, 1)];
-    borderBottom.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1];
-    [headerView addSubview:titleLabel];
-    [headerView addSubview:borderTop];
-    [headerView addSubview:borderBottom];
-    return headerView;
-}
 
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return @"问题";
+    }else if(section == 1){
+        return @"Part2List";
+    }else{
+        return @"Part3List";
+    }
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44.0;
+    if(self.hindex == 0){
+        self.hindex = 1;
+    }else{
+        self.hindex = 0;
+    }
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 1){
-        return self.part2CellHeight;
-    }else if(indexPath.section == 0){
-        return 50;
-    }else{
-        return 10;
-    }
-    
-}
--(CGFloat)getStringSize:(NSString *)string{
-    UIFont *strFont = [UIFont fontWithName:@"Arial" size:14];
-    CGSize strSize = [string boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:strFont} context:nil].size;
-    return strSize.height;
+    return 200;
 }
 /*
 // Override to support conditional editing of the table view.
@@ -185,7 +155,5 @@
     // Pass the selected object to the new view controller.
 }
 */
--(void)goBack{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 @end
