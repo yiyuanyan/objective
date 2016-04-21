@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface StudyTableViewCell : UITableViewCell
+@property(nonatomic, strong)NSMutableDictionary *dic;
+
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+-(void)createCell;
 @end

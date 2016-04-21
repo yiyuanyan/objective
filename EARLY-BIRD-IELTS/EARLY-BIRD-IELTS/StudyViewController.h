@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StudyViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface StudyViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
 @end
