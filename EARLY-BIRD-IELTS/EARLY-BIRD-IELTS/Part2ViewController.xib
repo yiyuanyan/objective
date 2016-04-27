@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Part2ViewController">
+            <connections>
+                <outlet property="tableScrollView" destination="NjD-6G-QPd" id="Ih5-Bb-pHK"/>
+                <outlet property="topScrollView" destination="EPO-8H-G1V" id="A3Y-dN-ix5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NjD-6G-QPd">
+                    <rect key="frame" x="0.0" y="94" width="600" height="506"/>
+                </scrollView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPO-8H-G1V">
+                    <rect key="frame" x="0.0" y="64" width="600" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1HO-Nt-Nqd"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="EPO-8H-G1V" secondAttribute="trailing" id="7b5-WZ-aJa"/>
+                <constraint firstItem="NjD-6G-QPd" firstAttribute="top" secondItem="EPO-8H-G1V" secondAttribute="bottom" id="8dW-RP-E53"/>
+                <constraint firstAttribute="bottom" secondItem="NjD-6G-QPd" secondAttribute="bottom" id="Ga8-SG-6k1"/>
+                <constraint firstItem="EPO-8H-G1V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ilw-zP-aBe"/>
+                <constraint firstItem="EPO-8H-G1V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Tez-Vb-NWK"/>
+                <constraint firstItem="NjD-6G-QPd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kDx-XE-LoX"/>
+                <constraint firstAttribute="trailing" secondItem="NjD-6G-QPd" secondAttribute="trailing" id="mNZ-wi-fEQ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

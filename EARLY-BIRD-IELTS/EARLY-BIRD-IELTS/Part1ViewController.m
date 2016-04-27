@@ -8,7 +8,7 @@
 
 #import "Part1ViewController.h"
 #import "MBProgressHUD.h"
-
+#import "Part1ListTableViewController.h"
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define strFont [UIFont fontWithName:@"Arial" size:14]
@@ -111,14 +111,10 @@
 }
 //点击top的按钮
 -(void)clickTopBtn:(UIButton *)sender{
-    
-    NSLog(@"%@",self.allBtn);
     for (int i = 0; i<self.allBtn.count; i++) {
-        NSLog(@"%d",[[self.allBtn objectAtIndex:i] tag]);
         if([[self.allBtn objectAtIndex:i] tag] == sender.tag){
             [[self.allBtn objectAtIndex:i] setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             NSInteger x = sender.tag - 200;
-            NSLog(@"%f",kScreenWidth*x);
             [self.tableScrollView setContentOffset:CGPointMake(kScreenWidth * x, -64) animated:YES];
         }else{
             [[self.allBtn objectAtIndex:i] setTitleColor:[UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1] forState:UIControlStateNormal];
@@ -193,16 +189,27 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell"];
     }
     NSString *str = [NSString stringWithFormat:@"%d",tableView.tag];
-    NSLog(@"%@",self.allDic[str][indexPath.row][@"chinese"]);
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.text = self.allDic[str][indexPath.row][@"chinese"];
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Part1ListTableViewController *listView = [[Part1ListTableViewController alloc] init];
+    
+    NSString *str = [NSString stringWithFormat:@"%d",tableView.tag];
+    NSLog(@"%@",self.allDic[str][indexPath.row]);
+    listView.cateId = self.allDic[str][indexPath.row][@"id"];
+    listView.newflg = self.allDic[str][indexPath.row][@"newflg"];
+    listView.title = self.allDic[str][indexPath.row][@"english"];
+    [self.navigationController pushViewController:listView animated:YES];
+    
 }
 #pragma mark - ScrollView方法
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     //获取当前视图的宽度
     CGFloat pageWith = scrollView.frame.size.width;
-    //根据scrolView的左右滑动,对pageCotrol的当前指示器进行切换(设置currentPage)
+    //根据scrolView的左右滑动,对pageCotrol的当前指示器进行切换(设置currentPage)  int page 为当前页
     int page = floor((scrollView.contentOffset.x - pageWith/2)/pageWith)+1;
     for (int i = 0; i<self.allBtn.count; i++) {
         if([[self.allBtn objectAtIndex:i] tag] == (page + 200)){

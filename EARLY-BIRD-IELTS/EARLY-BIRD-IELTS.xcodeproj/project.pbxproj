@@ -16,6 +16,8 @@
 		351B3F7C1CC094B300FFB89F /* StudyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 351B3F7B1CC094B300FFB89F /* StudyTableViewCell.m */; };
 		3520780C1CC60E2F00A5C73B /* TOPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520780B1CC60E2F00A5C73B /* TOPScrollView.m */; };
 		3528D4F71CC9BD68006D5DCC /* Part1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3528D4F61CC9BD68006D5DCC /* Part1ViewController.m */; };
+		354E44211CD04E4400E13E2F /* Part2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 354E441F1CD04E4400E13E2F /* Part2ViewController.m */; };
+		354E44221CD04E4400E13E2F /* Part2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 354E44201CD04E4400E13E2F /* Part2ViewController.xib */; };
 		35530A181CCDE32E008319AE /* Part1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35530A171CCDE32E008319AE /* Part1TableViewCell.m */; };
 		3584A1D11CBF44AF00602E46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584A1D01CBF44AF00602E46 /* main.m */; };
 		3584A1D41CBF44AF00602E46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584A1D31CBF44AF00602E46 /* AppDelegate.m */; };
@@ -44,6 +46,7 @@
 		35D02F341CC0E90600BF80D5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D02F331CC0E90600BF80D5 /* Security.framework */; };
 		35D02F361CC0E90F00BF80D5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D02F351CC0E90F00BF80D5 /* MobileCoreServices.framework */; };
 		35D02F381CC0E91A00BF80D5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D02F371CC0E91A00BF80D5 /* SystemConfiguration.framework */; };
+		35ECB8681CCF113F00A28852 /* Part1ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ECB8671CCF113F00A28852 /* Part1ListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		3520780B1CC60E2F00A5C73B /* TOPScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOPScrollView.m; sourceTree = "<group>"; };
 		3528D4F51CC9BD68006D5DCC /* Part1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part1ViewController.h; sourceTree = "<group>"; };
 		3528D4F61CC9BD68006D5DCC /* Part1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part1ViewController.m; sourceTree = "<group>"; };
+		354E441E1CD04E4400E13E2F /* Part2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part2ViewController.h; sourceTree = "<group>"; };
+		354E441F1CD04E4400E13E2F /* Part2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part2ViewController.m; sourceTree = "<group>"; };
+		354E44201CD04E4400E13E2F /* Part2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Part2ViewController.xib; sourceTree = "<group>"; };
 		35530A161CCDE32E008319AE /* Part1TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part1TableViewCell.h; sourceTree = "<group>"; };
 		35530A171CCDE32E008319AE /* Part1TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part1TableViewCell.m; sourceTree = "<group>"; };
 		3584A1CC1CBF44AF00602E46 /* EARLY-BIRD-IELTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EARLY-BIRD-IELTS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,8 @@
 		35D02F331CC0E90600BF80D5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		35D02F351CC0E90F00BF80D5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		35D02F371CC0E91A00BF80D5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		35ECB8661CCF113F00A28852 /* Part1ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part1ListTableViewController.h; sourceTree = "<group>"; };
+		35ECB8671CCF113F00A28852 /* Part1ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part1ListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +214,8 @@
 				352078091CC60DF700A5C73B /* view */,
 				3528D4F51CC9BD68006D5DCC /* Part1ViewController.h */,
 				3528D4F61CC9BD68006D5DCC /* Part1ViewController.m */,
+				35ECB8661CCF113F00A28852 /* Part1ListTableViewController.h */,
+				35ECB8671CCF113F00A28852 /* Part1ListTableViewController.m */,
 			);
 			name = PART1;
 			sourceTree = "<group>";
@@ -251,6 +261,7 @@
 		3584A1CE1CBF44AF00602E46 /* EARLY-BIRD-IELTS */ = {
 			isa = PBXGroup;
 			children = (
+				35ECB8691CCF3BE700A28852 /* PART2 */,
 				3518E6731CC86FDD000A5DC3 /* MBProgressHUD */,
 				352078051CC5FE5700A5C73B /* PART1 */,
 				35D02F151CC0E88A00BF80D5 /* UIKit+AFNetworking */,
@@ -341,6 +352,16 @@
 				35D02F291CC0E88A00BF80D5 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		35ECB8691CCF3BE700A28852 /* PART2 */ = {
+			isa = PBXGroup;
+			children = (
+				354E441E1CD04E4400E13E2F /* Part2ViewController.h */,
+				354E441F1CD04E4400E13E2F /* Part2ViewController.m */,
+				354E44201CD04E4400E13E2F /* Part2ViewController.xib */,
+			);
+			name = PART2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +472,7 @@
 			files = (
 				3584A1DF1CBF44AF00602E46 /* LaunchScreen.storyboard in Resources */,
 				3518E6721CC863F1000A5DC3 /* Part1View.xib in Resources */,
+				354E44221CD04E4400E13E2F /* Part2ViewController.xib in Resources */,
 				3584A1DC1CBF44AF00602E46 /* Assets.xcassets in Resources */,
 				3584A1DA1CBF44AF00602E46 /* Main.storyboard in Resources */,
 			);
@@ -486,6 +508,7 @@
 				3584A1D71CBF44AF00602E46 /* ViewController.m in Sources */,
 				3528D4F71CC9BD68006D5DCC /* Part1ViewController.m in Sources */,
 				3518E6771CC8701D000A5DC3 /* MBProgressHUD.m in Sources */,
+				354E44211CD04E4400E13E2F /* Part2ViewController.m in Sources */,
 				35D02F131CC0DFAB00BF80D5 /* AFURLResponseSerialization.m in Sources */,
 				3584A1D41CBF44AF00602E46 /* AppDelegate.m in Sources */,
 				3520780C1CC60E2F00A5C73B /* TOPScrollView.m in Sources */,
@@ -501,6 +524,7 @@
 				35D02F321CC0E88A00BF80D5 /* UIWebView+AFNetworking.m in Sources */,
 				351B3F7C1CC094B300FFB89F /* StudyTableViewCell.m in Sources */,
 				35D02F2D1CC0E88A00BF80D5 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				35ECB8681CCF113F00A28852 /* Part1ListTableViewController.m in Sources */,
 				35D02F2C1CC0E88A00BF80D5 /* AFNetworkActivityIndicatorManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
